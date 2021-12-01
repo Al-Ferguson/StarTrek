@@ -6,7 +6,7 @@
 
 ## API to [https://stfc.space]
 
-- [stfc.space](https://stfc.space) [API Examples](STFC%20API%20Examples.http)
+- VSCode GraphQL [API Examples](STFC%20API%20Examples.http) for [stfc.space](https://stfc.space)
 - [Python SQL IMPORT Builder for Ships & Systems](STFC%20Build%20IMPORTs.py)
 
 ## Star Trek Pirate Tracker

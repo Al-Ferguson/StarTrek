@@ -5,6 +5,12 @@
 @jsonType = application/json
 
 ###
+### Get stfc.space Database Version
+GET {{apiurl}}/version HTTP/1.1
+    Accept: {{jsonType}}
+
+
+##
 ### Get Ship Information
 GET {{apiurl}}/ship HTTP/1.1
     Accept: {{jsonType}}
