@@ -1,0 +1,134 @@
+@host = api.stfc.dev
+@apiPath = v1
+@apiurl = https://{{host}}/{{apiPath}}
+@translate = translations/en
+@jsonType = application/json
+
+###
+### Get Ship Information
+GET {{apiurl}}/ship HTTP/1.1
+    Accept: {{jsonType}}
+
+### Get Ship Name
+GET {{apiurl}}/{{translate}}/ships HTTP/1.1
+    Accept: {{jsonType}}
+
+### Get Ship Type
+GET {{apiurl}}/{{translate}}/ship_type HTTP/1.1
+    Accept: {{jsonType}}
+
+### Get Ship Components
+GET {{apiurl}}/{{translate}}/ship_components HTTP/1.1
+    Accept: {{jsonType}}
+
+
+###
+### Get Faction Information
+GET {{apiurl}}/faction HTTP/1.1
+    Accept: {{jsonType}}
+
+### Get Faction Detail Information
+GET {{apiurl}}/{{translate}}/factions HTTP/1.1
+    Accept: {{jsonType}}
+
+
+###
+### Get Galaxy information
+GET {{apiurl}}/galaxy HTTP/1.1
+    Accept: {{jsonType}}
+
+
+###
+### Get System information
+GET {{apiurl}}/system HTTP/1.1
+    Accept: {{jsonType}}
+
+### Get System Detail information
+GET {{apiurl}}/{{translate}}/systems HTTP/1.1
+    Accept: {{jsonType}}
+
+
+###
+### Get Officer information
+GET {{apiurl}}/officer HTTP/1.1
+    Accept: {{jsonType}}
+
+### Get Officer Detail information
+GET {{apiurl}}/{{translate}}/officers HTTP/1.1
+    Accept: {{jsonType}}
+
+### Get Officer Synergy information
+GET {{apiurl}}/{{translate}}/officers_synergy HTTP/1.1
+    Accept: {{jsonType}}
+
+### Get Officer Devision information
+GET {{apiurl}}/{{translate}}/officer_division HTTP/1.1
+    Accept: {{jsonType}}
+
+### Get Officer Trait Information
+GET {{apiurl}}/{{translate}}/traits HTTP/1.1
+    Accept: {{jsonType}}
+
+
+###
+### Get Building information
+GET {{apiurl}}/building HTTP/1.1
+    Accept: {{jsonType}}
+
+### Get Building Detail information
+GET {{apiurl}}/{{translate}}/buildings HTTP/1.1
+    Accept: {{jsonType}}
+
+### Get Building Buff information
+GET {{apiurl}}/{{translate}}/building_buffs HTTP/1.1
+    Accept: {{jsonType}}
+
+
+###
+### Get Research information
+GET {{apiurl}}/research HTTP/1.1
+    Accept: {{jsonType}}
+
+### Get Research Detail information
+GET {{apiurl}}/{{translate}}/research HTTP/1.1
+    Accept: {{jsonType}}
+
+
+###
+### Get Consumable information
+GET {{apiurl}}/consumable HTTP/1.1
+    Accept: {{jsonType}}
+
+### Get Consumable Detail information
+GET {{apiurl}}/{{translate}}/consumables HTTP/1.1
+    Accept: {{jsonType}}
+
+
+###
+### Get Hostile information
+GET {{apiurl}}/hostile HTTP/1.1
+    Accept: {{jsonType}}
+
+### Get Hostile Detail information
+GET {{apiurl}}/{{translate}}/hostiles HTTP/1.1
+    Accept: {{jsonType}}
+
+
+###
+### Get Mission information
+GET {{apiurl}}/mission HTTP/1.1
+    Accept: {{jsonType}}
+
+### Get Mission Detail information
+GET {{apiurl}}/{{translate}}/missions HTTP/1.1
+    Accept: {{jsonType}}
+
+### Get Mission Unlock information
+GET {{apiurl}}/galaxy/mission_unlocks HTTP/1.1
+    Accept: {{jsonType}}
+
+
+###
+### Get Material Detail information
+GET {{apiurl}}/{{translate}}/materials HTTP/1.1
+    Accept: {{jsonType}}
