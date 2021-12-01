@@ -7,7 +7,7 @@
 ## API to https://stfc.space
 
 - [stfc.space API Examples](STFC%20API%20Examples.http)
-- [SQL IMPORT Builder for Ships & Systems](STFC%20Build%20IMPORTs.py)
+- [Python SQL IMPORT Builder for Ships & Systems](STFC%20Build%20IMPORTs.py)
 ## Star Trek Pirate Tracker
 
 - Made up of files starting "STFC Pirate*"
