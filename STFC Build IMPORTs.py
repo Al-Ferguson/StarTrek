@@ -40,7 +40,7 @@ def getjsonvalue(name: list, key: int):
     return [x['text'] for x in name if (int(x['id']) == key and x['key'] == 'name')][0]
 
 
-def buildShipImp(ships: list, names: list, types: list, factions: list) -> str:
+def shipimport(ships: list, names: list, types: list, factions: list) -> str:
     """buildShipImp Builds the SQL for the STFC Ships Import File
     Args:
         ships (json): STFC Ships JSON
@@ -65,7 +65,7 @@ def buildShipImp(ships: list, names: list, types: list, factions: list) -> str:
     return result
 
 
-def buildSystemImp(systems: list, names: list, factions: list) -> str:
+def systemimport(systems: list, names: list, factions: list) -> str:
     """buildSystemImp Builds the SQL for the STFC Systems Import File
     Args:
         systems (json): STFC Systems JSON
@@ -102,16 +102,18 @@ def main() -> None:
     system_names = rq.get(API_URL + DETAIL_PATH + 'systems').json()
 
     factions = rq.get(API_URL + DETAIL_PATH + 'factions').json()
+    
+    import_end = ";\n\nCOMMIT;\n\n"
 
     # endregion
 
     print('Writing Ships IMPORT SQL:')
     with open("STFC Pirate Ships.sql", "w") as file:
-        file.write(buildShipImp(ships, ship_names, ship_types, factions) + ";\n\nCOMMIT;\n\n")
+        file.write(shipimport(ships, ship_names, ship_types, factions) + import_end)
 
     print('Writing Systems IMPORT SQL:')
     with open("STFC Pirate Systems.sql", "w") as file:
-        file.write(buildSystemImp(systems, system_names, factions) + ";\n\nCOMMIT;\n\n")
+        file.write(systemimport(systems, system_names, factions) + import_end)
 
 
 if __name__ == "__main__":
