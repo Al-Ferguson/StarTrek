@@ -51,7 +51,7 @@ def shipimport(factions: list) -> str:
     names = rq.get(API_URL + DETAIL_PATH + 'ships').json()
     types = rq.get(API_URL + DETAIL_PATH + 'ship_type').json()
     result: str = ''
-    
+
     for ship in ships:
         if not result:
             result = 'INSERT INTO `StfcShips` (`ShipID`, `ShipName`, `ShipLevel`, `ShipType`,`ShipFaction`) VALUES\n'
@@ -76,7 +76,7 @@ def systemimport(factions: list) -> str:
     systems = rq.get(API_URL + 'system').json()
     names = rq.get(API_URL + DETAIL_PATH + 'systems').json()
     result: str = ''
- 
+
     for system in systems:
         if not result:
             result = 'INSERT INTO `StfcSystems` (`SystemID`, `SystemName`, `SystemLevel`, `SystemWarpDist`, `SystemType`, `DarkSpace`) VALUES\n'
@@ -96,7 +96,7 @@ def main() -> None:
     """Driver for https://stfc.space Information retrieval."""
     # region Initialize Interfaces
 
-    factions = rq.get(API_URL + DETAIL_PATH + 'factions').json()  
+    factions = rq.get(API_URL + DETAIL_PATH + 'factions').json()
     import_end = ";\n\nCOMMIT;\n\n"
 
     # endregion
