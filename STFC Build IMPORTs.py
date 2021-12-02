@@ -28,6 +28,9 @@ DETAIL_PATH = "translations/en/"
 
 # region Functions
 
+def getjsonvalue(json_name: json, key: int) -> str:
+    return [x['text'] for x in json_name if (int(x['id']) == key and
+                                            x['key'] == 'name')][0]
 
 # endregion Functions
 
@@ -48,24 +51,34 @@ def main() -> None:
 
     print('Writing Ships IMPORT SQL:')
     with open("STFC Pirate Ships.sql", "w") as file:
-        file.write('INSERT INTO `StfcShips` (`ShipID`, `ShipName`, `ShipLevel`, `ShipType`,`ShipFaction`) VALUES\n')
+        output = ''
         for ship in ships:
-            ship_name = [x['text'] for x in ship_names if int(x['id']) == ship['id'] and x['key'] == 'name'][0]
-            ship_type = [x['text'] for x in ship_types if int(x['id']) == ship['hull_type'] and x['key'] == 'name'][0].capitalize()
-            faction = [x['text'] for x in factions if int(x['id']) == ship['faction'] and x['key'] == 'name'][0]
-            file.write(
-                f'({ship["id"]}, "{ship_name}", {ship["grade"]}, "{ship_type}", "{faction}"),\n')
-        file.write(';\nCOMMIT;\n\n')
+            if not output:
+                file.write('INSERT INTO `StfcShips` (`ShipID`, `ShipName`, `ShipLevel`, `ShipType`,`ShipFaction`) VALUES\n')
+            else:
+                file.write(output + ",\n")
+
+            ship_name = getjsonvalue(ship_names, ship['id'])
+            ship_type = getjsonvalue(ship_types, ship['hull_type']).capitalize()
+            faction = getjsonvalue(factions, ship['faction'])
+            output = f'({ship["id"]}, "{ship_name}", {ship["grade"]}, "{ship_type}", "{faction}")'
+
+        file.write(output + ";\n\nCOMMIT;\n\n")
 
     print('Writing Systems IMPORT SQL:')
     with open("STFC Pirate Systems.sql", "w") as file:
-        file.write('INSERT INTO `StfcSystems` (`SystemID`, `SystemName`, `SystemLevel`, `SystemWarpDist`, `SystemType`, `DarkSpace`) VALUES\n')
+        output = ''
         for system in systems:
-            system_name = [x['text'] for x in system_names if int(x['id']) == system['id'] and x['key'] == 'name'][0]
-            faction = [x['text'] for x in factions if int(x['id']) == system['faction'] and x['key'] == 'name'][0]
-            file.write(
-                f'({system["id"]}, "{system_name}", {system["level"]}, {system["est_warp"]}, "{faction}", {system["is_deep_space"]}),\n')
-        file.write(';\nCOMMIT;\n\n')
+            if not output:
+                file.write('INSERT INTO `StfcSystems` (`SystemID`, `SystemName`, `SystemLevel`, `SystemWarpDist`, `SystemType`, `DarkSpace`) VALUES\n')
+            else:
+                file.write(output + ",\n")
+
+            system_name = getjsonvalue(system_names, system['id'])
+            faction = getjsonvalue(factions, system['faction'])
+            output = f'({system["id"]}, "{system_name}", {system["level"]}, {system["est_warp"]}, "{faction}", {system["is_deep_space"]})'
+
+        file.write(output + ";\n\nCOMMIT;\n\n")
 
 if __name__ == "__main__":
     print(f"\n{__doc__}\n")
