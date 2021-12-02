@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Dec 01, 2021 at 02:15 AM
+-- Generation Time: Dec 02, 2021 at 08:53 PM
 -- Server version: 10.6.5-MariaDB-1:10.6.5+maria~focal
 -- PHP Version: 7.4.26
 
@@ -122,7 +122,8 @@ CREATE TABLE `FlagOfficers` (
 
 INSERT INTO `FlagOfficers` (`Name`, `Alliance`, `SpotterID`, `AccessStarted`, `AccessEnded`, `LastUpdatedBy`, `LastUpdated`) VALUES
 ('AdmiralAllanon', 'TTS', 'ttsadmallanon', '2021-11-23 18:46:39.000000', NULL, 'root@%', '2021-12-01 02:13:50.470643'),
-('CommodoreAl', 'TTS', 'ttscmdral', '2021-11-23 18:45:42.000000', NULL, 'root@%', '2021-12-01 02:13:50.470643');
+('CommodoreAl', 'TTS', 'ttscmdral', '2021-11-23 18:45:42.000000', NULL, 'root@%', '2021-12-01 02:13:50.470643'),
+('OfficerToeJam', 'TTS', 'ttscmdrtj', '2021-12-01 06:51:09.000000', NULL, 'root@%', '2021-12-01 06:51:09.000000');
 
 -- --------------------------------------------------------
 
@@ -164,8 +165,6 @@ CREATE TABLE `StfcShips` (
 --
 
 
--- --------------------------------------------------------
-
 --
 -- Table structure for table `StfcSystems`
 --
@@ -175,7 +174,7 @@ CREATE TABLE `StfcSystems` (
   `SystemName` varchar(20) NOT NULL,
   `SystemLevel` int(11) DEFAULT NULL,
   `SystemWarpDist` int(11) NOT NULL,
-  `SystemType` set('Federation','Independent','Klingon','Romulan','Territory') NOT NULL,
+  `SystemType` set('Federation','Neutral','Klingon','Romulan','Territory') NOT NULL,
   `DarkSpace` tinyint(1) NOT NULL DEFAULT 0,
   `LastUpdatedBy` varchar(20) NOT NULL DEFAULT current_user(),
   `LastUpdated` timestamp(6) NOT NULL DEFAULT current_timestamp(6) ON UPDATE current_timestamp(6)

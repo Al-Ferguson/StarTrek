@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Dec 02, 2021 at 08:53 PM
+-- Generation Time: Dec 02, 2021 at 10:29 PM
 -- Server version: 10.6.5-MariaDB-1:10.6.5+maria~focal
 -- PHP Version: 7.4.26
 
@@ -838,8 +838,7 @@ INSERT INTO `StfcSystems` (`SystemID`, `SystemName`, `SystemLevel`, `SystemWarpD
 (849541812, 'Azha', 20, 13, 'Neutral', 0, 'root@%', '2021-12-02 20:48:45.918789'),
 (850545148, 'Mehg Torr', 41, 75, 'Klingon', 1, 'root@%', '2021-12-01 02:14:44.219626'),
 (858232932, 'Lloyd', 30, 26, 'Romulan', 0, 'root@%', '2021-12-01 02:14:44.219626'),
-(858267632, 'Ko\'Stok', 44, 105, 'Klingon', 1, 'root@%', '2021-12-01 02:14:44.219626');
-INSERT INTO `StfcSystems` (`SystemID`, `SystemName`, `SystemLevel`, `SystemWarpDist`, `SystemType`, `DarkSpace`, `LastUpdatedBy`, `LastUpdated`) VALUES
+(858267632, 'Ko\'Stok', 44, 105, 'Klingon', 1, 'root@%', '2021-12-01 02:14:44.219626'),
 (861313265, 'Barasa Gamma', 40, 20, 'Territory', 1, 'root@%', '2021-12-02 20:46:16.961883'),
 (861558882, 'Eldur Beta', 30, 20, 'Territory', 1, 'root@%', '2021-12-02 20:40:55.690363'),
 (876124086, 'Exchange Alpha', 29, 24, 'Neutral', 0, 'root@%', '2021-12-02 20:48:45.918789'),
@@ -855,7 +854,8 @@ INSERT INTO `StfcSystems` (`SystemID`, `SystemName`, `SystemLevel`, `SystemWarpD
 (893618014, 'Ciara', 26, 18, 'Klingon', 0, 'root@%', '2021-12-01 02:14:44.219626'),
 (894967478, 'Parturi Beta', 20, 20, 'Territory', 1, 'root@%', '2021-12-02 20:40:55.690363'),
 (897954743, 'Zova Rhen', 25, 18, 'Romulan', 0, 'root@%', '2021-12-01 02:14:44.219626'),
-(900739434, 'Ok\'cet', 38, 52, 'Neutral', 0, 'root@%', '2021-12-02 20:48:45.918789'),
+(900739434, 'Ok\'cet', 38, 52, 'Neutral', 0, 'root@%', '2021-12-02 20:48:45.918789');
+INSERT INTO `StfcSystems` (`SystemID`, `SystemName`, `SystemLevel`, `SystemWarpDist`, `SystemType`, `DarkSpace`, `LastUpdatedBy`, `LastUpdated`) VALUES
 (902308741, 'Velata', 36, 50, 'Neutral', 0, 'root@%', '2021-12-02 20:48:45.918789'),
 (903675622, 'Hutch', 53, 255, 'Federation', 1, 'root@%', '2021-12-01 02:14:44.219626'),
 (910353989, 'Skyedark', 18, 13, 'Neutral', 0, 'root@%', '2021-12-02 20:48:45.918789'),
