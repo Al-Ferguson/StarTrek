@@ -76,7 +76,7 @@ def systemimport(factions: list) -> str:
     systems = rq.get(API_URL + 'system').json()
     names = rq.get(API_URL + DETAIL_PATH + 'systems').json()
     result: str = ''
-    
+ 
     for system in systems:
         if not result:
             result = 'INSERT INTO `StfcSystems` (`SystemID`, `SystemName`, `SystemLevel`, `SystemWarpDist`, `SystemType`, `DarkSpace`) VALUES\n'
