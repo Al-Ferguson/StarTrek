@@ -40,17 +40,18 @@ def getjsonvalue(name: list, key: int):
     return [x['text'] for x in name if (int(x['id']) == key and x['key'] == 'name')][0]
 
 
-def shipimport(ships: list, names: list, types: list, factions: list) -> str:
-    """buildShipImp Builds the SQL for the STFC Ships Import File
+def shipimport(factions: list) -> str:
+    """shipimport Builds the SQL for the STFC Ships Import File
     Args:
-        ships (json): STFC Ships JSON
-        names (json): STFC Ships Detail JSON
-        types (json): STFC Ships Type JSON
         factions (json): STFC Factions JSON
     Returns:
         str: IMPORT SQL for STFC Ships
     """
+    ships = rq.get(API_URL + 'ship').json()
+    names = rq.get(API_URL + DETAIL_PATH + 'ships').json()
+    types = rq.get(API_URL + DETAIL_PATH + 'ship_type').json()
     result: str = ''
+    
     for ship in ships:
         if not result:
             result = 'INSERT INTO `StfcShips` (`ShipID`, `ShipName`, `ShipLevel`, `ShipType`,`ShipFaction`) VALUES\n'
@@ -65,16 +66,17 @@ def shipimport(ships: list, names: list, types: list, factions: list) -> str:
     return result
 
 
-def systemimport(systems: list, names: list, factions: list) -> str:
-    """buildSystemImp Builds the SQL for the STFC Systems Import File
+def systemimport(factions: list) -> str:
+    """systemimport Builds the SQL for the STFC Systems Import File
     Args:
-        systems (json): STFC Systems JSON
-        names (json): STFC Systems Details JSON
         factions (json): STFC Factions JSON
     Returns:
         str: IMPORT SQL for STFC Systems
     """
+    systems = rq.get(API_URL + 'system').json()
+    names = rq.get(API_URL + DETAIL_PATH + 'systems').json()
     result: str = ''
+    
     for system in systems:
         if not result:
             result = 'INSERT INTO `StfcSystems` (`SystemID`, `SystemName`, `SystemLevel`, `SystemWarpDist`, `SystemType`, `DarkSpace`) VALUES\n'
@@ -94,26 +96,18 @@ def main() -> None:
     """Driver for https://stfc.space Information retrieval."""
     # region Initialize Interfaces
 
-    ships = rq.get(API_URL + 'ship').json()
-    ship_names = rq.get(API_URL + DETAIL_PATH + 'ships').json()
-    ship_types = rq.get(API_URL + DETAIL_PATH + 'ship_type').json()
-
-    systems = rq.get(API_URL + 'system').json()
-    system_names = rq.get(API_URL + DETAIL_PATH + 'systems').json()
-
-    factions = rq.get(API_URL + DETAIL_PATH + 'factions').json()
-    
+    factions = rq.get(API_URL + DETAIL_PATH + 'factions').json()  
     import_end = ";\n\nCOMMIT;\n\n"
 
     # endregion
 
     print('Writing Ships IMPORT SQL:')
-    with open("STFC Pirate Ships.sql", "w") as file:
-        file.write(shipimport(ships, ship_names, ship_types, factions) + import_end)
+    with open("STFC Pirate 2 Ships.sql", "w") as file:
+        file.write(shipimport(factions) + import_end)
 
     print('Writing Systems IMPORT SQL:')
-    with open("STFC Pirate Systems.sql", "w") as file:
-        file.write(systemimport(systems, system_names, factions) + import_end)
+    with open("STFC Pirate 3 Systems.sql", "w") as file:
+        file.write(systemimport(factions) + import_end)
 
 
 if __name__ == "__main__":
