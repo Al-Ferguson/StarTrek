@@ -27,7 +27,8 @@ DETAIL_PATH = "translations/en/"
 
 # region Functions
 
-def getjsonvalue(name: list, key: int) -> str:
+
+def getjsonvalue(name: list, key: int):
     """getjsonvalue returns Text versions of Int Key values from a JSON
     Args:
         name (json): JSON to search for Text value
@@ -35,8 +36,8 @@ def getjsonvalue(name: list, key: int) -> str:
     Returns:
         str: Text value for passed key
     """
-    return [x['text'] for x in name if (int(x['id']) == key and
-                                            x['key'] == 'name')][0]
+
+    return [x['text'] for x in name if (int(x['id']) == key and x['key'] == 'name')][0]
 
 
 def buildShipImp(ships: list, names: list, types: list, factions: list) -> str:
@@ -106,13 +107,12 @@ def main() -> None:
 
     print('Writing Ships IMPORT SQL:')
     with open("STFC Pirate Ships.sql", "w") as file:
-        file.write(buildShipImp(ships, ship_names,
-                   ship_types, factions) + ";\n\nCOMMIT;\n\n")
+        file.write(buildShipImp(ships, ship_names, ship_types, factions) + ";\n\nCOMMIT;\n\n")
 
     print('Writing Systems IMPORT SQL:')
     with open("STFC Pirate Systems.sql", "w") as file:
-        file.write(buildSystemImp(systems, system_names,
-                   factions) + ";\n\nCOMMIT;\n\n")
+        file.write(buildSystemImp(systems, system_names, factions) + ";\n\nCOMMIT;\n\n")
+
 
 if __name__ == "__main__":
     print(f"\n{__doc__}\n")
