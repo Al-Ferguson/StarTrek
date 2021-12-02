@@ -58,10 +58,10 @@ def shipimport(factions: list) -> str:
         else:
             result += ",\n"
 
-        ship_name = getjsonvalue(names, ship['id'])
-        ship_type = getjsonvalue(types, ship['hull_type']).capitalize()
+        name = getjsonvalue(names, ship['id'])
+        shiptype = getjsonvalue(types, ship['hull_type']).capitalize()
         faction = getjsonvalue(factions, ship['faction'])
-        result += f'({ship["id"]}, "{ship_name}", {ship["grade"]}, "{ship_type}", "{faction}")'
+        result += f'({ship["id"]}, "{name}", {ship["grade"]}, "{shiptype}", "{faction}")'
 
     return result
 
@@ -83,9 +83,9 @@ def systemimport(factions: list) -> str:
         else:
             result += ",\n"
 
-        system_name = getjsonvalue(names, system['id'])
+        name = getjsonvalue(names, system['id'])
         faction = getjsonvalue(factions, system['faction'])
-        result += f'({system["id"]}, "{system_name}", {system["level"]}, {system["est_warp"]}, "{faction}", {system["is_deep_space"]})'
+        result += f'({system["id"]}, "{name}", {system["level"]}, {system["est_warp"]}, "{faction}", {system["is_deep_space"]})'
 
     return result
 
