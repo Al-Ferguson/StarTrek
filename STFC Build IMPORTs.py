@@ -11,7 +11,6 @@ NOTE: This has been tested with  Python 3.9+ and Requests v2.30.0.
 # region Imports
 
 import requests as rq
-import json
 
 # endregion Imports
 
@@ -28,9 +27,64 @@ DETAIL_PATH = "translations/en/"
 
 # region Functions
 
-def getjsonvalue(json_name: json, key: int) -> str:
-    return [x['text'] for x in json_name if (int(x['id']) == key and
+def getjsonvalue(name: list, key: int) -> str:
+    """getjsonvalue returns Text versions of Int Key values from a JSON
+    Args:
+        name (json): JSON to search for Text value
+        key (int): Key to convert
+    Returns:
+        str: Text value for passed key
+    """
+    return [x['text'] for x in name if (int(x['id']) == key and
                                             x['key'] == 'name')][0]
+
+
+def buildShipImp(ships: list, names: list, types: list, factions: list) -> str:
+    """buildShipImp Builds the SQL for the STFC Ships Import File
+    Args:
+        ships (json): STFC Ships JSON
+        names (json): STFC Ships Detail JSON
+        types (json): STFC Ships Type JSON
+        factions (json): STFC Factions JSON
+    Returns:
+        str: IMPORT SQL for STFC Ships
+    """
+    result: str = ''
+    for ship in ships:
+        if not result:
+            result = 'INSERT INTO `StfcShips` (`ShipID`, `ShipName`, `ShipLevel`, `ShipType`,`ShipFaction`) VALUES\n'
+        else:
+            result += ",\n"
+
+        ship_name = getjsonvalue(names, ship['id'])
+        ship_type = getjsonvalue(types, ship['hull_type']).capitalize()
+        faction = getjsonvalue(factions, ship['faction'])
+        result += f'({ship["id"]}, "{ship_name}", {ship["grade"]}, "{ship_type}", "{faction}")'
+
+    return result
+
+
+def buildSystemImp(systems: list, names: list, factions: list) -> str:
+    """buildSystemImp Builds the SQL for the STFC Systems Import File
+    Args:
+        systems (json): STFC Systems JSON
+        names (json): STFC Systems Details JSON
+        factions (json): STFC Factions JSON
+    Returns:
+        str: IMPORT SQL for STFC Systems
+    """
+    result: str = ''
+    for system in systems:
+        if not result:
+            result = 'INSERT INTO `StfcSystems` (`SystemID`, `SystemName`, `SystemLevel`, `SystemWarpDist`, `SystemType`, `DarkSpace`) VALUES\n'
+        else:
+            result += ",\n"
+
+        system_name = getjsonvalue(names, system['id'])
+        faction = getjsonvalue(factions, system['faction'])
+        result += f'({system["id"]}, "{system_name}", {system["level"]}, {system["est_warp"]}, "{faction}", {system["is_deep_space"]})'
+
+    return result
 
 # endregion Functions
 
@@ -42,43 +96,23 @@ def main() -> None:
     ships = rq.get(API_URL + 'ship').json()
     ship_names = rq.get(API_URL + DETAIL_PATH + 'ships').json()
     ship_types = rq.get(API_URL + DETAIL_PATH + 'ship_type').json()
-    factions = rq.get(API_URL + DETAIL_PATH + 'factions').json()
 
     systems = rq.get(API_URL + 'system').json()
     system_names = rq.get(API_URL + DETAIL_PATH + 'systems').json()
+
+    factions = rq.get(API_URL + DETAIL_PATH + 'factions').json()
 
     # endregion
 
     print('Writing Ships IMPORT SQL:')
     with open("STFC Pirate Ships.sql", "w") as file:
-        output = ''
-        for ship in ships:
-            if not output:
-                file.write('INSERT INTO `StfcShips` (`ShipID`, `ShipName`, `ShipLevel`, `ShipType`,`ShipFaction`) VALUES\n')
-            else:
-                file.write(output + ",\n")
-
-            ship_name = getjsonvalue(ship_names, ship['id'])
-            ship_type = getjsonvalue(ship_types, ship['hull_type']).capitalize()
-            faction = getjsonvalue(factions, ship['faction'])
-            output = f'({ship["id"]}, "{ship_name}", {ship["grade"]}, "{ship_type}", "{faction}")'
-
-        file.write(output + ";\n\nCOMMIT;\n\n")
+        file.write(buildShipImp(ships, ship_names,
+                   ship_types, factions) + ";\n\nCOMMIT;\n\n")
 
     print('Writing Systems IMPORT SQL:')
     with open("STFC Pirate Systems.sql", "w") as file:
-        output = ''
-        for system in systems:
-            if not output:
-                file.write('INSERT INTO `StfcSystems` (`SystemID`, `SystemName`, `SystemLevel`, `SystemWarpDist`, `SystemType`, `DarkSpace`) VALUES\n')
-            else:
-                file.write(output + ",\n")
-
-            system_name = getjsonvalue(system_names, system['id'])
-            faction = getjsonvalue(factions, system['faction'])
-            output = f'({system["id"]}, "{system_name}", {system["level"]}, {system["est_warp"]}, "{faction}", {system["is_deep_space"]})'
-
-        file.write(output + ";\n\nCOMMIT;\n\n")
+        file.write(buildSystemImp(systems, system_names,
+                   factions) + ";\n\nCOMMIT;\n\n")
 
 if __name__ == "__main__":
     print(f"\n{__doc__}\n")
