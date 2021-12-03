@@ -1,8 +1,12 @@
 # Star Trek Projects
 
-## Star Trek Alliance Resources
+## Miscellaneous Star Trek Fleet Command Documents
 
-- [Alliance Resource Spreadsheet](StarTrekAllianceResources.ods)
+- [Miscellaneous STFC Documents](Misc%20STFC%20Doc)
+
+## Star Trek Alliance Resource Tracking Spreadsheet
+
+- [Alliance Resource Spreadsheet](STFC%20Alliance%20Resource%20Tracking)
 
 ## API to [https://stfc.space]
 
