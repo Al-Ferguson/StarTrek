@@ -55,16 +55,14 @@ def shipimport(factions: list) -> str:
 
     for ship in ships:
         if not result:
-            result = 'INSERT INTO `StfcShips` (`ShipID`, `ShipName`, \
-                `ShipLevel`, `ShipType`,`ShipFaction`) VALUES\n'
+            result = 'INSERT INTO `StfcShips` (`ShipID`, `ShipName`,' \
+                '`ShipLevel`, `ShipType`,`ShipFaction`) VALUES\n'
         else:
             result += ",\n"
-
-        name = getjsonvalue(names, ship['id'])
-        shiptype = getjsonvalue(types, ship['hull_type']).capitalize()
-        faction = getjsonvalue(factions, ship['faction'])
-        result += f'({ship["id"]}, "{name}", {ship["grade"]}, \
-            "{shiptype}", "{faction}")'
+        result += f'({ship["id"]}, "{getjsonvalue(names, ship["id"])}",' \
+            f'{ship["grade"]},' \
+            f'"{getjsonvalue(types, ship["hull_type"]).capitalize()}",' \
+            f'"{getjsonvalue(factions, ship["faction"])}")'
 
     return result
 
@@ -82,16 +80,15 @@ def systemimport(factions: list) -> str:
 
     for system in systems:
         if not result:
-            result = 'INSERT INTO `StfcSystems` (`SystemID`, \
-                `SystemName`, `SystemLevel`, `SystemWarpDist`, \
-                    `SystemType`, `DarkSpace`) VALUES\n'
+            result = 'INSERT INTO `StfcSystems` (`SystemID`, `SystemName`,' \
+                '`SystemLevel`, `SystemWarpDist`, `SystemType`, `DarkSpace`)' \
+                'VALUES\n'
         else:
             result += ",\n"
-
-        name = getjsonvalue(names, system['id'])
-        faction = getjsonvalue(factions, system['faction'])
-        result += f'({system["id"]}, "{name}", {system["level"]}, \
-            {system["est_warp"]}, "{faction}", {system["is_deep_space"]})'
+        result += f'({system["id"]}, "{getjsonvalue(names, system["id"])}",' \
+            f'{system["level"]}, {system["est_warp"]},' \
+            f'"{getjsonvalue(factions, system["faction"])}",' \
+            f'{system["is_deep_space"]})'
 
     return result
 
