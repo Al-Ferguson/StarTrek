@@ -6,12 +6,12 @@
 
 ## API to [https://stfc.space]
 
-- VSCode GraphQL [API Examples](STFC%20API%20Examples.http) for [stfc.space](https://stfc.space)
-- [Python SQL IMPORT Builder for Ships & Systems](STFC%20Build%20IMPORTs.py)
+- [STFC.SPACE API](api.stfc.def)
 
 ## Star Trek Pirate Tracker
 
 - Made up of files starting "STFC Pirate*"
+- ".pl" Python programs to build data IMPORTS from STFC.SPACE Database
 - ".odb" files are Database connection files
 - ".ods" files are Spreadsheets
 - ".sql" files used to create & populate stfcpirate Database
