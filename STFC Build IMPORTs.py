@@ -9,15 +9,14 @@ NOTE: This has been tested with  Python 3.9+ and Requests v2.30.0.
 
 
 # region Imports
-
 import requests as rq
-
 # endregion Imports
+
 # region Author & Version
-# __all__ = ""
 __author__: str = "Al Ferguson"
 __version__: str = "0.1.1"
 # endregion Author & Version
+
 # region Global Variables
 API_URL: str = 'https://api.stfc.dev/v1/'
 TRANSLATE_LANGUAGE = "en"
@@ -29,8 +28,8 @@ SHIPTYPES: list = rq.get(API_URL + DETAIL_PATH + 'ship_type').json()
 SYSTEMS: list = rq.get(API_URL + 'system').json()
 SYSTEMNAMES: list = rq.get(API_URL + DETAIL_PATH + 'systems').json()
 FACTIONS = rq.get(API_URL + DETAIL_PATH + 'factions').json()
-
 # endregion Author & Version
+
 # region Functions
 
 
