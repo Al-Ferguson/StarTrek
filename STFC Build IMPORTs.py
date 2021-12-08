@@ -108,7 +108,6 @@ def systemdata(system: dict) -> str:
         f'"{jsonvalue(FACTIONS, system["faction"])}",' \
         f'{system["is_deep_space"]})'
 
-
 # endregion Functions
 
 
