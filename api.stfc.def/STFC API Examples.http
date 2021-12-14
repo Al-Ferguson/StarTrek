@@ -142,5 +142,9 @@ GET {{apiurl}}/{{translate}}/materials HTTP/1.1
 
 ###
 ### Get Syndicate information
+GET {{apiurl}}/syndicate HTTP/1.1
+    Accept: {{jsonType}}
+
+### Get Syndicate Detail Information
 GET {{apiurl}}/{{translate}}/syndicate HTTP/1.1
     Accept: {{jsonType}}
