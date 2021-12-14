@@ -138,3 +138,9 @@ GET {{apiurl}}/galaxy/mission_unlocks HTTP/1.1
 ### Get Material Detail information
 GET {{apiurl}}/{{translate}}/materials HTTP/1.1
     Accept: {{jsonType}}
+
+
+###
+### Get Syndicate information
+GET {{apiurl}}/{{translate}}/syndicate HTTP/1.1
+    Accept: {{jsonType}}
