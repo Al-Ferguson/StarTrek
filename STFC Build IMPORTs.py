@@ -14,7 +14,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = '2021-12-23 18:40:08'
+__updated__ = '2021-12-24 03:13:38'
 __version__: str = "0.1.2"
 # endregion Author & Version
 
