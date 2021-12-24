@@ -13,6 +13,7 @@ import requests as rq
 # endregion Imports
 
 # region Author & Version
+__updated__: str = ''
 __author__: str = "Al Ferguson"
 __version__: str = "0.1.1"
 # endregion Author & Version
