@@ -9,5 +9,6 @@
 .venv
 __pycache__
 activate
+deactivate
 test_coverage
 ~*.*
