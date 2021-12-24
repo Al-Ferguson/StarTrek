@@ -8,5 +8,6 @@
 .scannerwork
 .venv
 __pycache__
+activate
 test_coverage
 ~*.*
