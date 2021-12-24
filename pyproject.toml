@@ -3,7 +3,7 @@ name = "startrek"
 version = "0.1.2"
 description = "STFC Related projects"
 authors = ["Al Ferguson <aferguson@neptunescove.org>"]
-license = "GNU3"
+license = "GPL-3.0"
 
 [tool.poetry.dependencies]
 python = "^3.9"
