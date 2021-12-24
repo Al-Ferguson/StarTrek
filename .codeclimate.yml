@@ -1,0 +1,37 @@
+
+---
+version: "2"
+plugins:
+  bandit:
+    enabled: false
+  duplication:
+    enabled: true
+  fixme:
+    enabled: true
+  markdownlint:
+    enabled: true
+  pep8:
+    enabled: false
+  pylint:
+    enabled: false
+  radon:
+    enabled: true
+  sonar-python:
+    enabled: true
+    config:
+      tests_patterns:
+        - tests/func/**
+        - tests/unit/**
+  structure:
+    enabled: true
+  watson:
+    enabled: false
+exclude_patterns:
+  - ".idea/"
+  - ".mypy_cache/"
+  - ".vscode/"
+  - "**/examples/"
+  - "__init__.py"
+  - "tests/"
+  - "**/test_coverage/"
+  - "env/"

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!./env/bin python
 # -*- coding: utf-8 -*-
 
 """StfcGet.py - Pull data from https://stfc.space and write to CSV file.
@@ -17,7 +17,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = '2021-12-23 18:26:43'
+__updated__ = '2021-12-23 18:36:50'
 __version__: str = "0.1.2"
 # endregion Author & Version
 
