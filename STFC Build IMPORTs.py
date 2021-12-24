@@ -1,6 +1,3 @@
-#!./env/bin python
-# -*- coding: utf-8 -*-
-
 """StfcGet.py - Pull data from https://stfc.space and write to CSV file.
 
 NOTE: To access a REST API via https, the Python implementation must be
@@ -17,7 +14,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = '2021-12-23 18:36:50'
+__updated__ = '2021-12-23 18:40:08'
 __version__: str = "0.1.2"
 # endregion Author & Version
 
