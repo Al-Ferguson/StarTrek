@@ -1,15 +1,16 @@
 [tool.poetry]
 name = "startrek"
 version = "0.1.2"
-description = "STFC Related projects"
+description = "Star Trek Fleet Command Projects"
 authors = ["Al Ferguson <aferguson@neptunescove.org>"]
-license = "GPL-3.0"
+license = "GNU3"
 
 [tool.poetry.dependencies]
 python = "^3.9"
 requests = "^2.26.0"
 
 [tool.poetry.dev-dependencies]
+mypy = "^0.930"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
