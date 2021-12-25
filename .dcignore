@@ -120,6 +120,8 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+activate/
+deactivate/
 /site
 cython_debug/
 
