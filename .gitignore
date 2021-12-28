@@ -53,3 +53,4 @@ dmypy.json
 
 # Mac directory file
 .DS_Store
+logs
