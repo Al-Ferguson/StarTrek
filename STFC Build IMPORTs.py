@@ -14,7 +14,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = '2022-02-10 00:18:48'
+__updated__ = '2022-02-10 00:19:59'
 __version__: str = "0.1.2"
 # endregion Author & Version
 
@@ -28,7 +28,7 @@ SHIPNAMES: list = rq.get(f'{API_URL}{DETAIL_PATH}ships').json()
 SHIPTYPES: list = rq.get(f'{API_URL}{DETAIL_PATH}ship_type').json()
 SYSTEMS: list = rq.get(f'{API_URL}system').json()
 SYSTEMNAMES: list = rq.get(f'{API_URL}{DETAIL_PATH}systems').json()
-FACTIONS = rq.get(f'{API_URL}{DETAIL_PATH]factions').json()
+FACTIONS = rq.get(f'{API_URL}{DETAIL_PATH}factions').json()
 # endregion Author & Version
 
 # region Functions
