@@ -14,7 +14,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = '2021-12-24 03:13:38'
+__updated__ = '2022-02-10 00:18:48'
 __version__: str = "0.1.2"
 # endregion Author & Version
 
@@ -23,12 +23,12 @@ API_URL: str = 'https://api.stfc.dev/v1/'
 TRANSLATE_LANGUAGE = "en"
 DETAIL_PATH = f'translations/{TRANSLATE_LANGUAGE}/'
 
-SHIPS: list = rq.get(API_URL + 'ship').json()
-SHIPNAMES: list = rq.get(API_URL + DETAIL_PATH + 'ships').json()
-SHIPTYPES: list = rq.get(API_URL + DETAIL_PATH + 'ship_type').json()
-SYSTEMS: list = rq.get(API_URL + 'system').json()
-SYSTEMNAMES: list = rq.get(API_URL + DETAIL_PATH + 'systems').json()
-FACTIONS = rq.get(API_URL + DETAIL_PATH + 'factions').json()
+SHIPS: list = rq.get(f'{API_URL}ship').json()
+SHIPNAMES: list = rq.get(f'{API_URL}{DETAIL_PATH}ships').json()
+SHIPTYPES: list = rq.get(f'{API_URL}{DETAIL_PATH}ship_type').json()
+SYSTEMS: list = rq.get(f'{API_URL}system').json()
+SYSTEMNAMES: list = rq.get(f'{API_URL}{DETAIL_PATH}systems').json()
+FACTIONS = rq.get(f'{API_URL}{DETAIL_PATH]factions').json()
 # endregion Author & Version
 
 # region Functions
