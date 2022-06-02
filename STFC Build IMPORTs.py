@@ -14,7 +14,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = '2022-05-21 00:05:36'
+__updated__ = '2022-06-02 14:10:01'
 __version__: str = "0.1.2"
 # endregion Author & Version
 
@@ -35,7 +35,7 @@ FACTIONS = rq.get(f'{API_URL}{DETAIL_PATH}factions').json()
 
 
 def jsonvalue(name: list, key: int):
-    """getjsonvalue returns Text versions of Int Key values from a JSON
+    """jsonvalue returns Text versions of Int Key values from a JSON
     Args:
         name (json): JSON to search for Text value
         key (int): Key to convert
