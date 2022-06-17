@@ -4,7 +4,7 @@ NOTE: To access a REST API via https, the Python implementation must be
       compiled with SSL support (accessed via `import ssl` statement).
 NOTE: This application requires the Requests Module from PyPi. This can
       be installed by running `pip install -U requests`.
-NOTE: This has been tested with  Python 3.9+ and Requests v2.30.0.
+NOTE: This has been tested with Python 3.9+ and Requests v2.30+
 """
 
 
@@ -14,7 +14,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = '2022-06-09 01:11:24'
+__updated__ = '2022-06-17 01:09:19'
 __version__: str = "0.1.2"
 # endregion Author & Version
 
