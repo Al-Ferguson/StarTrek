@@ -14,7 +14,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = '2022-06-17 01:09:19'
+__updated__ = '2022-06-25 22:35:28'
 __version__: str = "0.1.2"
 # endregion Author & Version
 
@@ -22,6 +22,12 @@ __version__: str = "0.1.2"
 API_URL: str = 'https://api.stfc.dev/v1/'
 TRANSLATE_LANGUAGE = "en"
 DETAIL_PATH = f'translations/{TRANSLATE_LANGUAGE}/'
+
+SHIP_INSERT: str = 'INSERT INTO `StfcShips` (`ShipID`, `ShipName`,' \
+    '`ShipLevel`, `ShipType`,`ShipFaction`) VALUES\n'
+SYSTEM_INSERT: str = 'INSERT INTO `StfcSystems` (`SystemID`, `SystemName`,' \
+    '`SystemLevel`, `SystemWarpDist`, `SystemType`, `DarkSpace`) VALUES\n'
+SQL_END = ";\n\nCOMMIT;\n\n"
 
 SHIPS: list = rq.get(f'{API_URL}ship').json()
 SHIPNAMES: list = rq.get(f'{API_URL}{DETAIL_PATH}ships').json()
@@ -47,7 +53,7 @@ def jsonvalue(name: list, key: int):
                                         and x['key'] == 'name')][0]
 
 
-def shipimport() -> str:
+def generate_ship_import() -> str:
     """shipimport Builds the SQL for the STFC Ships Import File
     Args:
         None
@@ -55,17 +61,12 @@ def shipimport() -> str:
         str: IMPORT SQL for STFC Ships
     """
 
-    # region Function Variables
     result: str = ''
-    # endregion Function Variables
-
     for ship in SHIPS:
         if not result:
-            result = 'INSERT INTO `StfcShips` (`ShipID`, `ShipName`,' \
-                '`ShipLevel`, `ShipType`,`ShipFaction`) VALUES\n'
+            result = SHIP_INSERT + shipdata(ship)
         else:
-            result += ",\n"
-        result += shipdata(ship)
+            result += ",\n" + shipdata(ship)
 
     return result
 
@@ -73,31 +74,25 @@ def shipimport() -> str:
 def shipdata(ship: dict) -> str:
     """data builds IMPORT Data Line"""
     return f'({ship["id"]},' \
-        f'"{jsonvalue(SHIPNAMES, ship["id"])}",' \
-        f'{ship["grade"]},' \
+        f'"{jsonvalue(SHIPNAMES, ship["id"])}",{ship["grade"]},' \
         f'"{jsonvalue(SHIPTYPES, ship["hull_type"]).capitalize()}",' \
         f'"{jsonvalue(FACTIONS, ship["faction"])}")'
 
 
-def systemimport() -> str:
+def generate_system_import() -> str:
     """systemimport Builds the SQL for the STFC Systems Import File
     Args:
         None
     Returns:
         str: IMPORT SQL for STFC Systems
     """
-    # region Function Variables
-    result: str = ''
-    # endregion Function Variables
 
+    result: str = ''
     for system in SYSTEMS:
         if not result:
-            result = 'INSERT INTO `StfcSystems` (`SystemID`, `SystemName`,' \
-                '`SystemLevel`, `SystemWarpDist`, `SystemType`, `DarkSpace`)' \
-                'VALUES\n'
+            result = SYSTEM_INSERT + systemdata(system)
         else:
-            result += ",\n"
-        result += systemdata(system)
+            result += ",\n" + systemdata(system)
 
     return result
 
@@ -114,19 +109,14 @@ def systemdata(system: dict) -> str:
 
 def main() -> None:
     """Driver for https://stfc.space Information retrieval."""
-    # region Initialize Variables
-
-    import_end = ";\n\nCOMMIT;\n\n"
-
-    # endregion
 
     print('Writing Ships IMPORT SQL:')
     with open("STFC Pirate 2 Ships.sql", "w") as file:
-        file.write(shipimport() + import_end)
+        file.write(generate_ship_import() + SQL_END)
 
     print('Writing Systems IMPORT SQL:')
     with open("STFC Pirate 3 Systems.sql", "w") as file:
-        file.write(systemimport() + import_end)
+        file.write(generate_system_import() + SQL_END)
 
 
 if __name__ == "__main__":
