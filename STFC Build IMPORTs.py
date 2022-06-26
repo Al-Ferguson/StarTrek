@@ -14,7 +14,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = '2022-06-25 22:35:28'
+__updated__ = '2022-06-25 22:44:32'
 __version__: str = "0.1.2"
 # endregion Author & Version
 
@@ -64,14 +64,14 @@ def generate_ship_import() -> str:
     result: str = ''
     for ship in SHIPS:
         if not result:
-            result = SHIP_INSERT + shipdata(ship)
+            result = SHIP_INSERT + construct_ship_row(ship)
         else:
-            result += ",\n" + shipdata(ship)
+            result += ",\n" + construct_ship_row(ship)
 
     return result
 
 
-def shipdata(ship: dict) -> str:
+def construct_ship_row(ship: dict) -> str:
     """data builds IMPORT Data Line"""
     return f'({ship["id"]},' \
         f'"{jsonvalue(SHIPNAMES, ship["id"])}",{ship["grade"]},' \
@@ -90,14 +90,14 @@ def generate_system_import() -> str:
     result: str = ''
     for system in SYSTEMS:
         if not result:
-            result = SYSTEM_INSERT + systemdata(system)
+            result = SYSTEM_INSERT + construct_system_row(system)
         else:
-            result += ",\n" + systemdata(system)
+            result += ",\n" + construct_system_row(system)
 
     return result
 
 
-def systemdata(system: dict) -> str:
+def construct_system_row(system: dict) -> str:
     """data builds IMPORT Data Line"""
     return f'({system["id"]}, "{jsonvalue(SYSTEMNAMES, system["id"])}",' \
         f'{system["level"]}, {system["est_warp"]},' \
@@ -108,7 +108,7 @@ def systemdata(system: dict) -> str:
 
 
 def main() -> None:
-    """Driver for https://stfc.space Information retrieval."""
+    """Driver for https://stfc.space Information retrieval & Import build."""
 
     print('Writing Ships IMPORT SQL:')
     with open("STFC Pirate 2 Ships.sql", "w") as file:
