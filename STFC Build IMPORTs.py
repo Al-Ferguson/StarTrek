@@ -14,7 +14,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = '2022-06-25 22:44:32'
+__updated__ = '2022-06-27 00:25:41'
 __version__: str = "0.1.2"
 # endregion Author & Version
 
@@ -108,7 +108,7 @@ def construct_system_row(system: dict) -> str:
 
 
 def main() -> None:
-    """Driver for https://stfc.space Information retrieval & Import build."""
+    """https://stfc.space Information retrieval & Import SQL build."""
 
     print('Writing Ships IMPORT SQL:')
     with open("STFC Pirate 2 Ships.sql", "w") as file:
