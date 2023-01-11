@@ -14,7 +14,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = '2022-06-27 00:25:41'
+__updated__ = '2023-01-11 11:53:20'
 __version__: str = "0.1.2"
 # endregion Author & Version
 
@@ -73,10 +73,29 @@ def generate_ship_import() -> str:
 
 def construct_ship_row(ship: dict) -> str:
     """data builds IMPORT Data Line"""
-    return f'({ship["id"]},' \
-        f'"{jsonvalue(SHIPNAMES, ship["id"])}",{ship["grade"]},' \
-        f'"{jsonvalue(SHIPTYPES, ship["hull_type"]).capitalize()}",' \
-        f'"{jsonvalue(FACTIONS, ship["faction"])}")'
+    return f'({ship["id"]}, {construct_name(ship)},\
+    {construct_grade(ship)}, {construct_hull_type(ship)},\
+    {construct_faction(ship)})'
+
+
+def construct_name(ship:dict) -> str:
+    """Construct ship Name from ship dictionary"""
+    return jsonvalue(SHIPNAMES, ship["id"])
+
+
+def construct_grade(ship:dict) -> str:
+    """Construct ship grade from ship dictionary"""
+    return ship["grade"]
+
+
+def construct_hull_type(ship:dict) -> str:
+    """Construct hull from ship dictionary"""
+    return jsonvalue(SHIPTYPES, ship["hull_type"]).capitalize()
+
+
+def construct_faction(ship:dict) -> str:
+    """Construct faction from ship dictionary"""
+    return jsonvalue(FACTIONS, ship["faction"])
 
 
 def generate_system_import() -> str:
