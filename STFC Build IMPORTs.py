@@ -14,7 +14,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = '2023-01-11 12:01:07'
+__updated__ = '2023-01-11 12:07:14'
 __version__: str = "0.1.2"
 # endregion Author & Version
 
@@ -73,9 +73,9 @@ def generate_ship_import() -> str:
 
 def construct_ship_row(ship: dict) -> str:
     """data builds IMPORT Data Line"""
-    return f'({ship["id"]}, {construct_name(ship)},\
-    {construct_grade(ship)}, {construct_hull_type(ship)},\
-    {construct_faction(ship)})'
+    return f'({ship["id"]}, {construct_name(ship)}, \
+{construct_grade(ship)}, {construct_hull_type(ship)}, \
+{construct_faction(ship)})'
 
 
 def construct_name(ship: dict) -> str:
