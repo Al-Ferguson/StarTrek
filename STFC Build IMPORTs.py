@@ -14,7 +14,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = '2023-01-12 15:05:22'
+__updated__ = '2023-01-12 15:31:14'
 __version__: str = "0.1.2"
 # endregion Author & Version
 
@@ -60,7 +60,6 @@ def generate_ship_import() -> str:
     Returns:
         str: IMPORT SQL for STFC Ships
     """
-
     result = [construct_ship_row(ship) for ship in SHIPS]
 
     return SHIP_INSERT + ",\n".join(result)
@@ -68,19 +67,14 @@ def generate_ship_import() -> str:
 
 def construct_ship_row(ship: dict) -> str:
     """data builds IMPORT Data Line"""
-    return f'({ship["id"]}, {construct_name(ship)}, \
-{construct_grade(ship)}, {construct_hull_type(ship)}, \
-{construct_faction(ship)})'
+    return f'({ship["id"]}, {construct_shipnames(ship)},\
+ {ship["grade"]}, {construct_hull_type(ship)},\
+ {construct_faction(ship)})'
 
 
-def construct_name(ship: dict) -> str:
+def construct_shipnames(ship: dict) -> str:
     """Construct ship Name from ship dictionary"""
     return f'"{jsonvalue(SHIPNAMES, ship["id"])}"'
-
-
-def construct_grade(ship: dict) -> str:
-    """Construct ship grade from ship dictionary"""
-    return f'{ship["grade"]}'
 
 
 def construct_hull_type(ship: dict) -> str:
@@ -88,9 +82,9 @@ def construct_hull_type(ship: dict) -> str:
     return f'"{jsonvalue(SHIPTYPES, ship["hull_type"]).capitalize()}"'
 
 
-def construct_faction(ship: dict) -> str:
-    """Construct faction from ship dictionary"""
-    return f'"{jsonvalue(FACTIONS, ship["faction"])}"'
+def construct_faction(dictionary: dict) -> str:
+    """Construct faction from a dictionary"""
+    return f'"{jsonvalue(FACTIONS, dictionary["faction"])}"'
 
 
 def generate_system_import() -> str:
@@ -100,7 +94,6 @@ def generate_system_import() -> str:
     Returns:
         str: IMPORT SQL for STFC Systems
     """
-
     result = [construct_system_row(system) for system in SYSTEMS]
 
     return SYSTEM_INSERT + ",\n".join(result)
@@ -108,10 +101,15 @@ def generate_system_import() -> str:
 
 def construct_system_row(system: dict) -> str:
     """data builds IMPORT Data Line"""
-    return f'({system["id"]}, "{jsonvalue(SYSTEMNAMES, system["id"])}",' \
-        f'{system["level"]}, {system["est_warp"]},' \
-        f'"{jsonvalue(FACTIONS, system["faction"])}",' \
-        f'{system["is_deep_space"]})'
+    return f'({system["id"]}, {construct_systemnames(system)},\
+ {system["level"]}, {system["est_warp"]}, {construct_faction(system)},\
+ {system["is_deep_space"]})'
+
+
+def construct_systemnames(system: dict) -> str:
+    """Construct system Name from system dictionary"""
+    return f'"{jsonvalue(SYSTEMNAMES, system["id"])}"'
+
 
 # endregion Functions
 
