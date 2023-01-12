@@ -14,7 +14,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = '2023-01-11 12:07:14'
+__updated__ = '2023-01-12 15:05:22'
 __version__: str = "0.1.2"
 # endregion Author & Version
 
@@ -61,14 +61,9 @@ def generate_ship_import() -> str:
         str: IMPORT SQL for STFC Ships
     """
 
-    result: str = ''
-    for ship in SHIPS:
-        if not result:
-            result = SHIP_INSERT + construct_ship_row(ship)
-        else:
-            result += ",\n" + construct_ship_row(ship)
+    result = [construct_ship_row(ship) for ship in SHIPS]
 
-    return result
+    return SHIP_INSERT + ",\n".join(result)
 
 
 def construct_ship_row(ship: dict) -> str:
@@ -106,14 +101,9 @@ def generate_system_import() -> str:
         str: IMPORT SQL for STFC Systems
     """
 
-    result: str = ''
-    for system in SYSTEMS:
-        if not result:
-            result = SYSTEM_INSERT + construct_system_row(system)
-        else:
-            result += ",\n" + construct_system_row(system)
+    result = [construct_system_row(system) for system in SYSTEMS]
 
-    return result
+    return SYSTEM_INSERT + ",\n".join(result)
 
 
 def construct_system_row(system: dict) -> str:
