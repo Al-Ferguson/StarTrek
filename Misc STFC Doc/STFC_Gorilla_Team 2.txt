@@ -1,0 +1,100 @@
+TTS Gorilla Attack Group One:
+	CommanderAl 	(L47 - Normally can hit L37+) -- Discord "@Al_F#1467"
+	OfficerToeJam 	(L43 - Normally can hit L28+) -- Discord "@OfficerToejam#1314"
+	OfficerZog 		(L39 - Normally can hit L25+) -- Discord "@Off Z#9223"
+	CaptSuperHater 	(L34 - Normally can hit L24+) -- Discord "@SuperHater#2945"	
+	
+For the Incursion I think you will want to set your bases/ships up something like:
+	-	Using https://stfc-gameplay.omnizen.xyz/crew or Leytu's Discord Crewing Bot.
+	-	1 or 2 Ships set for Base Cracking. If you don't have a good Base Cracking
+		Ship/Crew combo, crew these for PvP to protect Base Crackers. I plan to have 
+		Enterpise:	Rom, Kirk, & HGWorf. 
+		Korinar:	Khan, Otto, & Joachim
+	-	A very good PvP Ship & Crew, or two. I plan on my K'T'INGA & D4
+
+	-	An Amalgam with 2of11, 4of11, & B'Etor
+	-	Your Largest Survey ship setup with a Burning crew (for Base Defense)
+	-	Remaining ships (if any) setup for Base Defense	
+
+Main Battle Plan:
+__________________________________________________________________________________________
+
+Phase 1:
+	-	Group up in Elzbar (Safe House #1) immediately after Defense. When all are present, 
+		we will start our Incursion into Server 61 Space.
+	-	After Incursion, scout out "Safe House" (see below) and verify they are safe!
+	-	Scout out Systems appropriate for Attack. Start around popular systems where 
+		shields won't work, including Systems around:
+			P'Jem			(Federation Territory)
+			Khitomer		(Klingon Territory)
+			Galorndon Core	(Romulian Territory)
+			Tombstone		(Rogue Territory)
+			Willenia		(Neutral Territory)
+	-	Keep an Eye on AC, we have Scouts relaying targets (& big, non-Targets, to avoid).
+	-	Keep an Eye Out for Big Disco's, Big PvP ships may be following.
+	-	Keep an Eye Out for Big Bases showing up that were not there when we arrived.
+
+Phase 2:
+	-	Once a Target Space has been choosen, determine what type of Attack: Base or Disco
+	-	All move ships at once.
+	-	Upon arrival to Target System, KOS whatever you are sure you can Kill. 
+	-	Keep an Eye Out for ships coming from Bases and try to hit with best PvP combo.
+		Remember Combat Traiangle & scan crews when possible.
+	-	We will stay for 2m-3m max (at least initially) or until Bigger ships/bases show up.
+		Them back to the "Safe House" we launched from (or agreed upon alternative).
+
+Phase 3:
+	-	Once back at as "Safe House", choose the next target system and repeat Phase 2.
+
+	-	Keep an Eye on AC, we have Scouts relaying targets (& big, non-Targets, to avoid).
+	-	Every once in a while, choose a different "safe house" to return to.
+	-	Keep an Eye on Base Relocation Tokens. Don't run out during an attack run!
+	-	If you need to take a break & return to Server 60 Space, this is the time to do it.
+		Any remaining members will make a call to continue, or return, at this point.
+__________________________________________________________________________________________
+
+Safe Houses (NOTE: In #7 we will be able to shield, & probably should):
+
+	1.	[Station Housing Daqolet S:1813666945 X:246 Y:468]	- Elzbar (L38)
+	2.	[Station Housing Gakiuel S:90203356 X:-198 Y:-465]	- Bor (L38)
+	3.	[Station Housing Kimixuk S:117053650 X:475 Y:62]	- Nezha (L38)	
+	4.	[Station Housing Rejakie S:1976031045 X:-471 Y:41]	-  Eayou (L38)
+	5.	[Station Housing Ieueb S:1032390550 X:-152 Y:537]	-  Lanaj (L38)
+	6.	[Station Housing Lasiy S:725745965 X:-386 Y:337]	-  Roxeoum (L38)
+
+	7.	[Station Housing Seoae S:76295 X:-452 Y:518]		-  Obbia (L1)
+__________________________________________________________________________________________
+
+Types of Attack:
+	Base Attack:
+		-	Relocate Entire Base to Station Hub in Target System.
+		-	KOS all Targets in System.
+		-	At conclusion of Attack, Recall ship to Base & Relocate Base to "Safe House"	
+	Disco Attack:
+		-	Move all attacking ships out of Base, plus Disco & Cerritos
+		-	Move Disco to "adjacent" System to Target System
+		-	Enable Cerritos Support on Appropriate ships, then recall Cerritos to Base
+		-	Disco Summon attacking ships to "adjacent" System, then Recall Disco to Base
+		-	Cloak Attacking ships
+		-	Send ships into Target System (move adjacent, don't Attack until last minute).
+		-	Attack Targets
+		-	At conclusion of Attack, Recall ships to Base	
+__________________________________________________________________________________________
+
+Possible future Tweaks based on how things go during previous runs:
+	1.	Assign Base Crackers & PvP Cover before Attack Run.
+	2.	Lengthen or shorten the time we are attacking a given System.
+	3.	If too crowded for all 4, split and hit 2 systems at same time.
+		(risky, but will make it look like more groups are attacking)
+	4.	When done, let's compare notes for things like: strange crewings, defense tactics 
+		(and did they work), response times, ...
+	5.	Do we want to inform AC of our target Systems so they can watch out for Cloaked
+		Warp signatures and large, non-Targets, launching from their bases, big ships/bases
+		coming in after we leave (alert Leytu if this happens)?
+	6.	Possibly want to report back on AC during Phase 3 on System & Results. They may
+		pass to other Allies to take advantage of the same System, after it has settled
+		down (wait 5m-10m & have another group hit it again). 
+	7.	We may want to coordinate with Leytu. If they send in big L40 ships to counter us,
+		he may want to follow our attack with a Cloaked ship shortly after (disco it into
+		a near by System, clock & warp to Target System)
+	-	?????
