@@ -1548,3 +1548,6 @@ build/
 
 # Elisp
 *~
+
+# Test for Invalid Files
+*/test_invalid.*
