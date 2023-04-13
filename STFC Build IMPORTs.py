@@ -1,9 +1,9 @@
 """StfcGet.py - Pull data from https://stfc.space and write to CSV file.
 
-NOTE: To access a REST API via https, the Python implementation must be
-      compiled with SSL support (accessed via `import ssl` statement).
 NOTE: This application requires the Requests Module from PyPi. This can
       be installed by running `pip install -U requests`.
+NOTE: To access a REST API via https, the Python implementation must be
+      compiled with SSL support (accessed via `import ssl` statement).
 NOTE: This has been tested with Python 3.9+ and Requests v2.30+
 """
 
@@ -14,7 +14,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = '2023-01-12 15:36:25'
+__updated__ = '2023-04-13 16:14:11'
 __version__: str = "0.1.2"
 # endregion Author & Version
 
