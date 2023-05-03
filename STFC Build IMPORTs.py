@@ -14,7 +14,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = '2023-04-13 16:14:11'
+__updated__ = '2023-05-02 20:26:43'
 __version__: str = "0.1.2"
 # endregion Author & Version
 
@@ -29,12 +29,12 @@ SYSTEM_INSERT: str = 'INSERT INTO `StfcSystems` (`SystemID`, `SystemName`,' \
     '`SystemLevel`, `SystemWarpDist`, `SystemType`, `DarkSpace`) VALUES\n'
 SQL_END = ";\n\nCOMMIT;\n\n"
 
-SHIPS: list = rq.get(f'{API_URL}ship').json()
-SHIPNAMES: list = rq.get(f'{API_URL}{DETAIL_PATH}ships').json()
-SHIPTYPES: list = rq.get(f'{API_URL}{DETAIL_PATH}ship_type').json()
-SYSTEMS: list = rq.get(f'{API_URL}system').json()
-SYSTEMNAMES: list = rq.get(f'{API_URL}{DETAIL_PATH}systems').json()
-FACTIONS = rq.get(f'{API_URL}{DETAIL_PATH}factions').json()
+SHIPS: list = rq.get(f'{API_URL}ship', timeout=5).json()
+SHIPNAMES: list = rq.get(f'{API_URL}{DETAIL_PATH}ships', timeout=5).json()
+SHIPTYPES: list = rq.get(f'{API_URL}{DETAIL_PATH}ship_type', timeout=5).json()
+SYSTEMS: list = rq.get(f'{API_URL}system', timeout=5).json()
+SYSTEMNAMES: list = rq.get(f'{API_URL}{DETAIL_PATH}systems', timeout=5).json()
+FACTIONS = rq.get(f'{API_URL}{DETAIL_PATH}factions', timeout=5).json()
 # endregion Author & Version
 
 # region Functions
