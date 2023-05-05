@@ -1,8 +1,11 @@
+# https://api.stfc.dev/v1 Reset API examples
+
 @host = api.stfc.dev
 @apiPath = v1
-@apiurl = https://{{host}}/{{apiPath}}
 @translate = translations/en
 @jsonType = application/json
+
+@apiurl = https://{{host}}/{{apiPath}}
 
 ###
 ### Get stfc.space Database Version
