@@ -7,6 +7,7 @@
 
 @baseurl = https://{{host}}/{{apiPath}}
 
+
 ###
 ### Get stfc.space Database Version
 GET {{baseurl}}/version HTTP/1.1
