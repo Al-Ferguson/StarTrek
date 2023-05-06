@@ -1,4 +1,16 @@
-# Documentation for [stfc.space database](https://stfc.space)
+# Discovered REST API for [stfc.space](https://stfc.space)
 
+- Built as part of [Python SQL IMPORT Builder for Ships & Systems](../STFC%20Build%20IMPORTs.py)
 - VSCode GraphQL [API Examples](STFC%20API%20Examples.http) for [stfc.space](https://stfc.space)
-- [Python SQL IMPORT Builder for Ships & Systems](../STFC%20Build%20IMPORTs.py)
+- Covers Discovered REST API for:
+    - [Version Info](https://api.stfc.dev/v1/version)
+    - [Ship Info](https://api.stfc.dev/v1/ship)
+    - [Faction Info](https://api.stfc.dev/v1/faction)
+    - [System Info](https://api.stfc.dev/v1/system)
+    - [Officer Info](https://api.stfc.dev/v1/officer)
+    - [Building Info](https://api.stfc.dev/v1/building)
+    - [Research Info](https://api.stfc.dev/v1/research)
+    - [Hostile Info](https://api.stfc.dev/v1/hostile)
+    - [Mission Info](https://api.stfc.dev/v1/mission)
+    - [Material Info](https://api.stfc.dev/v1/translations/en/materials)
+    - [Syndicate Info](https://api.stfc.dev/v1/syndicate)

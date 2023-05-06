@@ -1,5 +1,7 @@
 ### https://api.stfc.dev/v1 Reset API examples
 
+
+### Variables for API Tests
 @host = api.stfc.dev
 @apiPath = v1
 @translate = translations/en
