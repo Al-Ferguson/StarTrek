@@ -55,3 +55,4 @@ dmypy.json
 .DS_Store
 logs
 .dockerrc
+.trunk
