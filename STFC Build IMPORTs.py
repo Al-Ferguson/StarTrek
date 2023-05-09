@@ -14,7 +14,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = '2023-05-02 20:26:43'
+__updated__ = '2023-05-09 01:42:12'
 __version__: str = "0.1.2"
 # endregion Author & Version
 
@@ -35,11 +35,9 @@ SHIPTYPES: list = rq.get(f'{API_URL}{DETAIL_PATH}ship_type', timeout=5).json()
 SYSTEMS: list = rq.get(f'{API_URL}system', timeout=5).json()
 SYSTEMNAMES: list = rq.get(f'{API_URL}{DETAIL_PATH}systems', timeout=5).json()
 FACTIONS = rq.get(f'{API_URL}{DETAIL_PATH}factions', timeout=5).json()
-# endregion Author & Version
+# endregion Global Variables
 
 # region Functions
-
-
 def jsonvalue(name: list, key: int):
     """jsonvalue returns Text versions of Int Key values from a JSON
     Args:
@@ -109,8 +107,6 @@ def construct_system_row(system: dict) -> str:
 def construct_systemnames(system: dict) -> str:
     """Construct system Name from system dictionary"""
     return f'"{jsonvalue(SYSTEMNAMES, system["id"])}"'
-
-
 # endregion Functions
 
 
