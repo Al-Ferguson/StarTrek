@@ -7,7 +7,9 @@
 1. Do NOT Hive!
 1. If not Active, SHIELD!
 
-## Alliance Planning
+___
+
+## Alliance Advanced Planning
 1. Ensure Enhancers benefiting Incursion have been enabled.
    - Hull, and Advanced Hull, Enhancer
    - PvP Enhancer
@@ -16,12 +18,16 @@
 1. 18-24 hours before Incursion; begin draining unshielded members still in Territory.
 1. Remind all members, If not Active, SHIELD!
 
+___
+
 ## If not participating, or not sure your engaging, in PvP & Base Raiding
 1. Move all ships back to Base. 
 1. Move to a <=L19 Space, do NOT create a Hive with other TTS Members or Alias (This only attracts Base Cracking).
 1. Pop a 4+h shield before start of day (noon EDT)
 1. Pop a 24h+ shield after start of day (if not sure, continue popping 4h+ shields until you are sure).
 1. Scout for the rest of TTS.## Crewing for PvP
+
+___
 
 ## PvP
 1. Remember the Battle Triangle
@@ -34,23 +40,24 @@
 
 ## Base Cracking/Draining
 1. Crewing Base Cracking ships
-1. Crewing Amalgam
-1. Crewing Survey Ships
+   - Enterprise (or 2nd Largest Ship): Rom (C), Kirk, & HG Worf
+   - Biggest Other ship: Khan(C), Otto, & Joachim
+   - Below Decks crewing:
+1. Crewing Amalgam for Size and Grabbing Protected Loot use: 2of11(C), 4of11, & B'Etor
+1. Crewing Survey Ships for Size
 
 ## Active Base Defense
 1. If not Active, SHIELD!
-1. Order of ships attacked is based off Battle Triangle & Size
+1. Order of ships attacked based off Battle Triangle & Size:
    - Attackers always leverage the Battle Triangle, starting with biggest ship
    - Then attack similar ships, starting with biggest ship
    - Then attack ships that have a battle triangle advantage, starting with biggest ship
    - Finally attack survey ships
-1. Baby Jelly Crewing
-  - Yes, a Baby Jelly, NOT an ISS Jelly!
-  - Mitigation Stripping Crew
-  - 
-1. Big Survey Ship Crewing
-  - Burning Crew
-  - 
+1. Baby Jelly Crewing:
+   - Yes, a Baby Jelly, NOT an ISS Jelly!
+   - Mitigation Stripping Crew
+1. Big Survey Ship Crewing:
+   - Your best Burning Crew
 1. Sally Crewing
 1. Remaining War Ship Crewing
 1. Do NOT ignore hits to your base. This defense REQUIREs that you respond to them. If you don't want to respond, then Shield!
