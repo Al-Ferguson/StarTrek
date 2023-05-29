@@ -122,7 +122,7 @@ ___
    - Your best Hull Breach/Burning Crew:
      - Lorca (C), Gorkon, and Georgiou (Fortunate).
      - Gorkon (C), Lorca, and Nero (Fortunate).
-     - Georgiou (C), Tyler, and 3rd as situation dictates (Fortunatealternative crewing).
+     - Georgiou (C), Tyler, and 3rd as situation dictates (Fortunate alternative crewing).
 1. Do __NOT__ ignore hits to your base
    - This defense __REQUIREs__ you Actively Respond to all Attacks!
    - If you don't want to respond, then __SHIELD__!
