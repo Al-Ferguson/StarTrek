@@ -7,6 +7,16 @@
 1. Do NOT Hive!
 1. If not Active, SHIELD!
 
+## Alliance Planning
+1. Ensure Enhancers benefiting Incursion have been enabled.
+   - Hull, and Advanced Hull, Enhancer
+   - PvP Enhancer
+   - Siege Enhancer
+1. 24-36 hours before Incursion; Move all members out of Territory to <=L19 Space.
+1. 18-24 hours before Incursion; begin draining unshielded members still in Territory.
+1. Remind all members, If not Active, SHIELD!
+
+
 ## If not participating, or not sure your engaging, in PvP & Base Raiding
 1. Move all ships back to Base. 
 1. Move to a <=L19 Space, do NOT create a Hive with other TTS Members or Alias (This only attracts Base Cracking).
