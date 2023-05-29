@@ -16,14 +16,21 @@ ___
    - Hull, and Advanced Hull, Enhancer
    - PvP Enhancer
    - Siege Enhancer
-1. 24-36 hours before Incursion; Move all members out of Territory to <=L19 Space and __SHIELD__! Do __NOT__ Hive.
-1. 18-24 hours before Incursion; begin draining unshielded members still in Territory.
+1. 24-36 hours before Incursion:
+   - Move all members out of Territory to <=L19 Space and __SHIELD__!
+   - Do __NOT__ Hive.
+1. 18-24 hours before Incursion, begin draining unshielded bases in Territory.
 1. Before Incursion, Flag Officers should remind members:
    - [ ] If not Active, __SHIELD__!
-   - [ ] Do __NOT__ hit players from our Sever, unless participating in a Defensive Draining.
-   - [ ] Incursion is a Team Event, and all members of our server are on our team.
-   - [ ] When draining larger targets, remember ALL Members on our Sever are on the same Team. Share the spoils. There are various *bugs* that make it more efficient to drain Bases with large numbers of participants.
-   - [ ] GC is monitored by both Servers, don't put *Classified* info on GC. Use AC of PC to keep it private.
+   - [ ] Do __NOT__ hit players from our Sever, unless Defensive Draining.
+   - [ ] Incursion is a Team Event and Our Team is all members of our Server.
+   - [ ] When draining larger targets, remember:
+      - ALL Members on our Sever are on the same Team.
+      - Share the spoils.
+      - There are *bugs* making it more efficient to drain Bases with large numbers of participants.
+   - [ ] GC is monitored by both Servers!
+      - Don't put *Classified* info on GC.
+      - Use AC of PC to keep it private.
    - [ ] If not Active, __SHIELD__!
 
 ___
