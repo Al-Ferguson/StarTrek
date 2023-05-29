@@ -43,6 +43,14 @@ ___
    - Interceptor has advantage over Battleship.
    - Battleship has advantage over Explorer.
    - Survey ships are a wash (no advantage/disadvantage) over other ships.
+1. Make sure your crewing gives you all your ship bonuses.
+1. Try to keep Attack, Defense, and Health balanced.
+1. Below Decks the following can help (best when lots of Below Deck seats available).:
+   - Hugh, Odo, and Kira (for Critical Damage bonuses)
+   - Beckett and Badgey (for additional damage bonus)
+   - Tendi (for Hull Health bonus)
+   - Boimler and Rutherford (Armor, Shield, and Dodge bonus)
+   - Dezoc (to reduce effectiveness of targets crew). Dezoc may be the least useful during Incursion.
 1. Crewing the Enterprise for PvP:
    - Gowron (C), HG Worf, Kirk (either).
    - Don't bother with Spock on bridge, Enterprise already does Shield regeneration.
@@ -51,9 +59,12 @@ ___
      - Martok (C), HG Worf, and 3rd as situation dictates.
      - Gul Dukat (C), Garak, and Damar.
    - On Explorers:
-     -
+     - Weyoun (C), Ikat'ika, and Pon.
    - On Battleships:
      - Lorca (C), Tilly, and 3rd as situation dictates.
+     - SNW Strike Team Una or La'an as Capt, with Ortegas as 3rd Seater.
+1. Having multiple types of PvP ships will allow you to leverage the Battle Triangle
+1. You may not be able to crew all ships they way you want (may require same crew member on multiple ships), be ready to swap crew members or add an alternate crew member that helps the rest of the crew.
 
 ## Base Cracking/Draining
 1. Crewing Base Cracking ships.
@@ -82,6 +93,7 @@ ___
 ## Active Base Defense
 1. If not Active, SHIELD!
 1. This is a great Base Defense when involved with a larger PvP Slugfest.
+1. Lots of Crewing options to allow you to find crews for all your ships.
 1. Order of ships attacked based off Battle Triangle & Size:
    - Attackers always leverage the Battle Triangle, starting with biggest ship.
    - Then attack similar ships, starting with biggest ship.
@@ -89,14 +101,36 @@ ___
    - Finally attack survey ships.
 1. Baby Jelly Crewing:
    - Yes, a Baby Jelly, NOT an ISS Jelly!
-   - Mitigation Stripping Crew (makes Attacker suspectable to Base Defenses).
+   - Shield Stripping Crew (makes Attacker suspectable to Base Defenses), Yuki (C), Marcus, and Zhou.
 1. Big Survey Ship Crewing:
-   - Your best Burning Crew:
-     - Kumak (C) Vemet, and Nero.
-     - Nero(C), Vemet, and D'jaoki.
-     - Georgiou, Tyler, and 3rd as situation dictates.
-1. Sally Crewing
-1. Remaining War Ship Crewing
+   - Your best Hull Breach/Burning Crew:
+     - Lorca (C), Gorkon, and Georgiou.
+     - Gorkon (C), Lorca, and Nero.
+     - Georgiou (C), Tyler, and 3rd as situation dictates.
+1. War Ship Crewing
+   - Pike (C), Crusher, and Harrison
+   - Pike (C), Moreau, and Harrison
+   - Pike/Picard (C), Vixis, and Harrison.
 1. Do __NOT__ ignore hits to your base
    - This defense REQUIREs that you respond to them
    - If you don't want to respond, then __SHIELD__!
+   
+___
+
+## One Crewing Possibility
+1. Crewing and  Ships for multiple missions.
+1. Missions include:
+   - Base Cracking.
+     1. Biggest Warship (Battleship would work best, then Explorer) crewed with; Khan(C), Otto, & Joachim.
+     1. Second Biggest (preferably different type the 1st) with; Rom (C), Kirk, & HG Worf.
+   - Base Raiding.
+     1. Amalgam (or 2nd larges Survey Ship) with 2of11(C), 4of11, & B'Etor. SNW La'an Below Decks
+     1. Largest capacity Survey Ship, Georgiou (C), Tyler, and ???
+   - PvP.
+     1. Interceptor crewed for PvP with Gul Dukat (C), Garak, and Damar.
+   - Active Base Defense.
+     1. Baby Jelly with Shield Stripping Crew, Yuki (C), Marcus, and Zhou.
+     1. Largest Survey Ship has Burning Crew.
+     1. Mix of Explorers, Battleships, and Interceptors. 
+     1. Interceptor crewed for PvP with Gul Dukat (C), Garak, and Damar.
+1. May need to do some minor recrewing when transitioning between above missions.
