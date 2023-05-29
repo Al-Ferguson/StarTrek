@@ -26,6 +26,11 @@
 
 ## Active Base Defense
 1. If not Active, SHIELD!
+1. Order of ships attacked is based off Battle Triangle & Size
+   - Attackers always leverage the Battle Triangle, starting with biggest ship
+   - Then attack similar ships, starting with biggest ship
+   - Then attack ships that have a battle triangle advantage, starting with biggest ship
+   - Finally attack survey ships
 1. Baby Jelly Crewing
   - Yes, a Baby Jelly, NOT an ISS Jelly!
   - Mitigation Stripping Crew
@@ -35,8 +40,6 @@
   - 
 1. Sally Crewing
 1. Remaining War Ship Crewing
-1. Order of ships attacked is based off Battle Triangle & Size
-   - First ships
 1. Do NOT ignore hits to your base. This defense REQUIREs that you respond to them. If you don't want to respond, then Shield!
 
 ## Base Cracking/Draining
