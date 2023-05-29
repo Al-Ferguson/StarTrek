@@ -100,33 +100,9 @@ ___
 ___
 
 ## Active Base Defense
-1. This defense __REQUIREs__ you Actively Respond to all Attacks!
-1. This is a great Base Defense when involved with a larger PvP Slugfest.
-1. Lots of Crewing options to allow you to find crews for all your ships.
-1. Order of ships attacked based off Battle Triangle & Size:
-   - Attackers always leverage the Battle Triangle, starting with biggest ship.
-   - Then attack similar ships, starting with biggest ship.
-   - Then attack ships that have a battle triangle advantage, starting with biggest ship.
-   - Finally attack survey ships.
-1. Baby Jelly Crewing:
-   - Yes, a Baby Jelly, NOT an ISS Jelly!
-   - Shield Stripping Crew (makes Attacker suspectable to Base Defenses), Yuki (C), Marcus, and Zhou.
-1. Docked War Ship Crewing:
-   - If you do not have VERY BIG ships that will last many rounds, use ships that are quick, and cheap, to repair.
-   - Picard, Bev, and Harrison (Realta good choice).
-   - Tilly (C), Burnham, and Saru (Turas).
-   - Kras (C), Rukor, and Komal (Turas alternative crewing).
-1. Survey Ship Crewing:
-   - If you are using this ship for Base Raiding as well, make it your biggest survey ship.
-   - If you are not using this ship for Base Raiding, use a Fortunate (or two), as they are cheap to repair quick.
-   - Your best Hull Breach/Burning Crew:
-     - Lorca (C), Gorkon, and Georgiou (Fortunate).
-     - Gorkon (C), Lorca, and Nero (Fortunate).
-     - Georgiou (C), Tyler, and 3rd as situation dictates (Fortunate alternative crewing).
-1. Do __NOT__ ignore hits to your base
-   - This defense __REQUIREs__ you Actively Respond to all Attacks!
-   - If you don't want to respond, then __SHIELD__!
-   
+
+This style of defense is well suited for Incursions and close in Base PvP Slugfest (e.g. Alliance Raids & Defenses). Posted elsewhere.
+
 ___
 
 ## One Crewing Possibility
