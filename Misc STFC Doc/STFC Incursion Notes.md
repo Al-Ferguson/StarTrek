@@ -13,9 +13,9 @@ ___
 
 ## Alliance Advanced Planning
 1. Ensure Enhancers benefiting Incursion have been enabled.
-   - Hull, and Advanced Hull, Enhancer
-   - PvP Enhancer
-   - Siege Enhancer
+   - Hull, and Advanced Hull, Enhancer.
+   - PvP Enhancer.
+   - Siege Enhancer.
 1. 24-36 hours before Incursion:
    - Move all members out of Territory to <=L19 Space and __SHIELD__!
    - Do __NOT__ Hive.
@@ -96,9 +96,11 @@ ___
 1. When Target becomes Active, or help arrives:
    - If on your own, you should probably shield.
    - If you have enough support, you may want to turn it into a PvP Slugfest (Active Base Defense good here).
+   
+___
 
 ## Active Base Defense
-1. If not Active, SHIELD!
+1. This defense __REQUIREs__ you Actively Respond to all Attacks!
 1. This is a great Base Defense when involved with a larger PvP Slugfest.
 1. Lots of Crewing options to allow you to find crews for all your ships.
 1. Order of ships attacked based off Battle Triangle & Size:
@@ -109,17 +111,20 @@ ___
 1. Baby Jelly Crewing:
    - Yes, a Baby Jelly, NOT an ISS Jelly!
    - Shield Stripping Crew (makes Attacker suspectable to Base Defenses), Yuki (C), Marcus, and Zhou.
-1. Big Survey Ship Crewing:
+1. Docked War Ship Crewing:
+   - If you do not have VERY BIG ships that will last many rounds, use ships that are quick, and cheap, to repair.
+   - Picard, Bev, and Harrison (Realta good choice).
+   - Tilly (C), Burnham, and Saru (Turas).
+   - Kras (C), Rukor, and Komal (Turas alternative crewing).
+1. Survey Ship Crewing:
+   - If you are using this ship for Base Raiding as well, make it your biggest survey ship.
+   - If you are not using this ship for Base Raiding, use a Fortunate (or two), as they are cheap to repair quick.
    - Your best Hull Breach/Burning Crew:
-     - Lorca (C), Gorkon, and Georgiou.
-     - Gorkon (C), Lorca, and Nero.
-     - Georgiou (C), Tyler, and 3rd as situation dictates.
-1. War Ship Crewing
-   - Pike (C), Crusher, and Harrison
-   - Pike (C), Moreau, and Harrison
-   - Pike/Picard (C), Vixis, and Harrison.
+     - Lorca (C), Gorkon, and Georgiou (Fortunate).
+     - Gorkon (C), Lorca, and Nero (Fortunate).
+     - Georgiou (C), Tyler, and 3rd as situation dictates (Fortunatealternative crewing).
 1. Do __NOT__ ignore hits to your base
-   - This defense REQUIREs that you respond to them
+   - This defense __REQUIREs__ you Actively Respond to all Attacks!
    - If you don't want to respond, then __SHIELD__!
    
 ___
