@@ -50,13 +50,13 @@ This is a great Base Defense when involved with a larger PvP Slugfest (e.g. Alli
    - Shield Stripping Crew: Yuki(C), Marcus, and Zhou.
    - Makes Attacker suspectable to Base Defenses.
 1. Docked Warship Crewing:
-   - If you do not have VERY BIG ships that will last many rounds, use multiple Turas. These are quick, and cheap, to repair during attack.
+   - If you don't have VERY BIG ships to last many rounds, use multiple Turas. These are quick & cheap to repair during attack.
    - Picard, Bev, and Harrison (Realta Explorer good choice).
    - Kras(C), Rukor, and Komal (Turas Explorer, anti-Rom Damage Reduction).
    - Tilly(C), Burnham, and Saru (Turas Explorer good choice).
 1. Survey Ship Crewing:
    - If you are using this ship for Base Raiding as well, make it your biggest survey ship.
-   - If you are not using this ship for Base Raiding, use a Fortunate (or two). These are quick, and cheap, to repair during attack.
+   - If you are not using this for Base Raiding, use a Fortunate (or two). These are quick & cheap to repair during attack.
    - Your best Hull Breach/Burning Crew:
      - Lorca(C), Gorkon, and Georgiou (ECS Fortunate).
      - Gorkon(C), Lorca, and Nero (ECS Fortunate).
