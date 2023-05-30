@@ -4,7 +4,8 @@ Thanks to Laytu, USSE, and many others for the following suggestions.
 
 ## Always follow these rules
 1. If not Active, __SHIELD__!
-1. If not Active, __SHIELD__!
+1. If you get a Call, __SHIELD__!
+1. If you have a Meeting, __SHIELD__!
 1. No Mining During Incursion!
 1. Do __NOT__ Hive!
 1. If not Active, __SHIELD__!
@@ -22,10 +23,10 @@ ___
 1. 18-24 hours before Incursion, begin draining unshielded bases in Territory.
 1. Before Incursion, Flag Officers should remind members:
    - [ ] If not Active, __SHIELD__!
-   - [ ] Do __NOT__ hit players from our Sever, unless Defensive Draining.
+   - [ ] Do __NOT__ hit players from our Server, unless Defensive Draining.
    - [ ] Incursion is a Team Event and Our Team is all members of our Server.
    - [ ] When draining larger targets, remember:
-      - ALL Members on our Sever are on the same Team.
+      - ALL Members on our Server are on the same Team.
       - Share the spoils.
       - There are *bugs* making it more efficient to drain Bases with large numbers of participants.
    - [ ] GC is monitored by both Servers!
@@ -53,24 +54,27 @@ ___
 1. Make sure your crewing gives you all your ship bonuses.
 1. Try to keep Attack, Defense, and Health balanced.
 1. Below Decks the following can help (best when lots of Below Deck seats available).:
-   - Odo and Kira (for Critical Damage bonuses)
+   - Odo (for Critical Damage bonuses)
+   - Kira (for Critical Hit Chance reduction)
    - Beckett and Badgey (for additional damage bonus)
    - Tendi (for Hull Health bonus)
    - Boimler (Armor, Shield, and Dodge bonus)
-   - Rutherford (Shield Health bonus)
+   - Rutherford (Increase Shield Health)
    - Dezoc (to reduce effectiveness of targets crew). Dezoc may be the least useful during Incursion.
 1. Crewing the Enterprise for PvP:
-   - Gowron(C), HG Worf, Kirk (either).
-   - Don't bother with Spock on bridge, Enterprise already does Shield regeneration.
+   1. PIC Picard(C), Weyoun, & HG Worf
+   1. Kirk(C) (either), Weyoun, & Trinity Officer
+   1. Gowron(C), HG Worf, & Kirk (either).
+   1. Don't bother with Spock on bridge, Enterprise already does Shield regeneration.
 1. Crewing other ships for PvP:
    - On Interceptors: 
-     - Martok(C), HG Worf, and 3rd as situation dictates.
-     - Gul Dukat(C), Garak, and Damar.
+     1. Gul Dukat(C), Garak, & Damar.
+     1. Martok(C), HG Worf, & 3rd as situation dictates.
    - On Explorers:
-     - Weyoun(C), Ikat'ika, and Pon.
+     1. Weyoun(C), Ikat'ika, & Pon.
    - On Battleships:
-     - Lorca(C), Tilly, and 3rd as situation dictates.
-     - SNW Strike Team Una or La'an as Capt, with Ortegas as 3rd Seater.
+     1. SNW Strike Team Una or La'an as Capt, with Ortegas as 3rd Seater.
+     1. Lorca(C), Tilly, & 3rd as situation dictates.
 1. Having multiple types of PvP ships will allow you to leverage the Battle Triangle
 1. You may not be able to crew all ships they way you want (may require same crew member on multiple ships), be ready to swap crew members or add an alternate crew member that helps the rest of the crew.
 
@@ -80,13 +84,13 @@ ___
    - Biggest non-Enterprise ship: Khan(C), Otto, & Joachim.
    - Below Decks crewing:
 1. Crew Amalgam for Capacity and Grabbing Protected Loot use:
-   - 2of11(C), 4of11, & B'Etor.
-   - B'Etor(C), 4of11, & Stonn.
-   - 2of11(C), 4of11, & Stonn.
-   - Include La'an Below Decks.
+   1. 2of11(C), 4of11, & B'Etor.
+   1. B'Etor(C), 4of11, & Stonn.
+   1. 2of11(C), 4of11, & Stonn.
+   1. Include La'an Below Decks.
 1. Crew Survey Ship for Capacity
-   - 2of11(C), 4of11, & Stonn.
-   - Include La'an Below Decks.
+   1. 2of11(C), 4of11, & Stonn.
+   1. Include La'an Below Decks.
 1. For the best attacks:
    1. Check if target crewed with Anti-Rom Crew (Kras(C), Rukor, and Komal), don't use Rom if so crewed.
    1. __When not sure if 10m Shield will deploy.__
