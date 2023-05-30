@@ -33,13 +33,13 @@ This is a great Base Defense when involved with a larger PvP Slugfest (e.g. Alli
 | Slot | Ship | Captain | 2nd Seat | 3rd Seat | Purpose |
 | ---: | :--- | :---: | :---: | :---: | :--- |
 | 1 | Realta | Picard | Bev| Harrison | Shield bypass 1st Round |
-| 2 | Toras | Kras | Rukor | Komal | Anti ROM, Damage Reduction |
+| 2 | Toras | Kras | Rukor | Komal | Anti Rom, Damage Reduction |
 | 3 | Toras | Tilly | Burnham | Saru | Shield Stripping |
 | 4 | Baby Jelly | Yuki | Marcus| Zhou | Shield Stripping |
-| 5 | Fortunate | Lorca | Gorkon | Georgiou | Hull Breach, Burning |
+| 5 | Fortunate | Lorca | Gorkon | Georgiou | Hull Breach & Burning |
 
-<details>
-<summary>Ship Slotting Options</summary>
+<details><summary>Ship Slotting Options</summary>
+
 1. For Medium Level Members (L30-L49), this leverages ships that are quick and cheap to repair.
    - Baby Jelly Explorer
    - The Realta Explorer
@@ -56,8 +56,8 @@ This is a great Base Defense when involved with a larger PvP Slugfest (e.g. Alli
      - Perform Base Cracking Duties
      - Perform Base Draining Duties
 </details>
-<details>
-<summary>Abridged Active Base Defense Details</summary>
+<details><summary>Abridged Active Base Defense Details</summary>
+
 1. Baby Jelly Crewing (always required):
    - Yes, a Baby Jelly, NOT an ISS Jelly!
    - Shield Stripping Crew: Yuki(C), Marcus, and Zhou.

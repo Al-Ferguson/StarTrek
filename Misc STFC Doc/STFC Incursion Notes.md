@@ -79,22 +79,22 @@ ___
    - Enterprise (or 2nd Largest Ship): Rom(C), Kirk, & HG Worf.
    - Biggest non-Enterprise ship: Khan(C), Otto, & Joachim.
    - Below Decks crewing:
-1. Crewing Amalgam for Capacity and Grabbing Protected Loot use:
+1. Crew Amalgam for Capacity and Grabbing Protected Loot use:
    - 2of11(C), 4of11, & B'Etor.
    - B'Etor(C), 4of11, & Stonn.
    - 2of11(C), 4of11, & Stonn.
    - Include La'an Below Decks.
-1. Crewing Survey Ships for Capacity
+1. Crew Survey Ship for Capacity
    - 2of11(C), 4of11, & Stonn.
    - Include La'an Below Decks.
-1. Check if target crewed with Anti-Rom Crew (Kras(C), Rukor, and Komal), don't use if so crewed.
-1. The best attacks are:
-   1. __Best when not sure if 10m Shield will deploy.__
+1. For the best attacks:
+   1. Check if target crewed with Anti-Rom Crew (Kras(C), Rukor, and Komal), don't use Rom if so crewed.
+   1. __When not sure if 10m Shield will deploy.__
       - Start with all ships in Base, except largest cracking ship.
       - Hit target while Cloaked.
       - If 10m shield does __not__ pop, move base and start draining.
       - If 10m shield does pop, retrieve ship to base and monitor for shield drop.
-   1. __Best when sure 10m Shield won't deploy.__
+   1. __When sure 10m Shield won't deploy.__
       - Start with all ships in Base.
       - Move base next to target.
       - Hit target with biggest ship.
@@ -102,7 +102,7 @@ ___
 1. If target is big enough, put the coordinates on AC to bring in help for defending & draining.
 1. When Target becomes Active, or help arrives:
    - If on your own, you should probably shield.
-   - If you have enough support, you may want to turn it into a PvP Slugfest (Active Base Defense good here).
+   - If you have enough support, you may want to turn it into a PvP Slugfest (An Active Base Defense good here).
    
 ___
 
@@ -112,20 +112,22 @@ This style of defense is well suited for Incursions and close in Base PvP Slugfe
 
 ___
 
-## One Crewing Possibility
+## A Crewing Possibility
 1. Crewing and  Ships for multiple missions.
 1. Missions include:
    - Base Cracking.
-     1. Biggest Warship (Battleship would work best, then Explorer) crewed with; Khan(C), Otto, & Joachim.
+     1. Biggest Warship (Battleships work best, then Explorer) crewed with; Khan(C), Otto, & Joachim.
      1. 2nd Biggest (different type the 1st) crewed with; Rom(C), Kirk, & HG Worf. Don't use against Kras(C), Rukor, and Komal.
    - Base Raiding.
      1. Amalgam (or 2nd larges Survey Ship) with 2of11(C), 4of11, & B'Etor. SNW La'an Below Decks
-     1. Largest capacity Survey Ship, Georgiou(C), Tyler, and ???
+     1. Largest capacity Survey Ship with Burning Crew; Georgiou(C), Tyler, and Stonn.
+     1. Include La'an Below Decks, on largest capacity ship.
    - PvP.
      1. Interceptor crewed for PvP with Gul Dukat(C), Garak, and Damar.
+     1. Explorer crewed for PvP with Weyoun(C), Ikat'ika, and Pon.
    - Active Base Defense.
-     1. Baby Jelly with Shield Stripping Crew, Yuki(C), Marcus, and Zhou.
-     1. Largest Survey Ship has Burning Crew.
-     1. Mix of Explorers, Battleships, and Interceptors. 
+     1. Baby Jelly (required) with Shield Stripping Crew, Yuki(C), Marcus, and Zhou.
+     1. Largest Survey Ship has Burning Crew (required).
+     1. Mix of Battleships, Explorers, and Interceptors.
      1. Interceptor crewed for PvP with Gul Dukat(C), Garak, and Damar.
 1. May need to do some minor recrewing when transitioning between above missions.
