@@ -25,9 +25,21 @@ This is a great Base Defense when involved with a larger PvP Slugfest (e.g. Alli
    - Then attack ships that have a battle triangle advantage, starting with biggest ship.
    - Finally attack survey ships.
 1. Ships are crewed to:
-   - Strip their Shields
-   - Burn the ship (increasing Attack Damage)
-   - Breach Hulls (increasing Attack Damage)
+   - Strip and Bypass attackers Shields
+   - Burn the Attackers Ship (increasing Attack Damage)
+   - Breach the Attackers Hull (increasing Attack Damage)
+
+## Ships and Crewing Table
+| Slot | Ship | Captain | 2nd Seat | 3rd Seat | Purpose |
+| ---: | :--- | :---: | :---: | :---: | :--- |
+| 1 | Realta | Picard | Bev| Harrison | Shield bypass 1st Round |
+| 2 | Toras | Kras | Rukor | Komal | Anti ROM, Damage Reduction |
+| 3 | Toras | Tilly | Burnham | Saru | Shield Stripping |
+| 4 | Baby Jelly | Yuki | Marcus| Zhou | Shield Stripping |
+| 5 | Fortunate | Lorca | Gorkon | Georgiou | Hull Breach, Burning |
+
+<details>
+<summary>Ship Slotting Options</summary>
 1. For Medium Level Members (L30-L49), this leverages ships that are quick and cheap to repair.
    - Baby Jelly Explorer
    - The Realta Explorer
@@ -43,8 +55,9 @@ This is a great Base Defense when involved with a larger PvP Slugfest (e.g. Alli
      - Perform PvP duties for Warships
      - Perform Base Cracking Duties
      - Perform Base Draining Duties
-
-## Active Base Defense (Very Abridged Edition)
+</details>
+<details>
+<summary>Abridged Active Base Defense Details</summary>
 1. Baby Jelly Crewing (always required):
    - Yes, a Baby Jelly, NOT an ISS Jelly!
    - Shield Stripping Crew: Yuki(C), Marcus, and Zhou.
@@ -61,3 +74,4 @@ This is a great Base Defense when involved with a larger PvP Slugfest (e.g. Alli
      - Lorca(C), Gorkon, and Georgiou (ECS Fortunate).
      - Gorkon(C), Lorca, and Nero (ECS Fortunate).
      - Georgiou(C), Tyler, and 3rd as situation dictates (ECS Fortunate alt crewing).
+</details>

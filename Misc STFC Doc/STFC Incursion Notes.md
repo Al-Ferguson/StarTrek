@@ -53,10 +53,11 @@ ___
 1. Make sure your crewing gives you all your ship bonuses.
 1. Try to keep Attack, Defense, and Health balanced.
 1. Below Decks the following can help (best when lots of Below Deck seats available).:
-   - Hugh, Odo, and Kira (for Critical Damage bonuses)
+   - Odo and Kira (for Critical Damage bonuses)
    - Beckett and Badgey (for additional damage bonus)
    - Tendi (for Hull Health bonus)
-   - Boimler and Rutherford (Armor, Shield, and Dodge bonus)
+   - Boimler (Armor, Shield, and Dodge bonus)
+   - Rutherford (Shield Health bonus)
    - Dezoc (to reduce effectiveness of targets crew). Dezoc may be the least useful during Incursion.
 1. Crewing the Enterprise for PvP:
    - Gowron(C), HG Worf, Kirk (either).
@@ -78,8 +79,14 @@ ___
    - Enterprise (or 2nd Largest Ship): Rom(C), Kirk, & HG Worf.
    - Biggest non-Enterprise ship: Khan(C), Otto, & Joachim.
    - Below Decks crewing:
-1. Crewing Amalgam for Capacity and Grabbing Protected Loot use 2of11(C), 4of11, & B'Etor.
+1. Crewing Amalgam for Capacity and Grabbing Protected Loot use:
+   - 2of11(C), 4of11, & B'Etor.
+   - B'Etor(C), 4of11, & Stonn.
+   - 2of11(C), 4of11, & Stonn.
+   - Include La'an Below Decks.
 1. Crewing Survey Ships for Capacity
+   - 2of11(C), 4of11, & Stonn.
+   - Include La'an Below Decks.
 1. Check if target crewed with Anti-Rom Crew (Kras(C), Rukor, and Komal), don't use if so crewed.
 1. The best attacks are:
    1. __Best when not sure if 10m Shield will deploy.__
