@@ -1,6 +1,9 @@
 # WARNING
 
+This is a great Base Defense when involved with a larger PvP Slugfest (e.g. Alliance Base Raiding and Base Defense). The idea is to make your Base as non-One Hit Crackable as possible, and allow you to be effective in a PvP Slugfest.
+
 ## This defense can be dangerous if you are not actively engaged
+1. Read this in its entirety before attempting to implement this!
 1. This defense __REQUIREs__ you Actively Respond to all Attacks!
 1. This defense __REQUIREs__ you to have a _Baby_ Jelly, __NOT__ an ISS Jelly!
 1. This defense __REQUIREs__ you to have a Medium to Large Base with amplified Defense Platforms.
@@ -11,28 +14,50 @@
    - If you don't want to respond, then __SHIELD__!
    - If you don't respond, you will be cracked and draining will follow quickly!
 1. If you can not keep up with the Active Requirement of this defense; __SHIELD__!
-1. Your really need at least 6 Dry Docks for this to be effective!
+1. You really need at least 6 Dry Docks for this to be effective!
+1. You really need at least 5 Defense Platforms for this to be effective!
 
-## Active Base Defense (Very Abridged Edition)
-1. This is a great Base Defense when involved with a larger PvP Slugfest.
-1. The key is the order of attack on Docked Ships:
+## Why/How it works
+1. This works by Crewing to make Attackers more suspectable to Base Defense Platforms.
+1. One key is the order of attack on Docked Ships:
    - Attackers always leverage the Battle Triangle, starting with biggest ship in that class.
    - Then attack similar ships, starting with biggest ship.
    - Then attack ships that have a battle triangle advantage, starting with biggest ship.
    - Finally attack survey ships.
-1. Baby Jelly Crewing:
+1. Ships are crewed to:
+   - Strip their Shields
+   - Burn the ship (increasing Attack Damage)
+   - Breach Hulls (increasing Attack Damage)
+1. For Medium Level Members (L30-L49), this leverages ships that are quick and cheap to repair.
+   - Baby Jelly Explorer
+   - The Realta Explorer
+   - The Turas Explorer
+   - The ECS Fortunate Survey Ships
+1. For Large Level Members (L50+ with most of their research completed), they can use larger ships:
+   - Baby Jelly Explorer (still required)
+   - Very Large Explorer (if not available, use a Realta Explorer)
+   - Large 2nd Explorer (helps keep Baby Jelly alive)
+   - Very Large Survey Ships (if not available, use an ECS Fortunate)
+   - If you are big enough, and have the larger ships, they can do double duty:
+     - Perform duties for Active Base Defense
+     - Perform PvP duties for Warships
+     - Perform Base Cracking Duties
+     - Perform Base Draining Duties
+
+## Active Base Defense (Very Abridged Edition)
+1. Baby Jelly Crewing (always required):
    - Yes, a Baby Jelly, NOT an ISS Jelly!
-   - Shield Stripping Crew: Yuki (C), Marcus, and Zhou.
+   - Shield Stripping Crew: Yuki(C), Marcus, and Zhou.
    - Makes Attacker suspectable to Base Defenses.
-1. Docked War Ship Crewing:
-   - If you do not have VERY BIG ships that will last many rounds, use multiple Turas. Thees are quick, and cheap, to repair during attack.
-   - Picard, Bev, and Harrison (Realta good choice).
-   - Tilly (C), Burnham, and Saru.
-   - Kras (C), Rukor, and Komal (alternative crewing).
+1. Docked Warship Crewing:
+   - If you do not have VERY BIG ships that will last many rounds, use multiple Turas. These are quick, and cheap, to repair during attack.
+   - Picard, Bev, and Harrison (Realta Explorer good choice).
+   - Kras(C), Rukor, and Komal (Turas Explorer, anti-Rom Damage Reduction).
+   - Tilly(C), Burnham, and Saru (Turas Explorer good choice).
 1. Survey Ship Crewing:
    - If you are using this ship for Base Raiding as well, make it your biggest survey ship.
    - If you are not using this ship for Base Raiding, use a Fortunate (or two). These are quick, and cheap, to repair during attack.
    - Your best Hull Breach/Burning Crew:
-     - Lorca (C), Gorkon, and Georgiou (Fortunate).
-     - Gorkon (C), Lorca, and Nero (Fortunate).
-     - Georgiou (C), Tyler, and 3rd as situation dictates (Fortunate alternative crewing).
+     - Lorca(C), Gorkon, and Georgiou (ECS Fortunate).
+     - Gorkon(C), Lorca, and Nero (ECS Fortunate).
+     - Georgiou(C), Tyler, and 3rd as situation dictates (ECS Fortunate alt crewing).

@@ -59,28 +59,28 @@ ___
    - Boimler and Rutherford (Armor, Shield, and Dodge bonus)
    - Dezoc (to reduce effectiveness of targets crew). Dezoc may be the least useful during Incursion.
 1. Crewing the Enterprise for PvP:
-   - Gowron (C), HG Worf, Kirk (either).
+   - Gowron(C), HG Worf, Kirk (either).
    - Don't bother with Spock on bridge, Enterprise already does Shield regeneration.
 1. Crewing other ships for PvP:
    - On Interceptors: 
-     - Martok (C), HG Worf, and 3rd as situation dictates.
-     - Gul Dukat (C), Garak, and Damar.
+     - Martok(C), HG Worf, and 3rd as situation dictates.
+     - Gul Dukat(C), Garak, and Damar.
    - On Explorers:
-     - Weyoun (C), Ikat'ika, and Pon.
+     - Weyoun(C), Ikat'ika, and Pon.
    - On Battleships:
-     - Lorca (C), Tilly, and 3rd as situation dictates.
+     - Lorca(C), Tilly, and 3rd as situation dictates.
      - SNW Strike Team Una or La'an as Capt, with Ortegas as 3rd Seater.
 1. Having multiple types of PvP ships will allow you to leverage the Battle Triangle
 1. You may not be able to crew all ships they way you want (may require same crew member on multiple ships), be ready to swap crew members or add an alternate crew member that helps the rest of the crew.
 
 ## Base Cracking/Draining
 1. Crewing Base Cracking ships.
-   - Enterprise (or 2nd Largest Ship): Rom (C), Kirk, & HG Worf.
+   - Enterprise (or 2nd Largest Ship): Rom(C), Kirk, & HG Worf.
    - Biggest non-Enterprise ship: Khan(C), Otto, & Joachim.
    - Below Decks crewing:
 1. Crewing Amalgam for Capacity and Grabbing Protected Loot use 2of11(C), 4of11, & B'Etor.
 1. Crewing Survey Ships for Capacity
-1. Check if target crewed with Anti-Rom Crew (don't use Rom if so crewed)
+1. Check if target crewed with Anti-Rom Crew (Kras(C), Rukor, and Komal), don't use if so crewed.
 1. The best attacks are:
    1. __Best when not sure if 10m Shield will deploy.__
       - Start with all ships in Base, except largest cracking ship.
@@ -110,15 +110,15 @@ ___
 1. Missions include:
    - Base Cracking.
      1. Biggest Warship (Battleship would work best, then Explorer) crewed with; Khan(C), Otto, & Joachim.
-     1. Second Biggest (preferably different type the 1st) with; Rom (C), Kirk, & HG Worf.
+     1. 2nd Biggest (different type the 1st) crewed with; Rom(C), Kirk, & HG Worf. Don't use against Kras(C), Rukor, and Komal.
    - Base Raiding.
      1. Amalgam (or 2nd larges Survey Ship) with 2of11(C), 4of11, & B'Etor. SNW La'an Below Decks
-     1. Largest capacity Survey Ship, Georgiou (C), Tyler, and ???
+     1. Largest capacity Survey Ship, Georgiou(C), Tyler, and ???
    - PvP.
-     1. Interceptor crewed for PvP with Gul Dukat (C), Garak, and Damar.
+     1. Interceptor crewed for PvP with Gul Dukat(C), Garak, and Damar.
    - Active Base Defense.
-     1. Baby Jelly with Shield Stripping Crew, Yuki (C), Marcus, and Zhou.
+     1. Baby Jelly with Shield Stripping Crew, Yuki(C), Marcus, and Zhou.
      1. Largest Survey Ship has Burning Crew.
      1. Mix of Explorers, Battleships, and Interceptors. 
-     1. Interceptor crewed for PvP with Gul Dukat (C), Garak, and Damar.
+     1. Interceptor crewed for PvP with Gul Dukat(C), Garak, and Damar.
 1. May need to do some minor recrewing when transitioning between above missions.
