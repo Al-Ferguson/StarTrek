@@ -12,30 +12,6 @@ Thanks to Laytu, USSE, and many others for the following suggestions.
 
 ___
 
-## Alliance Advanced Planning
-1. Ensure Enhancers benefiting Incursion have been enabled.
-   - Hull, and Advanced Hull, Enhancer.
-   - PvP Enhancer.
-   - Siege Enhancer.
-1. 24-36 hours before Incursion:
-   - Move all members out of Territory to <=L19 Space and __SHIELD__!
-   - Do __NOT__ Hive.
-1. 18-24 hours before Incursion, begin draining unshielded bases in Territory.
-1. Before Incursion, Flag Officers should remind members:
-   - [ ] If not Active, __SHIELD__!
-   - [ ] Do __NOT__ hit players from our Server, unless Defensive Draining.
-   - [ ] Incursion is a Team Event and Our Team is all members of our Server.
-   - [ ] When draining larger targets, remember:
-      - ALL Members on our Server are on the same Team.
-      - Share the spoils.
-      - There are *bugs* making it more efficient to drain Bases with large numbers of participants.
-   - [ ] GC is monitored by both Servers!
-      - Don't put *Classified* info on GC.
-      - Use AC of PC to keep it private.
-   - [ ] If not Active, __SHIELD__!
-
-___
-
 ## If not participating, or not sure your engaging, in PvP & Base Raiding
 1. Move all ships back to Base and Shield!
 1. Move to a <=L19 Space, do NOT create a Hive with other TTS Members or Alias (This only attracts Base Cracking).
@@ -135,3 +111,32 @@ ___
      1. Mix of Battleships, Explorers, and Interceptors.
      1. Interceptor crewed for PvP with Gul Dukat(C), Garak, and Damar.
 1. May need to do some minor recrewing when transitioning between above missions.
+
+___
+
+## Alliance Advanced Planning
+1. 1 Week before Incursion begin reminding members to:
+   - Save up on Tokens (vs actual Par, Tri, & Dy).
+   - Save up and/or buy, Base Move Tokens.
+   - Save up and/or buy, Peace Shield Tokens.
+1. Ensure Enhancers benefiting Incursion have been enabled.
+   - Hull, and Advanced Hull, Enhancer.
+   - PvP Enhancer.
+   - Siege Enhancer.
+1. 24-36 hours before Incursion:
+   - Move all members out of Territory to <=L19 Space and __SHIELD__!
+   - Do __NOT__ Hive.
+1. 18-24 hours before Incursion, begin draining unshielded bases in Territory.
+1. Before Incursion, Flag Officers should remind members:
+   - [ ] If not Active, __SHIELD__!
+   - [ ] Do __NOT__ hit players from our Server, unless Defensive Draining.
+   - [ ] Incursion is a Team Event and Our Team is all members of our Server.
+   - [ ] When draining larger targets, remember:
+      - ALL Members on our Server are on the same Team.
+      - Share the spoils.
+      - There are *bugs* making it more efficient to drain Bases with large numbers of participants.
+   - [ ] GC is monitored by both Servers!
+      - Don't put *Classified* info on GC.
+      - Use AC of PC to keep it private.
+   - [ ] If not Active, __SHIELD__!
+
