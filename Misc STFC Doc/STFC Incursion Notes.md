@@ -119,6 +119,7 @@ ___
    - Save up on Tokens (vs actual Par, Tri, & Dy).
    - Save up and/or buy, Base Move Tokens.
    - Save up and/or buy, Peace Shield Tokens.
+   - Begin stock piling Ore, Gas, and Crystal. No Mining during Incursions, so refine off your stockpiles.
 1. Ensure Enhancers benefiting Incursion have been enabled.
    - Hull, and Advanced Hull, Enhancer.
    - PvP Enhancer.
@@ -126,17 +127,22 @@ ___
 1. 24-36 hours before Incursion:
    - Move all members out of Territory to <=L19 Space and __SHIELD__!
    - Do __NOT__ Hive.
-1. 18-24 hours before Incursion, begin draining unshielded bases in Territory.
+1. 18-24 hours before Incursion: 
+   - Begin draining unshielded bases in Territory.
+   - Remind members, Seise Fire start 24h before Incursion. Do __NOT__ 
+     - Hit other members of our Server until after Incursion concludes.
+     - No Base Raiding members of our Server until after Incursion concludes.
+     - No hitting OPC members of our Server until after Incursion concludes.
 1. Before Incursion, Flag Officers should remind members:
    - [ ] If not Active, __SHIELD__!
    - [ ] Do __NOT__ hit players from our Server, unless Defensive Draining.
    - [ ] Incursion is a Team Event and Our Team is all members of our Server.
    - [ ] When draining larger targets, remember:
-      - ALL Members on our Server are on the same Team.
-      - Share the spoils.
-      - There are *bugs* making it more efficient to drain Bases with large numbers of participants.
+     - ALL Members on our Server are on the same Team.
+     - Share the spoils.
+     - There are *bugs* making it more efficient to drain Bases with large numbers of participants.
    - [ ] GC is monitored by both Servers!
-      - Don't put *Classified* info on GC.
-      - Use AC of PC to keep it private.
-   - [ ] If not Active, __SHIELD__!
+     - Don't put *Classified* info on GC.
+     - Use AC of PC to keep it private.
+   - [ ] If AFK, __SHIELD__!
 
