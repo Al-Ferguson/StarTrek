@@ -18,16 +18,19 @@ This is a great Base Defense when involved with a larger PvP Slugfest (e.g. Alli
 1. You really need at least 5 Defense Platforms for this to be effective!
 
 ## Why/How it works
-1. This works by Crewing to make Attackers more suspectable to Base Defense Platforms.
-1. One key is the order of attack on Docked Ships:
+1. This defense works by Crewing to make Attackers more suspectable to Base Defense Platforms.
+1. This defense costs the attacker the most, and the defender the least.
+1. This defense prevents most one-hit cracks (and reduces base damage) and bring ships back online quickly.
+1. The first key is the order of attack on Docked Ships:
    - Attackers always leverage the Battle Triangle, starting with biggest ship in that class.
    - Then attack similar ships, starting with biggest ship.
    - Then attack ships that have a battle triangle advantage, starting with biggest ship.
    - Finally attack survey ships.
-1. Ships are crewed to:
-   - Strip and Bypass attackers Shields
-   - Burn the Attackers Ship (increasing Attack Damage)
-   - Breach the Attackers Hull (increasing Attack Damage)
+1. The second key is the crewing of very specific Ships to:
+   - Strip and Bypass attackers Shields.
+   - Burn the Attackers Ship (increasing Attack Damage).
+   - Breach the Attackers Hull (increasing Attack Damage).
+   - Amplify the effectiveness of the Defense Platforms.
 
 ## Ships and Crewing Table
 | Slot | Ship | Captain | 2nd Seat | 3rd Seat | Purpose |
