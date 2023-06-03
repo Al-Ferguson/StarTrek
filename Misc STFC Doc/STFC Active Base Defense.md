@@ -33,6 +33,8 @@ This is a great Base Defense when involved with a larger PvP Slugfest (e.g. Alli
    - Amplify the effectiveness of the Defense Platforms.
 
 ## Abridged Ship and Crewing Table
+![Abridged Ship & Crewing](./imgs/Abriged%20Ship%20%26%20Crewing%20Table.png)
+
 | Slot | Ship | Captain | 2nd Seat | 3rd Seat | Purpose |
 | ---: | :--- | :---: | :---: | :---: | :--- |
 | 1 | Realta | Picard | Bev| Harrison | Shield bypass 1st Round |
