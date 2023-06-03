@@ -45,7 +45,7 @@ __But__ this __requires__ you to Actively monitor, and respond, to any attacks t
 | 4 | Baby Jelly | Yuki | Marcus| Zhou | Shield Stripping |
 | 5 | Fortunate | Lorca | Gorkon | Georgiou | Hull Breach & Burning |
 
-<details><summary>Abridged Ship and Crewing Details</summary>
+## Abridged Ship and Crewing Details
 
 1. Docked Warship Crewing:
    - If you don't have VERY BIG ships to last many rounds, use multiple Turas. These are quick & cheap to repair during attack.
@@ -66,7 +66,7 @@ __But__ this __requires__ you to Actively monitor, and respond, to any attacks t
      - Lorca(C), Gorkon, and Georgiou (ECS Fortunate).
      - Gorkon(C), Lorca, and Nero (ECS Fortunate).
      - Georgiou(C), Tyler, and 3rd as situation dictates (ECS Fortunate alt crewing).
-</details>
+
 <details><summary>Detailed Reference Material</summary>
 
 </details>
@@ -118,3 +118,13 @@ __But__ this __requires__ you to Actively monitor, and respond, to any attacks t
 <details><summary>Bold Defense vs Regular Defense outcomes</summary>
 
 </details>
+
+## How to Spot a Practitioner of the Bold Defense
+- Important when Base Cracking, as you do not want to be the Victim!
+- The Signs are:
+  1. A Baby Jelly with Yuki as Captain.
+  1. Picard Captaining a small warship.
+  1. Multiple Survey Ships with Burning Crew Captains.
+- Skip this base, it will be costly to crack at best!
+- If they crewed properly, they can potentially defeat an Attacker up to 20 Levels higher!
+- So Rule #1 when Base Cracking: "Check to make sure the Target is not practicing a Bold Defense!"

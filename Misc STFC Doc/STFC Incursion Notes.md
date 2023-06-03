@@ -10,16 +10,12 @@ Thanks to Laytu, CaptSuperHater, USSE, and many others for the following suggest
 1. Do __NOT__ Hive!
 1. If not Active, __SHIELD__!
 
-___
-
 ## If not participating, or not sure your engaging, in PvP & Base Raiding
 1. Move all ships back to Base and Shield!
 1. Move to a <=L19 Space, do NOT create a Hive with other TTS Members or Alias (This only attracts Base Cracking).
 1. Pop a 4+h shield before start of day (noon EDT).
 1. Pop a 24h+ shield after start of day (if not sure, continue popping 4h+ shields until you are sure).
 1. Scout for the rest of the Alliance.
-
-___
 
 ## PvP
 1. Remember the Battle Triangle
@@ -68,7 +64,9 @@ ___
    1. 2of11(C), 4of11, & Stonn.
    1. Include La'an Below Decks.
 1. For the best attacks:
-   1. Check if target crewed with Anti-Rom Crew (Kras(C), Rukor, and Komal), don't use Rom if so crewed.
+   1. Check if target crewed with:
+      1. Make sure the Target is not practicing a Bold Defense!
+      1. If crewed with Anti-Rom Crew (Kras(C), Rukor, and Komal), don't use Rom!
    1. __When not sure if 10m Shield will deploy.__
       - Start with all ships in Base, except largest cracking ship.
       - Hit target while Cloaked.
@@ -83,14 +81,10 @@ ___
 1. When Target becomes Active, or help arrives:
    - If on your own, you should probably shield.
    - If you have enough support, you may want to turn it into a PvP Slugfest (An Active Base Defense good here).
-   
-___
 
 ## Active Base Defense
 
 As Incursion can quickly become a close in Base & Ship PvP Slugfest you need to man your Base to Survive. The best defense we have found is __NOT__ for the faint of heart, but can save your Base (and its resources) from those far bigger then you. If you are up for it, see an Abridged version, and links to the full research documentation, in the #bold-defense thread.
-
-___
 
 ## A Crewing Possibility
 1. Crewing and  Ships for multiple missions.
