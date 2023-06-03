@@ -1,6 +1,8 @@
 # WARNING
 
-This is a great Base Defense when involved with a larger PvP Slugfest (e.g. Alliance Base Raiding and Base Defense). The idea is to make your Base as non-One Hit Crackable as possible, and allow you to be effective in a PvP Slugfest.
+This is a great __Active__ Base Defense when involved in a larger PvP Slugfest (e.g. Alliance Base Raiding, Alliance Base Defense, and Incursions). The idea is to make your Base as non-One Hit Crackable as possible, cost the Attacker much more then it cost you, and allow you to be effective in the greater PvP Slugfest at the same time.
+
+__But__ this __requires__ you to Actively monitor, and respond, to any attacks that happen. If you don't, you will quickly loose the advantage this defense provides! A key factor in this defense is how quickly, and cheaply, you can restore it after an attack.
 
 ## This defense can be dangerous if you are not actively engaged
 1. Read this in its entirety before attempting to implement this!
@@ -43,21 +45,24 @@ This is a great Base Defense when involved with a larger PvP Slugfest (e.g. Alli
 | 4 | Baby Jelly | Yuki | Marcus| Zhou | Shield Stripping |
 | 5 | Fortunate | Lorca | Gorkon | Georgiou | Hull Breach & Burning |
 
-<details><summary>Abridged Active Base Defense Details</summary>
+<details><summary>Abridged Ship and Crewing Details</summary>
 
-1. Baby Jelly Crewing (always required):
-   - Yes, a Baby Jelly, NOT an ISS Jelly!
-   - Shield Stripping Crew: Yuki(C), Marcus, and Zhou.
-   - Makes Attacker suspectable to Base Defenses.
 1. Docked Warship Crewing:
    - If you don't have VERY BIG ships to last many rounds, use multiple Turas. These are quick & cheap to repair during attack.
-   - Picard, Bev, and Harrison (Realta Explorer good choice).
+   - Picard(C), Bev, and Harrison (Realta Explorer good choice).
+     - Strips shields from Attacker the first round, making them suspectable to Base Defense Platforms.
+     - __Probably__ the first ship to restore, if destroyed.
    - Kras(C), Rukor, and Komal (Turas Explorer, anti-Rom Damage Reduction).
    - Tilly(C), Burnham, and Saru (Turas Explorer good choice).
+1. Baby Jelly Crewing (always required):
+   - Yes, a Baby Jelly, __NOT__ an ISS Jelly!
+   - Shield Stripping Crew: Yuki(C), Marcus, and Zhou.
+   - Strips shields from Attacker starting after 2nd round, making them suspectable to Base Defense Platforms.
+   - __Probably__ the second ship to restore, if destroyed.
 1. Survey Ship Crewing:
    - If you are using this ship for Base Raiding as well, make it your biggest survey ship.
    - If you are not using this for Base Raiding, use a Fortunate (or two). These are quick & cheap to repair during attack.
-   - Your best Hull Breach/Burning Crew:
+   - Your best Hull Breach/Burning Crews are:
      - Lorca(C), Gorkon, and Georgiou (ECS Fortunate).
      - Gorkon(C), Lorca, and Nero (ECS Fortunate).
      - Georgiou(C), Tyler, and 3rd as situation dictates (ECS Fortunate alt crewing).
@@ -67,21 +72,48 @@ This is a great Base Defense when involved with a larger PvP Slugfest (e.g. Alli
 </details>
 <details><summary>Advanced Ship Slotting Options</summary>
 
-1. For Medium Level Members (L30-L49), this leverages ships that are quick and cheap to repair.
+1. For Medium Level Members (L30-L48), leverage ships that are quick, and cheap, to repair.
    - Baby Jelly Explorer
    - The Realta Explorer
    - The Turas Explorer
    - The ECS Fortunate Survey Ships
-1. For Large Level Members (L50+ with most of their research completed), they can use larger ships:
-   - Baby Jelly Explorer (still required)
-   - Very Large Explorer (if not available, use a Realta Explorer)
-   - Large 2nd Explorer (helps keep Baby Jelly alive)
+1. For Large Level Members (L49+ with most of their research completed), they can use larger ships:
+   - Baby Jelly Explorer (always required).
+   - Very Large Explorer (if not available, use a Realta Explorer).
+   - Large 2nd Explorer (if available).
+     - Helps keep Baby Jelly alive
+     - If available, this is where I would crew with Picard(C), Bev, and Harrison.
    - Very Large Survey Ships (if not available, use an ECS Fortunate)
+     - Large Capacity Survey ships make for quick Base Raiding.
+     - Large Capacity Survey ships make survive better against a simple Base Repair Defense.
+     - More Powerful Survey ships with Burning, and Hull Breaching, crews destroy Attackers more quickly.
    - If you are big enough, and have the larger ships, they can do double duty:
-     - Perform duties for Active Base Defense
-     - Perform PvP duties for Warships
-     - Perform Base Cracking Duties
-     - Perform Base Draining Duties
+     - Perform duties for Active Base Defense.
+     - Perform PvP duties for Warships, when away from Base.
+     - Perform Base Cracking Duties, when away from Base.
+     - Perform Base Draining Duties for Survey ships, when away from Base.
+1. As you get bigger, modify the original ships by:
+   - Using your Amalgam, or larger Survey ship, to replace a Survey ship from the original list.
+     - Use the Georgiou(C), Tyler, and a Storage Optimization Crew member for this ship so:
+       - It remains a very good Burning Crew ship when in Base.
+       - Has a large capacity when Base Stripping.
+     - Use Below Decks crewing to enhance Storage Optimization and/or Burning.
+   - Add a bigger, more survivable Explorer to crew with Picard(C), Bev, and Harrison.
+     - While the main purpose of this ship is completely in the first round of defense, the longer it survives, the longer the Baby Jelly is around. Prolonging its Shield Stripping capabilities.
+   - If you have more than 5 Dry Docks (and therefore ships), consider crewing:
+     - A large Base Cracking ship.
+       - Crew appropriately (see #incursion-event thread Base Cracking/Draining section).
+       - Battleships are usually best suited for Base Cracking, as they have best Hull Health.
+       - Explorers are close second for Base Cracking.
+     - A large PvP ship (or two).
+       - Crew a Battleship with SNW Strike Team Una or La'an as Capt, & Ortegas as 3rd Seater.
+       - Crew an Explorer with Weyoun(C), Ikat'ika, & Pon.
+       - Crew an Interceptor with Gul Dukat(C), Garak, & Damar.
+       - Particularly effective against an Attacker w/o Shields!
+     - A second (or even third) large Survey Ship:
+       - Still Crew for Burning and Hull Breach as this also helps survivability when Base Stripping.
+       - Use Below Decks Crewing to balance capacity with primary Base Stripper.
+       - Allows for use of multiple stripping ships (every 5s) when it makes sense.
 </details>
 <details><summary>Bold Defense vs Regular Defense outcomes</summary>
 

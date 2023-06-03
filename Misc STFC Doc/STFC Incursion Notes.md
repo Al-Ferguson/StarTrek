@@ -49,7 +49,7 @@ ___
    - On Explorers:
      1. Weyoun(C), Ikat'ika, & Pon.
    - On Battleships:
-     1. SNW Strike Team Una or La'an as Capt, with Ortegas as 3rd Seater.
+     1. SNW Strike Team Una or La'an as Capt, & Ortegas as 3rd Seater.
      1. Lorca(C), Tilly, & 3rd as situation dictates.
 1. Having multiple types of PvP ships will allow you to leverage the Battle Triangle
 1. You may not be able to crew all ships they way you want (may require same crew member on multiple ships), be ready to swap crew members or add an alternate crew member that helps the rest of the crew.
@@ -145,4 +145,3 @@ ___
      - Don't put *Classified* info on GC.
      - Use AC of PC to keep it private.
    - [ ] If AFK, __SHIELD__!
-
