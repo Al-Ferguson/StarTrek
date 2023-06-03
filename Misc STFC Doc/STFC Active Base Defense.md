@@ -1,8 +1,8 @@
 # WARNING
 
-This is a great __Active__ Base Defense when involved in a larger PvP Slugfest (e.g. Alliance Base Raiding, Alliance Base Defense, and Incursions). The idea is to make your Base as non-One Hit Crackable as possible, cost the Attacker much more then it cost you, and allow you to be effective in the greater PvP Slugfest at the same time.
+This is a great __Active__ Base Defense when involved in a larger PvP Slugfest (e.g. Alliance Base Raiding, Alliance Base Defense, and Incursions). The idea is to make your Base as non-One Hit Crackable as possible, cost the Attacker much more then it cost you, and allow you to be effective in the greater PvP Slugfest; ALL at the same time.
 
-__But__ this __requires__ you to Actively monitor, and respond, to any attacks that happen. If you don't, you will quickly loose the advantage this defense provides! A key factor in this defense is how quickly, and cheaply, you can restore it after an attack.
+__But__ this __requires__ you to Actively monitor, and respond, to any attacks that happen. If you don't, you will quickly loose the advantage this defense provides! A key factor in this defense is how quickly, and cheaply, you can restore it after an attack. If you don't, you will loose your Base, Ships, and contents quickly!
 
 ## This defense can be dangerous if you are not actively engaged
 1. Read this in its entirety before attempting to implement this!
@@ -71,14 +71,18 @@ __But__ this __requires__ you to Actively monitor, and respond, to any attacks t
 
 Coming Soon
 
-## Advanced Ship Slotting Options
+## Bold Defense vs Regular Defense outcomes
 
-1. For Medium Level Members (L30-L48), leverage ships that are quick, and cheap, to repair.
+Coming Soon
+
+## Advanced Ship Slotting Options (publish after Bold Defense Course?)
+
+1. For Mid-Level Members (L30-L48), leverage ships that are quick, and cheap, to repair.
    - Baby Jelly Explorer
    - The Realta Explorer
    - The Turas Explorer
    - The ECS Fortunate Survey Ships
-1. For Large Level Members (L49+ with most of their research completed), they can use larger ships:
+1. For Higher Level Members (L49+ with most of their research completed), they can use larger ships:
    - Baby Jelly Explorer (always required).
    - Very Large Explorer (if not available, use a Realta Explorer).
    - Large 2nd Explorer (if available).
@@ -125,10 +129,6 @@ Coming Soon
      - Replace 1, or 2, Explorers with bigger Explorers. __BUT NEVER__ replace the Baby Jelly!
      - Replace standard Survey Ships with Bigger ones.
      - Replace a PvP Ship with a good Base Cracking ship.
-
-## Bold Defense vs Regular Defense outcomes
-
-Coming Soon
 
 ## How to Spot a Practitioner of the Bold Defense
 - Important when Base Cracking, as you do not want to be the Victim!
