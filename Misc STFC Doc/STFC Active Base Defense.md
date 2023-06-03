@@ -32,7 +32,7 @@ This is a great Base Defense when involved with a larger PvP Slugfest (e.g. Alli
    - Breach the Attackers Hull (increasing Attack Damage).
    - Amplify the effectiveness of the Defense Platforms.
 
-## Ships and Crewing Table
+## Abridged Ship and Crewing Table
 | Slot | Ship | Captain | 2nd Seat | 3rd Seat | Purpose |
 | ---: | :--- | :---: | :---: | :---: | :--- |
 | 1 | Realta | Picard | Bev| Harrison | Shield bypass 1st Round |
@@ -41,24 +41,6 @@ This is a great Base Defense when involved with a larger PvP Slugfest (e.g. Alli
 | 4 | Baby Jelly | Yuki | Marcus| Zhou | Shield Stripping |
 | 5 | Fortunate | Lorca | Gorkon | Georgiou | Hull Breach & Burning |
 
-<details><summary>Ship Slotting Options</summary>
-
-1. For Medium Level Members (L30-L49), this leverages ships that are quick and cheap to repair.
-   - Baby Jelly Explorer
-   - The Realta Explorer
-   - The Turas Explorer
-   - The ECS Fortunate Survey Ships
-1. For Large Level Members (L50+ with most of their research completed), they can use larger ships:
-   - Baby Jelly Explorer (still required)
-   - Very Large Explorer (if not available, use a Realta Explorer)
-   - Large 2nd Explorer (helps keep Baby Jelly alive)
-   - Very Large Survey Ships (if not available, use an ECS Fortunate)
-   - If you are big enough, and have the larger ships, they can do double duty:
-     - Perform duties for Active Base Defense
-     - Perform PvP duties for Warships
-     - Perform Base Cracking Duties
-     - Perform Base Draining Duties
-</details>
 <details><summary>Abridged Active Base Defense Details</summary>
 
 1. Baby Jelly Crewing (always required):
@@ -77,4 +59,28 @@ This is a great Base Defense when involved with a larger PvP Slugfest (e.g. Alli
      - Lorca(C), Gorkon, and Georgiou (ECS Fortunate).
      - Gorkon(C), Lorca, and Nero (ECS Fortunate).
      - Georgiou(C), Tyler, and 3rd as situation dictates (ECS Fortunate alt crewing).
+</details>
+<details><summary>Detailed Reference Material</summary>
+
+</details>
+<details><summary>Advanced Ship Slotting Options</summary>
+
+1. For Medium Level Members (L30-L49), this leverages ships that are quick and cheap to repair.
+   - Baby Jelly Explorer
+   - The Realta Explorer
+   - The Turas Explorer
+   - The ECS Fortunate Survey Ships
+1. For Large Level Members (L50+ with most of their research completed), they can use larger ships:
+   - Baby Jelly Explorer (still required)
+   - Very Large Explorer (if not available, use a Realta Explorer)
+   - Large 2nd Explorer (helps keep Baby Jelly alive)
+   - Very Large Survey Ships (if not available, use an ECS Fortunate)
+   - If you are big enough, and have the larger ships, they can do double duty:
+     - Perform duties for Active Base Defense
+     - Perform PvP duties for Warships
+     - Perform Base Cracking Duties
+     - Perform Base Draining Duties
+</details>
+<details><summary>Bold Defense vs Regular Defense outcomes</summary>
+
 </details>
