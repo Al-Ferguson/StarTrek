@@ -69,6 +69,8 @@ __But__ this __requires__ you to Actively monitor, and respond, to any attacks t
 
 <details><summary>Detailed Reference Material</summary>
 
+#### Coming Soon
+
 </details>
 <details><summary>Advanced Ship Slotting Options</summary>
 
@@ -114,8 +116,20 @@ __But__ this __requires__ you to Actively monitor, and respond, to any attacks t
        - Still Crew for Burning and Hull Breach as this also helps survivability when Base Stripping.
        - Use Below Decks Crewing to balance capacity with primary Base Stripper.
        - Allows for use of multiple stripping ships (every 5s) when it makes sense.
+1. Where to concentrate upgrade efforts:
+   - Improving Crew Level, and Power, is quickest payback.
+   - Improving Health, and Fire Power, of Station Defenses is next.
+   - Until you have >6 Dry Docks, don't worry about ships beyond the standard ships.
+   - With >=7 Dry Docks, start adding good PvP Ships & Crews.
+   - Until your Level, Power, and research are there; stick with the standard configuration.
+   - When you can survive multiple rounds of attacks from bigger Attackers:
+     - Replace 1, or 2, Explorers with bigger Explorers. __BUT NEVER__ replace the Baby Jelly!
+     - Replace standard Survey Ships with Bigger ones.
+     - Replace a PvP Ship with a good Base Cracking ship.
 </details>
 <details><summary>Bold Defense vs Regular Defense outcomes</summary>
+
+#### Coming Soon
 
 </details>
 
