@@ -67,12 +67,11 @@ __But__ this __requires__ you to Actively monitor, and respond, to any attacks t
      - Gorkon(C), Lorca, and Nero (ECS Fortunate).
      - Georgiou(C), Tyler, and 3rd as situation dictates (ECS Fortunate alt crewing).
 
-<details><summary>Detailed Reference Material</summary>
+## Detailed Reference Material
 
-#### Coming Soon
+Coming Soon
 
-</details>
-<details><summary>Advanced Ship Slotting Options</summary>
+## Advanced Ship Slotting Options
 
 1. For Medium Level Members (L30-L48), leverage ships that are quick, and cheap, to repair.
    - Baby Jelly Explorer
@@ -126,12 +125,10 @@ __But__ this __requires__ you to Actively monitor, and respond, to any attacks t
      - Replace 1, or 2, Explorers with bigger Explorers. __BUT NEVER__ replace the Baby Jelly!
      - Replace standard Survey Ships with Bigger ones.
      - Replace a PvP Ship with a good Base Cracking ship.
-</details>
-<details><summary>Bold Defense vs Regular Defense outcomes</summary>
 
-#### Coming Soon
+## Bold Defense vs Regular Defense outcomes
 
-</details>
+Coming Soon
 
 ## How to Spot a Practitioner of the Bold Defense
 - Important when Base Cracking, as you do not want to be the Victim!
