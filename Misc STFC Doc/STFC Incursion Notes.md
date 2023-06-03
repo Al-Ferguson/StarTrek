@@ -1,6 +1,6 @@
 # Incursion Notes
 
-Thanks to Laytu, USSE, and many others for the following suggestions.
+Thanks to Laytu, CaptSuperHater, USSE, and many others for the following suggestions.
 
 ## Always follow these rules
 1. If not Active, __SHIELD__!
@@ -88,7 +88,7 @@ ___
 
 ## Active Base Defense
 
-This style of defense is well suited for Incursions and close in Base PvP Slugfest (e.g. Alliance Raids & Defenses). Posted elsewhere.
+As Incursion can quickly become a close in Base & Ship PvP Slugfest you need to man your Base to Survive. The best defense we have found is __NOT__ for the faint of heart, but can save your Base (and its resources) from those far bigger then you. If you are up for it, see an Abridged version, and links to the full research documentation, in the #bold-defense thread.
 
 ___
 
