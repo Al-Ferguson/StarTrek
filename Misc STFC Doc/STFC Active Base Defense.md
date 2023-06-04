@@ -81,6 +81,7 @@ Coming Soon
 
 ## Advanced Ship Slotting Options (publish after Bold Defense Course?)
 
+1. __DO NOT__ Continue until you understand the above sections.
 1. For Mid-Level Members (L30-L48), leverage ships that are quick, and cheap, to repair.
    - Baby Jelly Explorer
    - The Realta Explorer
