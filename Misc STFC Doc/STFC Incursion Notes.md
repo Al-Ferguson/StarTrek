@@ -100,7 +100,7 @@ As Incursion can quickly become a close in Base & Ship PvP Slugfest you need to 
    - PvP.
      1. Interceptor crewed for PvP with Gul Dukat(C), Garak, and Damar.
      1. Explorer crewed for PvP with Weyoun(C), Ikat'ika, and Pon.
-   - Active Base Defense.
+   - Active Base Defense (see #bold-defense ).
      1. Baby Jelly (required) with Shield Stripping Crew, Yuki(C), Marcus, and Zhou.
      1. Largest Survey Ship has Burning Crew (required).
      1. Mix of Battleships, Explorers, and Interceptors.
