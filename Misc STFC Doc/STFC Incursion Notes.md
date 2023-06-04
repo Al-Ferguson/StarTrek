@@ -78,9 +78,10 @@ Thanks to Laytu, CaptSuperHater, USSE, and many others for the following suggest
       - Hit target with biggest ship.
       - Begin draining operation with biggest survey ship (Amalgam).
 1. If target is big enough, put the coordinates on AC to bring in help for defending & draining.
-1. When Target becomes Active, or help arrives:
+1. When Target becomes Active:
    - If on your own, you should probably shield.
-   - If you have enough support, you may want to turn it into a PvP Slugfest (An Active Base Defense good here).
+   - If help arrives, you may want to turn it into a PvP Slugfest (An Active Base Defense good here).
+   - If this has become a PvP Slugfest, get it out on AC to bring in more support.
 
 ## Active Base Defense
 

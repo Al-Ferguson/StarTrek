@@ -2,7 +2,7 @@
 
 This is a great __Active__ Base Defense when involved in a larger PvP Slugfest (e.g. Alliance Base Raiding, Alliance Base Defense, and Incursions). The idea is to make your Base as non-One Hit Crackable as possible, cost the Attacker much more then it cost you, and allow you to be effective in the greater PvP Slugfest; ALL at the same time.
 
-__But__ this __requires__ you to Actively monitor, and respond, to any attacks that happen. If you don't, you will quickly loose the advantage this defense provides! A key factor in this defense is how quickly, and cheaply, you can restore it after an attack. If you don't, you will loose your Base, Ships, and contents quickly!
+__But__ this __requires__ you to Actively monitor, and respond, to any attacks that happen. If you don't, you will quickly loose the advantage this defense provides! A key factor in this defense is how quickly, and cheaply (0-1 Latinum instant Fix), you can restore it after an attack. If you don't, you will loose your Base, Ships, and contents quickly!
 
 ## This defense can be dangerous if you are not actively engaged
 1. Read this in its entirety before attempting to implement this!
@@ -13,7 +13,7 @@ __But__ this __requires__ you to Actively monitor, and respond, to any attacks t
 1. This defense works best during an Incursion, particularly during close in Base PvP Slugfests.
 1. Do __NOT__ ignore hits to your base!
    - This defense __REQUIREs__ you Actively Respond to all Attacks!
-   - If you don't want to respond, then __SHIELD__!
+   - If you don't want to respond, then __SHIELD__!)
    - If you don't respond, you will be cracked and draining will follow quickly!
 1. If you can not keep up with the Active Requirement of this defense; __SHIELD__!
 1. You really need at least 6 Dry Docks for this to be effective!
@@ -23,13 +23,13 @@ __But__ this __requires__ you to Actively monitor, and respond, to any attacks t
 1. This defense works by Crewing to make Attackers more suspectable to Base Defense Platforms.
 1. This defense costs the attacker the most, and the defender the least.
 1. This defense prevents most one-hit cracks (and reduces base damage) and bring ships back online quickly.
-1. The first key is the order of attack on Docked Ships:
-   - Attackers always leverage the Battle Triangle, starting with biggest ship in that class.
-   - Then attack similar ships, starting with biggest ship.
-   - Then attack ships that have a battle triangle advantage, starting with biggest ship.
-   - Finally attack survey ships.
+1. The first key is the order of attack on Docked Ships, i.e. the Battle Triangle:
+   - Attackers always leverage the Battle Triangle, starting with smallest ship the opposite class.
+   - Then attack similar ships, starting with smallest ship.
+   - Then attack ships that have a the advantage, starting with smallest ship.
+   - Finally they attack survey ships, starting with smallest ship.
 1. The second key is the crewing of very specific Ships to:
-   - Strip and Bypass attackers Shields.
+   - Strip, and Bypass, attackers Shields.
    - Burn the Attackers Ship (increasing Attack Damage).
    - Breach the Attackers Hull (increasing Attack Damage).
    - Amplify the effectiveness of the Defense Platforms.
@@ -69,7 +69,11 @@ __But__ this __requires__ you to Actively monitor, and respond, to any attacks t
 
 ## Detailed Reference Material
 
-Coming Soon
+- [STFC Knowledge Base - Base Defense](https://stfc.johnwsiskar.com/base-defense/)
+- [RevDuce's YouTube Channel - Bold Base Defense](https://www.youtube.com/watch?v=dfQ1wre_G-4)
+- [Talking Trek STFC - Bold Defense 2.0 Podcast](https://www.talkingtrekstfc.com/e/bold-defense-20-event-calendar-hits-and-misses/)
+- [Talking Trek STFC Discord Channel - BoldDefense 2.0 Podcast](https://discord.gg/MXgBcYR)
+- [PDF to go with Talking Trek Bold Defense](https://www.dropbox.com/s/577mjx241h89y6y/BOLD%20Station%20Defense.pdf?dl=0)
 
 ## Bold Defense vs Regular Defense outcomes
 
