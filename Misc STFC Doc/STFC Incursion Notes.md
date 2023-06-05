@@ -116,7 +116,7 @@ ___
    - Save up and/or buy, Peace Shield Tokens.
    - Begin stock piling Ore, Gas, and Crystal so you can refine off your stockpiles.
    - __No__ Mining during Incursions. Miners are valid targets, whether Friendly or Invader!
-1. Ensure Enhancers benefiting Incursion have been enabled.
+1. Ensure Territory Enhancers benefiting Incursion have been enabled.
    - Hull, and Advanced Hull, Enhancers.
    - PvP Enhancer.
    - Siege Enhancer.
