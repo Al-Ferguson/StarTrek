@@ -54,7 +54,7 @@ Thanks to Laytu, CaptSuperHater, USSE, and many others for the following suggest
 1. Crewing Base Cracking ships.
    - Enterprise (or 2nd Largest Ship): Rom(C), Kirk, & HG Worf.
    - Biggest non-Enterprise ship: Khan(C), Otto, & Joachim.
-   - Below Decks crewing:
+   - Below Decks crewing to increase Critical Damage, Damage, and then to reduce damage.
 1. Crew Amalgam for Capacity and Grabbing Protected Loot use:
    1. 2of11(C), 4of11, & B'Etor.
    1. B'Etor(C), 4of11, & Stonn.
