@@ -88,11 +88,64 @@ If a Capture Node is empty/taken; try to have Ally clear it, then Declaring Alli
 _______________
 
 
-3 Groups in Declaring Alliance: Node Squad, Cloaked Squad, and all others
-2 Groups in Allies: Cloaked Squad and all other PvP ships
+3 Squads in Declaring Alliance: Node Squad, Cloaked Squad, and all others
+2 Squads in Allies: Cloaked Squad and all other PvP ships
 
 Ideally, no Ally visible before TO is Declared.
 Ideally, Node Squad captures all nodes as soon as TO is Declared.
 Ideally, Allies do all PvP and Declaring Alliance just collects the points
 Ideally, If a Capture Node falls to an opponent, an Ally will clear it then let
 	someone from the Declaring Alliance re-occupy it.
+	
+
+_______________
+
+
+Team Alpha	- Cmdr CommodoreAl
+Team Beta	- Cmdr OfficerZog
+
+General Orders:	
+	1. Keep Chatter down to allow Team Commanders to relay orders.
+	2. If you have an Epic Ship with Ability, activate it just before engaging.
+	3. When possible, let our Allies engage in PvP. (We will get our turn with their TO)
+
+
+Node Squad:
+	- Plan to Cloak and Warp into Territory with arrival ~4m before TO.
+	- Take up positions next to Capture Nodes
+	- When Declaring Alert displays, grab your Node.
+	- If all Nodes are taken, remain Cloaked and be prepared to re-take Nodes
+
+
+Cloaked Squad:
+	- Plan to Cloak and Warp into Territory with Arrival ~1m before TO.
+	- Bigger ships take up positions around Capture Nodes. Your Job is to support the Nodes.
+	- Smaller ships take up positions away from Capture Nodes. Your Job is to stay alive.
+	- When Declaring Alert displays, Stay cloaked!
+	- If a Node becomes Empty, Occupy it
+
+
+Points Squad:
+	- Plan to Warp into Territory ~30s before TO.
+	- Bigger ships take up positions around Capture Nodes. Your Job is to support the Nodes.
+	- Smaller ships take up positions away from Capture Nodes. Your Job is to stay alive.
+	- When Declaring Alert displays, Stay Alive!
+	- If a Node becomes Empty & you are near it, Occupy it. Otherwise, Stay Alive!
+		
+
+_______________
+
+Allies:
+	-   Break up Alliance into 2 Teams:
+		Alpha:	About 25% of Medium to Large ships
+		Beta:	Remaining 75% of ships, Largest PvP ships here.
+	-	Send in Cloaked ships to Arrive ~1m before TO. 
+		Take up position around Nodes.
+	-	Send in non-Clocked ships to Arrive ~30s AFTER TO.
+		Take up position around Nodes.
+	-	When Declaring Aler displays, TO all opponents, go after biggest ships first
+		Your JOB, All PvP (if possible)
+		
+Ideally, opponents will not see any Allies before TO Declared.
+	
+	
