@@ -1,0 +1,98 @@
+We need to connect Territories together, given order of TO/Defense times we need to take:
+    1.  Adia
+    2.  Tezera
+    3.  Tigan
+    4.  Crios
+    5.  Corva
+    
+Remember:
+    1.  In 1* & 2* Territories; whomever holds Beta gets the Territory (more Capture nodes, 
+        so more points available).
+    2.  These are un-owned, so we can get in and setup whenever we want. Also, setting up
+        before hand is not a violation of the Merged Server 61 RoE.
+    3.  Use Allies for PvP, avoid contact where possible.
+    4.  Admiral or Cmdrs Declare immediately (we will need all the points we can get)
+
+_______________
+
+Noon EDT, Wedneday 26 July
+    - Adia 1* Territory
+    - Alpha manned by Small group of Bigs 
+      (Primarily a Honey Trap to suck in those wanting PvP)
+    - Beta manned by 80+% of Rest of TTS
+      (If Beta starts having issue, Alpha Bigs to re-enforce Beta)
+    - Big KBT's on Nodes, followed by Big 2nd Tear Warships crewed for Territory Defense
+      
+7PM EDT, Thursday 27 July
+    - Tezera 2* Territory
+    - Alpha manned by Small group of Bigs 
+      (Primarily a Honey Trap to suck in those wanting PvP)
+    - Beta manned by 80+% of Rest of TTS
+      (If Beta starts having issue, Alpha Bigs to re-enforce Beta)
+    - Big KBT's on Nodes, followed by Big 2nd Tear Warships crewed for Territory Defense
+      
+9PM EDT, Friday 28 July
+    - Tigan 1* Territory
+    - Alpha manned by Small group of Bigs 
+      (Primarily a Honey Trap to suck in those wanting PvP)
+    - Beta manned by 80+% of Rest of TTS
+      (If Beta starts having issue, Alpha Bigs to re-enforce Beta)
+    - Big KBT's on Nodes, followed by Big 2nd Tear Warships crewed for Territory Defense
+      
+3PM EDT, Monday 31 July
+    - Crios 2* Territory
+    - Alpha manned by Small group of Bigs 
+      (Primarily a Honey Trap to suck in those wanting PvP)
+    - Beta manned by 80+% of Rest of TTS
+      (If Beta starts having issue, Alpha Bigs to re-enforce Beta)
+    - Big KBT's on Nodes, followed by Big 2nd Tear Warships crewed for Territory Defense
+      
+5PM EDT, Saturday 05 August
+    - Corva 3* Territory
+    - Alpha manned by Small group of Bigs 
+      (Primarily a Honey Trap to suck in those wanting PvP)
+    - Beta manned by 40+% of Rest of TTS
+      (If Beta starts having issue, Alpha Bigs to re-enforce Beta)
+    - Gamma manned by 40+% of Rest of TTS
+      (If Gamma starts having issue, Alpha Bigs to re-enforce Gamma)
+    - Big KBT's on Nodes, followed by Big 2nd Tear Warships crewed for Territory Defense
+      
+
+_______________
+
+Scouting:
+	1.	Cmdr(s) send in Cloaked Ship to Alpha & Beta (& Gamma, if applicable). 
+		Time so cloak will last 1m into TO.
+	2.	Report to flag officers & allies what they see (Discord channel?)
+
+Setup:
+	3.	All Declaring Alliance Capture Nodes ships will cloak and time to arrive at 4m to TO.
+		After arriving take up positions next to the Capture Node they will be Occupying. If
+		opposition ship already on Node, try to make sure you can beat it in Node PvP.
+	4.	Remaining Declaring Alliance ships w/cloaking will cloak and time to arrive 1m to TO
+	5.	Allies with cloaking will also time their arrive for 1m before TO.
+		Position near capture Nodes and/or bigger opponents.
+	6.	Remaining non-cloaked Declaring Alliance ships will time to arrive ~30s before TO.
+	7.	Non-cloaked Allies will time to arrive 15s after TO begins.
+
+Declare and Execute:
+	6.	At the Declaration Alert, Node Capture ships will Occupy their Nodes.
+	7.	Cloaked ships will stay put until cloaks time out, then try to stay alive.
+	8.	Allies will attempt to do ALL PvP. Bigger cloaked ships taking out bigger opponents.
+	9.	Declaring Alliance non-cloaked ships will try to stay alive and out of PvP as much 
+		as possible. We need survival time, not PvP victories. 
+		
+If a Capture Node is empty/taken; try to have Ally clear it, then Declaring Alliance Occupy it.
+
+
+_______________
+
+
+3 Groups in Declaring Alliance: Node Squad, Cloaked Squad, and all others
+2 Groups in Allies: Cloaked Squad and all other PvP ships
+
+Ideally, no Ally visible before TO is Declared.
+Ideally, Node Squad captures all nodes as soon as TO is Declared.
+Ideally, Allies do all PvP and Declaring Alliance just collects the points
+Ideally, If a Capture Node falls to an opponent, an Ally will clear it then let
+	someone from the Declaring Alliance re-occupy it.
