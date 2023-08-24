@@ -98,7 +98,7 @@ Ideally, If a Capture Node falls to an opponent, an Ally will clear it then let
 	someone from the Declaring Alliance re-occupy it.
 	
 
-_______________
+_______________ Alliance TO Plans
 
 
 Team Alpha	- Cmdr CommodoreAl
