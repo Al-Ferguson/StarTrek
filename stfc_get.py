@@ -1,4 +1,4 @@
-"""StfcGet.py - Pull data from https://stfc.space and write to CSV file.
+"""stfc_get.py - Pull data from https://stfc.space and write to CSV file.
 
 NOTE: This application requires the Requests Module from PyPi. This can
       be installed by running `pip install -U requests`.
@@ -14,7 +14,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = '2023-05-09 01:43:29'
+__updated__ = '2023-09-24 10:22:02'
 __version__: str = "0.1.2"
 # endregion Author & Version
 
