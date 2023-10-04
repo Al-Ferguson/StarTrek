@@ -16,27 +16,34 @@
 
 ###
 ### Get stfc.space Database Version
-GET {{baseurl}}/version HTTP/1.1
+GET {{baseurl}}/{{translate}}/version.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
     Host: assets.stfc.space
 
-##
-### Get Ship Information
-GET {{baseurl}}/ship HTTP/1.1
+
+###
+### Get Building information
+GET {{baseurl}}/building/summary.json HTTP/1.1
     Accept: {{jsonType}}
 
-### Get Ship Name
-GET {{baseurl}}/{{translate}}/ships.json HTTP/1.1
+### Get Building Detail information
+GET {{baseurl}}/{{translate}}/buildings HTTP/1.1
     Accept: {{jsonType}}
 
-### Get Ship Type
-GET {{baseurl}}/ship_type HTTP/1.1
+### Get Building Buff information
+GET {{baseurl}}/{{translate}}/building_buffs HTTP/1.1
     Accept: {{jsonType}}
 
-### Get Ship Components
-GET {{baseurl}}/{{translate}}/ship_components.json HTTP/1.1
+
+###
+### Get Consumable information
+GET {{baseurl}}/consumable HTTP/1.1
+    Accept: {{jsonType}}
+
+### Get Consumable Detail information
+GET {{baseurl}}/{{translate}}/consumables.json HTTP/1.1
     Accept: {{jsonType}}
 
 
@@ -57,18 +64,38 @@ GET {{baseurl}}/galaxy HTTP/1.1
 
 
 ###
-### Get System information
-GET {{baseurl}}/system HTTP/1.1
+### Get Hostile information
+GET {{baseurl}}/hostile HTTP/1.1
     Accept: {{jsonType}}
 
-### Get System Detail information
-GET {{baseurl}}/{{translate}}/systems.json HTTP/1.1
+### Get Hostile Detail information
+GET {{baseurl}}/{{translate}}/hostiles HTTP/1.1
+    Accept: {{jsonType}}
+
+
+###
+### Get Material Detail information
+GET {{baseurl}}/{{translate}}/materials.json HTTP/1.1
+    Accept: {{jsonType}}
+
+
+###
+### Get Mission information
+GET {{baseurl}}/mission HTTP/1.1
+    Accept: {{jsonType}}
+
+### Get Mission Detail information
+GET {{baseurl}}/{{translate}}/missions HTTP/1.1
+    Accept: {{jsonType}}
+
+### Get Mission Unlock information
+GET {{baseurl}}/galaxy/mission_unlocks HTTP/1.1
     Accept: {{jsonType}}
 
 
 ###
 ### Get Officer information
-GET {{baseurl}}/officer HTTP/1.1
+GET {{baseurl}}/officer/summary.json HTTP/1.1
     Accept: {{jsonType}}
 
 ### Get Officer Detail information
@@ -89,20 +116,6 @@ GET {{baseurl}}/{{translate}}/traits.json HTTP/1.1
 
 
 ###
-### Get Building information
-GET {{baseurl}}/building HTTP/1.1
-    Accept: {{jsonType}}
-
-### Get Building Detail information
-GET {{baseurl}}/{{translate}}/buildings HTTP/1.1
-    Accept: {{jsonType}}
-
-### Get Building Buff information
-GET {{baseurl}}/{{translate}}/building_buffs HTTP/1.1
-    Accept: {{jsonType}}
-
-
-###
 ### Get Research information
 GET {{baseurl}}/research HTTP/1.1
     Accept: {{jsonType}}
@@ -113,42 +126,20 @@ GET {{baseurl}}/{{translate}}/research.json HTTP/1.1
 
 
 ###
-### Get Consumable information
-GET {{baseurl}}/consumable HTTP/1.1
+### Get Ship Summary Information
+GET {{baseurl}}/ship/summary.json HTTP/1.1
     Accept: {{jsonType}}
 
-### Get Consumable Detail information
-GET {{baseurl}}/{{translate}}/consumables.json HTTP/1.1
+### Get Ship Name
+GET {{baseurl}}/{{translate}}/ships.json HTTP/1.1
     Accept: {{jsonType}}
 
-
-###
-### Get Hostile information
-GET {{baseurl}}/hostile HTTP/1.1
+### Get Ship Buffs
+GET {{baseurl}}/{{translate}}/ship_buffs.json HTTP/1.1
     Accept: {{jsonType}}
 
-### Get Hostile Detail information
-GET {{baseurl}}/{{translate}}/hostiles HTTP/1.1
-    Accept: {{jsonType}}
-
-
-###
-### Get Mission information
-GET {{baseurl}}/mission HTTP/1.1
-    Accept: {{jsonType}}
-
-### Get Mission Detail information
-GET {{baseurl}}/{{translate}}/missions.json HTTP/1.1
-    Accept: {{jsonType}}
-
-### Get Mission Unlock information
-GET {{baseurl}}/galaxy/mission_unlocks HTTP/1.1
-    Accept: {{jsonType}}
-
-
-###
-### Get Material Detail information
-GET {{baseurl}}/{{translate}}/materials.json HTTP/1.1
+### Get Ship Components
+GET {{baseurl}}/{{translate}}/ship_components.json HTTP/1.1
     Accept: {{jsonType}}
 
 
@@ -159,4 +150,14 @@ GET {{baseurl}}/syndicate HTTP/1.1
 
 ### Get Syndicate Detail Information
 GET {{baseurl}}/{{translate}}/syndicate HTTP/1.1
+    Accept: {{jsonType}}
+
+
+###
+### Get System information
+GET {{baseurl}}/system/summary.json HTTP/1.1
+    Accept: {{jsonType}}
+
+### Get System Detail information
+GET {{baseurl}}/{{translate}}/systems.json HTTP/1.1
     Accept: {{jsonType}}
