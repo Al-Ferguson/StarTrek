@@ -13,13 +13,15 @@ NOTE: This has been tested with Python 3.11+ and Requests v2.30+
 #   - requests
 #   - csv
 #   - json
+#   - typing
 
 import requests as rq
+# from typing import Generic, TypeVar
 # endregion Imports
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = '2023-10-03 15:58:11'
+__updated__ = '2023-10-04 11:53:18'
 __version__: str = "0.0.1"
 # endregion Author & Version
 
