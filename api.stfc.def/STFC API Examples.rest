@@ -1,11 +1,18 @@
 ### https://api.stfc.dev/v1 Reset API examples
+### https://assets.stfc.space/data/latest Reset API examples
 
 
 ### Variables for API Tests
 @host = api.stfc.dev
+@host = assets.stfc.space
 @apiPath = v1
+@apiPath = data/latest
 @translate = translations/en
 @jsonType = application/json
+@jsonEncoding = gzip, deflate, br
+@jsonLanguage = en-US, en;q=0.9
+
+
 
 @baseurl = https://{{host}}/{{apiPath}}
 
@@ -14,7 +21,9 @@
 ### Get stfc.space Database Version
 GET {{baseurl}}/version HTTP/1.1
     Accept: {{jsonType}}
-
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+    Host: assets.stfc.space
 
 ##
 ### Get Ship Information
