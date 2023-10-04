@@ -1,11 +1,8 @@
-### https://api.stfc.dev/v1 Reset API examples
 ### https://assets.stfc.space/data/latest Reset API examples
 
 
 ### Variables for API Tests
-@host = api.stfc.dev
 @host = assets.stfc.space
-@apiPath = v1
 @apiPath = data/latest
 @translate = translations/en
 @jsonType = application/json
