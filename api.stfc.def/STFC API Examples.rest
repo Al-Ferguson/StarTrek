@@ -16,11 +16,16 @@
 
 ###
 ### Get stfc.space Database Version
-GET {{baseurl}}/{{translate}}/version.json HTTP/1.1
+GET {{baseurl}}/version.txt HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-    Host: assets.stfc.space
+ 
+
+###
+### Get Blueprints information
+GET {{baseurl}}/{{translate}}/blueprints.json HTTP/1.1
+    Accept: {{jsonType}}
 
 
 ###
@@ -29,21 +34,23 @@ GET {{baseurl}}/building/summary.json HTTP/1.1
     Accept: {{jsonType}}
 
 ### Get Building Detail information
-GET {{baseurl}}/{{translate}}/buildings HTTP/1.1
-    Accept: {{jsonType}}
 
 ### Get Building Buff information
-GET {{baseurl}}/{{translate}}/building_buffs HTTP/1.1
-    Accept: {{jsonType}}
 
 
 ###
 ### Get Consumable information
-GET {{baseurl}}/consumable HTTP/1.1
+GET {{baseurl}}/consumable/summary.json HTTP/1.1
     Accept: {{jsonType}}
 
 ### Get Consumable Detail information
 GET {{baseurl}}/{{translate}}/consumables.json HTTP/1.1
+    Accept: {{jsonType}}
+
+
+###
+### Get Event Titles information
+GET {{baseurl}}/{{translate}}/event_titles.json HTTP/1.1
     Accept: {{jsonType}}
 
 
@@ -58,18 +65,20 @@ GET {{baseurl}}/{{translate}}/factions.json HTTP/1.1
 
 
 ###
-### Get Galaxy information
-GET {{baseurl}}/galaxy HTTP/1.1
+### Get Forbidden Tech information
+GET {{baseurl}}/forbidden_tech/summary.json HTTP/1.1
     Accept: {{jsonType}}
 
 
 ###
 ### Get Hostile information
-GET {{baseurl}}/hostile HTTP/1.1
+GET {{baseurl}}/hostile/summary.json HTTP/1.1
     Accept: {{jsonType}}
 
-### Get Hostile Detail information
-GET {{baseurl}}/{{translate}}/hostiles HTTP/1.1
+
+###
+### Get Loyalty information
+GET {{baseurl}}/{{translate}}/loyalty.json HTTP/1.1
     Accept: {{jsonType}}
 
 
@@ -81,15 +90,17 @@ GET {{baseurl}}/{{translate}}/materials.json HTTP/1.1
 
 ###
 ### Get Mission information
-GET {{baseurl}}/mission HTTP/1.1
+GET {{baseurl}}/mission/summary.json HTTP/1.1
     Accept: {{jsonType}}
 
 ### Get Mission Detail information
-GET {{baseurl}}/{{translate}}/missions HTTP/1.1
+GET {{baseurl}}/{{translate}}/mission_titles.json HTTP/1.1
     Accept: {{jsonType}}
 
-### Get Mission Unlock information
-GET {{baseurl}}/galaxy/mission_unlocks HTTP/1.1
+
+###
+### Get Navigation information
+GET {{baseurl}}/{{translate}}/navigation.json HTTP/1.1
     Accept: {{jsonType}}
 
 
@@ -102,12 +113,16 @@ GET {{baseurl}}/officer/summary.json HTTP/1.1
 GET {{baseurl}}/{{translate}}/officers.json HTTP/1.1
     Accept: {{jsonType}}
 
-### Get Officer Synergy information
-GET {{baseurl}}/{{translate}}/officers_synergy HTTP/1.1
+### Get Officer Buffs information
+GET {{baseurl}}/{{translate}}/officer_buffs.json HTTP/1.1
     Accept: {{jsonType}}
 
-### Get Officer Devision information
-GET {{baseurl}}/{{translate}}/officer_division HTTP/1.1
+### Get Officer Flavor information
+GET {{baseurl}}/{{translate}}/officer_flavor_text.json HTTP/1.1
+    Accept: {{jsonType}}
+
+### Get Officer Names information
+GET {{baseurl}}/{{translate}}/officer_names.json HTTP/1.1
     Accept: {{jsonType}}
 
 ### Get Officer Trait Information
@@ -116,12 +131,24 @@ GET {{baseurl}}/{{translate}}/traits.json HTTP/1.1
 
 
 ###
+### Get Player Avatar information
+GET {{baseurl}}/{{translate}}/player_avatars.json HTTP/1.1
+    Accept: {{jsonType}}
+
+
+###
 ### Get Research information
-GET {{baseurl}}/research HTTP/1.1
+GET {{baseurl}}/research/summary.json HTTP/1.1
     Accept: {{jsonType}}
 
 ### Get Research Detail information
 GET {{baseurl}}/{{translate}}/research.json HTTP/1.1
+    Accept: {{jsonType}}
+
+
+###
+### Get Resource information
+GET {{baseurl}}/resource/summary.json HTTP/1.1
     Accept: {{jsonType}}
 
 
@@ -144,12 +171,20 @@ GET {{baseurl}}/{{translate}}/ship_components.json HTTP/1.1
 
 
 ###
-### Get Syndicate information
-GET {{baseurl}}/syndicate HTTP/1.1
+### Get Skins information
+GET {{baseurl}}/skins/summary.json HTTP/1.1
     Accept: {{jsonType}}
 
-### Get Syndicate Detail Information
-GET {{baseurl}}/{{translate}}/syndicate HTTP/1.1
+
+###
+### Get Starbase Module information
+GET {{baseurl}}/{{translate}}/starbase_modules.json HTTP/1.1
+    Accept: {{jsonType}}
+
+
+###
+### Get Syndicate information
+GET {{baseurl}}/syndicate/summary.json HTTP/1.1
     Accept: {{jsonType}}
 
 
