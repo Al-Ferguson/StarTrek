@@ -11,9 +11,6 @@
 @jsonType = application/json
 @jsonEncoding = gzip, deflate, br
 @jsonLanguage = en-US, en;q=0.9
-
-
-
 @baseurl = https://{{host}}/{{apiPath}}
 
 
@@ -31,15 +28,15 @@ GET {{baseurl}}/ship HTTP/1.1
     Accept: {{jsonType}}
 
 ### Get Ship Name
-GET {{baseurl}}/{{translate}}/ships HTTP/1.1
+GET {{baseurl}}/{{translate}}/ships.json HTTP/1.1
     Accept: {{jsonType}}
 
 ### Get Ship Type
-GET {{baseurl}}/{{translate}}/ship_type HTTP/1.1
+GET {{baseurl}}/ship_type HTTP/1.1
     Accept: {{jsonType}}
 
 ### Get Ship Components
-GET {{baseurl}}/{{translate}}/ship_components HTTP/1.1
+GET {{baseurl}}/{{translate}}/ship_components.json HTTP/1.1
     Accept: {{jsonType}}
 
 
@@ -49,7 +46,7 @@ GET {{baseurl}}/faction HTTP/1.1
     Accept: {{jsonType}}
 
 ### Get Faction Detail Information
-GET {{baseurl}}/{{translate}}/factions HTTP/1.1
+GET {{baseurl}}/{{translate}}/factions.json HTTP/1.1
     Accept: {{jsonType}}
 
 
@@ -65,7 +62,7 @@ GET {{baseurl}}/system HTTP/1.1
     Accept: {{jsonType}}
 
 ### Get System Detail information
-GET {{baseurl}}/{{translate}}/systems HTTP/1.1
+GET {{baseurl}}/{{translate}}/systems.json HTTP/1.1
     Accept: {{jsonType}}
 
 
@@ -75,7 +72,7 @@ GET {{baseurl}}/officer HTTP/1.1
     Accept: {{jsonType}}
 
 ### Get Officer Detail information
-GET {{baseurl}}/{{translate}}/officers HTTP/1.1
+GET {{baseurl}}/{{translate}}/officers.json HTTP/1.1
     Accept: {{jsonType}}
 
 ### Get Officer Synergy information
@@ -87,7 +84,7 @@ GET {{baseurl}}/{{translate}}/officer_division HTTP/1.1
     Accept: {{jsonType}}
 
 ### Get Officer Trait Information
-GET {{baseurl}}/{{translate}}/traits HTTP/1.1
+GET {{baseurl}}/{{translate}}/traits.json HTTP/1.1
     Accept: {{jsonType}}
 
 
@@ -111,7 +108,7 @@ GET {{baseurl}}/research HTTP/1.1
     Accept: {{jsonType}}
 
 ### Get Research Detail information
-GET {{baseurl}}/{{translate}}/research HTTP/1.1
+GET {{baseurl}}/{{translate}}/research.json HTTP/1.1
     Accept: {{jsonType}}
 
 
@@ -121,7 +118,7 @@ GET {{baseurl}}/consumable HTTP/1.1
     Accept: {{jsonType}}
 
 ### Get Consumable Detail information
-GET {{baseurl}}/{{translate}}/consumables HTTP/1.1
+GET {{baseurl}}/{{translate}}/consumables.json HTTP/1.1
     Accept: {{jsonType}}
 
 
@@ -141,7 +138,7 @@ GET {{baseurl}}/mission HTTP/1.1
     Accept: {{jsonType}}
 
 ### Get Mission Detail information
-GET {{baseurl}}/{{translate}}/missions HTTP/1.1
+GET {{baseurl}}/{{translate}}/missions.json HTTP/1.1
     Accept: {{jsonType}}
 
 ### Get Mission Unlock information
@@ -151,7 +148,7 @@ GET {{baseurl}}/galaxy/mission_unlocks HTTP/1.1
 
 ###
 ### Get Material Detail information
-GET {{baseurl}}/{{translate}}/materials HTTP/1.1
+GET {{baseurl}}/{{translate}}/materials.json HTTP/1.1
     Accept: {{jsonType}}
 
 
