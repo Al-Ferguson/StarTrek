@@ -21,12 +21,12 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = '2023-10-04 11:53:18'
+__updated__ = '2023-10-04 15:05:01'
 __version__: str = "0.0.1"
 # endregion Author & Version
 
 # region Global Variables
-API_URL: str = 'https://api.stfc.dev/v1/'
+API_URL: str = 'https://assets.stfc.space/data/latest/'
 TRANSLATE_LANGUAGE = "en"
 DETAIL_PATH = f'translations/{TRANSLATE_LANGUAGE}/'
 
