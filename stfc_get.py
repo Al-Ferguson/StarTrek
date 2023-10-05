@@ -14,14 +14,14 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = '2023-10-04 23:23:51'
+__updated__ = '2023-10-04 23:41:58'
 __version__: str = "0.1.2"
 # endregion Author & Version
 
 # region Global Variables
-API_URL: str = 'https://assets.stfc.space/data/latest/'
+API_URL: str = 'https://assets.stfc.space/data/latest'
 TRANSLATE_LANGUAGE = "en"
-DETAIL_PATH = f'translations/{TRANSLATE_LANGUAGE}/'
+DETAIL_URL: str = f'{API_URL}/translations/{TRANSLATE_LANGUAGE}'
 
 SHIP_INSERT: str = 'INSERT INTO `StfcShips` (`ShipID`, `ShipName`,' \
     '`ShipLevel`, `ShipType`,`ShipFaction`) VALUES\n'
@@ -29,12 +29,12 @@ SYSTEM_INSERT: str = 'INSERT INTO `StfcSystems` (`SystemID`, `SystemName`,' \
     '`SystemLevel`, `SystemWarpDist`, `SystemType`, `DarkSpace`) VALUES\n'
 SQL_END = ";\n\nCOMMIT;\n\n"
 
-SHIPS: list = rq.get(f'{API_URL}ship/summary.json', timeout=5).json()
-SHIPNAMES: list = rq.get(f'{API_URL}{DETAIL_PATH}ships.json', timeout=5).json()
-SHIPTYPES: list = rq.get(f'{API_URL}{DETAIL_PATH}ship_type.json', timeout=5).json()
-SYSTEMS: list = rq.get(f'{API_URL}system/summary.json', timeout=5).json()
-SYSTEMNAMES: list = rq.get(f'{API_URL}{DETAIL_PATH}systems.json', timeout=5).json()
-FACTIONS = rq.get(f'{API_URL}{DETAIL_PATH}factions.json', timeout=5).json()
+SHIP: list = rq.get(f'{API_URL}/ship/summary.json', timeout=5).json()
+SHIPS: list = rq.get(f'{DETAIL_URL}/ships.json', timeout=5).json()
+SHIPTYPES: list = rq.get(f'{DETAIL_URL}/ship_type.json', timeout=5).json()
+SYSTEM: list = rq.get(f'{API_URL}/system/summary.json', timeout=5).json()
+SYSTEMS: list = rq.get(f'{DETAIL_URL}/systems.json', timeout=5).json()
+FACTIONS = rq.get(f'{DETAIL_URL}/factions.json', timeout=5).json()
 # endregion Global Variables
 
 # region Functions
@@ -60,7 +60,7 @@ def generate_ship_import() -> str:
     Returns:
         str: IMPORT SQL for STFC Ships
     """
-    result = [construct_ship_row(ship) for ship in SHIPS]
+    result = [construct_ship_row(ship) for ship in SHIP]
 
     return SHIP_INSERT + ",\n".join(result)
 
@@ -74,7 +74,7 @@ def construct_ship_row(ship: dict) -> str:
 
 def construct_shipnames(ship: dict) -> str:
     """Construct ship Name from ship dictionary"""
-    return f'"{jsonvalue(SHIPNAMES, ship["id"])}"'
+    return f'"{jsonvalue(SHIPS, ship["id"])}"'
 
 
 def construct_hull_type(ship: dict) -> str:
@@ -94,7 +94,7 @@ def generate_system_import() -> str:
     Returns:
         str: IMPORT SQL for STFC Systems
     """
-    result = [construct_system_row(system) for system in SYSTEMS]
+    result = [construct_system_row(system) for system in SYSTEM]
 
     return SYSTEM_INSERT + ",\n".join(result)
 
@@ -108,7 +108,7 @@ def construct_system_row(system: dict) -> str:
 
 def construct_systemnames(system: dict) -> str:
     """Construct system Name from system dictionary"""
-    return f'"{jsonvalue(SYSTEMNAMES, system["id"])}"'
+    return f'"{jsonvalue(SYSTEMS, system["id"])}"'
 
 
 # endregion Functions
