@@ -222,7 +222,7 @@ GET {{baseurl}}/system/summary.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
 
-### Get System Name information
+### Get System Name information ???
 GET {{baseurl}}/{{translate}}/system_names.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
