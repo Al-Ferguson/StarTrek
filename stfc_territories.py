@@ -21,7 +21,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = '2023-10-04 15:05:01'
+__updated__ = '2023-10-04 23:17:03'
 __version__: str = "0.0.1"
 # endregion Author & Version
 
@@ -30,8 +30,8 @@ API_URL: str = 'https://assets.stfc.space/data/latest/'
 TRANSLATE_LANGUAGE = "en"
 DETAIL_PATH = f'translations/{TRANSLATE_LANGUAGE}/'
 
-SYSTEMS: list = rq.get(f'{API_URL}system', timeout=5).json()
-SYSTEMNAMES: list = rq.get(f'{API_URL}{DETAIL_PATH}systems', timeout=5).json()
+SYSTEMS: list = rq.get(f'{API_URL}system/summary.json', timeout=5).json()
+SYSTEMTITLES: list = rq.get(f'{API_URL}{DETAIL_PATH}systems.json', timeout=5).json()
 # endregion Global Variables
 
 # region Functions
@@ -50,9 +50,9 @@ def jsonvalue(name: list, key: int):
                                         and x['key'] == 'name')][0]
 
 
-def construct_systemnames(system: dict) -> str:
+def construct_systemtitles(system: dict) -> str:
     """Construct system Name from system dictionary"""
-    return f'"{jsonvalue(SYSTEMNAMES, system["id"])}"'
+    return f'"{jsonvalue(SYSTEMTITLES, system["id"])}"'
 
 
 # endregion Functions

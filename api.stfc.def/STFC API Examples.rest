@@ -83,13 +83,6 @@ GET {{baseurl}}/hostile/summary.json HTTP/1.1
 
 
 ###
-### Get Loyalty information
-GET {{baseurl}}/{{translate}}/loyalty.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-
-
-###
 ### Get Material Detail information
 GET {{baseurl}}/{{translate}}/materials.json HTTP/1.1
     Accept: {{jsonType}}
@@ -215,15 +208,15 @@ GET {{baseurl}}/syndicate/summary.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
 
+### Get Syndicate Loyalty information
+GET {{baseurl}}/{{translate}}/loyalty.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+
 
 ###
 ### Get System information
 GET {{baseurl}}/system/summary.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-
-### Get System Name information ???
-GET {{baseurl}}/{{translate}}/system_names.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
 
