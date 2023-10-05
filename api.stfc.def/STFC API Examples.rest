@@ -23,12 +23,14 @@ GET {{baseurl}}/version.txt HTTP/1.1
 ### Get Blueprints information
 GET {{baseurl}}/{{translate}}/blueprints.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 
 ###
 ### Get Building information
 GET {{baseurl}}/building/summary.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 ### Get Building Detail information
 
@@ -39,157 +41,193 @@ GET {{baseurl}}/building/summary.json HTTP/1.1
 ### Get Consumable information
 GET {{baseurl}}/consumable/summary.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 ### Get Consumable Detail information
 GET {{baseurl}}/{{translate}}/consumables.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 
 ###
 ### Get Event Titles information
 GET {{baseurl}}/{{translate}}/event_titles.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 
 ###
 ### Get Faction Information
 GET {{baseurl}}/faction HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 ### Get Faction Detail Information
 GET {{baseurl}}/{{translate}}/factions.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 
 ###
 ### Get Forbidden Tech information
 GET {{baseurl}}/forbidden_tech/summary.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 
 ###
 ### Get Hostile information
 GET {{baseurl}}/hostile/summary.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 
 ###
 ### Get Loyalty information
 GET {{baseurl}}/{{translate}}/loyalty.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 
 ###
 ### Get Material Detail information
 GET {{baseurl}}/{{translate}}/materials.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 
 ###
 ### Get Mission information
 GET {{baseurl}}/mission/summary.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 ### Get Mission Detail information
 GET {{baseurl}}/{{translate}}/mission_titles.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 
 ###
 ### Get Navigation information
 GET {{baseurl}}/{{translate}}/navigation.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 
 ###
 ### Get Officer information
 GET {{baseurl}}/officer/summary.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 ### Get Officer Detail information
 GET {{baseurl}}/{{translate}}/officers.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 ### Get Officer Buffs information
 GET {{baseurl}}/{{translate}}/officer_buffs.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 ### Get Officer Flavor information
 GET {{baseurl}}/{{translate}}/officer_flavor_text.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 ### Get Officer Names information
 GET {{baseurl}}/{{translate}}/officer_names.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 ### Get Officer Trait Information
 GET {{baseurl}}/{{translate}}/traits.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 
 ###
 ### Get Player Avatar information
 GET {{baseurl}}/{{translate}}/player_avatars.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 
 ###
 ### Get Research information
 GET {{baseurl}}/research/summary.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 ### Get Research Detail information
 GET {{baseurl}}/{{translate}}/research.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 
 ###
 ### Get Resource information
 GET {{baseurl}}/resource/summary.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 
 ###
 ### Get Ship Summary Information
 GET {{baseurl}}/ship/summary.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 ### Get Ship Name
 GET {{baseurl}}/{{translate}}/ships.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 ### Get Ship Buffs
 GET {{baseurl}}/{{translate}}/ship_buffs.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 ### Get Ship Components
 GET {{baseurl}}/{{translate}}/ship_components.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 
 ###
 ### Get Skins information
 GET {{baseurl}}/skins/summary.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 
 ###
 ### Get Starbase Module information
 GET {{baseurl}}/{{translate}}/starbase_modules.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 
 ###
 ### Get Syndicate information
 GET {{baseurl}}/syndicate/summary.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 
 ###
 ### Get System information
 GET {{baseurl}}/system/summary.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+
+### Get System Name information
+GET {{baseurl}}/{{translate}}/system_names.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
 
 ### Get System Detail information
 GET {{baseurl}}/{{translate}}/systems.json HTTP/1.1
     Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
