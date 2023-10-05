@@ -14,7 +14,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = '2023-10-04 23:41:58'
+__updated__ = '2023-10-04 23:47:00'
 __version__: str = "0.1.2"
 # endregion Author & Version
 
@@ -118,11 +118,11 @@ def main() -> None:
     """https://stfc.space Information retrieval & Import SQL build."""
 
     print('Writing Ships IMPORT SQL:')
-    with open("STFC Pirate 2 Ships.sql", "w") as file:
+    with open("STFC Pirate 2 Ships.sql", "w", encoding="utf-8") as file:
         file.write(generate_ship_import() + SQL_END)
 
     print('Writing Systems IMPORT SQL:')
-    with open("STFC Pirate 3 Systems.sql", "w") as file:
+    with open("STFC Pirate 3 Systems.sql", "w", encoding="utf-8") as file:
         file.write(generate_system_import() + SQL_END)
 
 

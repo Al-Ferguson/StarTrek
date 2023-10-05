@@ -1,4 +1,4 @@
-"""stfc_territories.py - Pull data from https://stfc.space and write to CSV file.
+"""stfc_territories.py - Pull https://stfc.space data and write CSV file.
 
 NOTE: This application requires the Requests Module from PyPi. This can
       be installed by running `pip install -U requests`.
@@ -21,17 +21,17 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = '2023-10-04 23:17:03'
+__updated__ = '2023-10-04 23:45:12'
 __version__: str = "0.0.1"
 # endregion Author & Version
 
 # region Global Variables
 API_URL: str = 'https://assets.stfc.space/data/latest/'
 TRANSLATE_LANGUAGE = "en"
-DETAIL_PATH = f'translations/{TRANSLATE_LANGUAGE}/'
+DETAIL_URL: str = f'{API_URL}/translations/{TRANSLATE_LANGUAGE}'
 
-SYSTEMS: list = rq.get(f'{API_URL}system/summary.json', timeout=5).json()
-SYSTEMTITLES: list = rq.get(f'{API_URL}{DETAIL_PATH}systems.json', timeout=5).json()
+SYSTEM: list = rq.get(f'{API_URL}system/summary.json', timeout=5).json()
+SYSTEMS: list = rq.get(f'{DETAIL_URL}/systems.json', timeout=5).json()
 # endregion Global Variables
 
 # region Functions
@@ -52,7 +52,7 @@ def jsonvalue(name: list, key: int):
 
 def construct_systemtitles(system: dict) -> str:
     """Construct system Name from system dictionary"""
-    return f'"{jsonvalue(SYSTEMTITLES, system["id"])}"'
+    return f'"{jsonvalue(SYSTEMS, system["id"])}"'
 
 
 # endregion Functions
