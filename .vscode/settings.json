@@ -64,5 +64,6 @@
             "username": "root",
             "database": "stfcpirate"
         }
-    ]
+    ],
+    "python.analysis.autoImportCompletions": true
 }
