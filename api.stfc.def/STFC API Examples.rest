@@ -6,7 +6,7 @@
 @apiPath = data/latest
 @translate = translations/en
 @jsonType = application/json
-@jsonEncoding = gzip, deflate, br
+@jsonEncoding = gzip, deflate
 @jsonLanguage = en-US, en;q=0.9
 @baseurl = https://{{host}}/{{apiPath}}
 
@@ -24,6 +24,7 @@ GET {{baseurl}}/version.txt HTTP/1.1
 GET {{baseurl}}/{{translate}}/blueprints.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 
 ###
@@ -31,6 +32,7 @@ GET {{baseurl}}/{{translate}}/blueprints.json HTTP/1.1
 GET {{baseurl}}/building/summary.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 ### Get Building Detail information
 
@@ -42,11 +44,13 @@ GET {{baseurl}}/building/summary.json HTTP/1.1
 GET {{baseurl}}/consumable/summary.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 ### Get Consumable Detail information
 GET {{baseurl}}/{{translate}}/consumables.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 
 ###
@@ -54,6 +58,7 @@ GET {{baseurl}}/{{translate}}/consumables.json HTTP/1.1
 GET {{baseurl}}/{{translate}}/event_titles.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 
 ###
@@ -61,11 +66,13 @@ GET {{baseurl}}/{{translate}}/event_titles.json HTTP/1.1
 GET {{baseurl}}/faction HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 ### Get Faction Detail Information
 GET {{baseurl}}/{{translate}}/factions.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 
 ###
@@ -73,6 +80,7 @@ GET {{baseurl}}/{{translate}}/factions.json HTTP/1.1
 GET {{baseurl}}/forbidden_tech/summary.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 
 ###
@@ -80,6 +88,7 @@ GET {{baseurl}}/forbidden_tech/summary.json HTTP/1.1
 GET {{baseurl}}/hostile/summary.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 
 ###
@@ -87,6 +96,7 @@ GET {{baseurl}}/hostile/summary.json HTTP/1.1
 GET {{baseurl}}/{{translate}}/materials.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 
 ###
@@ -94,11 +104,13 @@ GET {{baseurl}}/{{translate}}/materials.json HTTP/1.1
 GET {{baseurl}}/mission/summary.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 ### Get Mission Detail information
 GET {{baseurl}}/{{translate}}/mission_titles.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 
 ###
@@ -106,6 +118,7 @@ GET {{baseurl}}/{{translate}}/mission_titles.json HTTP/1.1
 GET {{baseurl}}/{{translate}}/navigation.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 
 ###
@@ -113,31 +126,37 @@ GET {{baseurl}}/{{translate}}/navigation.json HTTP/1.1
 GET {{baseurl}}/officer/summary.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 ### Get Officer Detail information
 GET {{baseurl}}/{{translate}}/officers.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 ### Get Officer Buffs information
 GET {{baseurl}}/{{translate}}/officer_buffs.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 ### Get Officer Flavor information
 GET {{baseurl}}/{{translate}}/officer_flavor_text.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 ### Get Officer Names information
 GET {{baseurl}}/{{translate}}/officer_names.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 ### Get Officer Trait Information
 GET {{baseurl}}/{{translate}}/traits.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 
 ###
@@ -145,6 +164,7 @@ GET {{baseurl}}/{{translate}}/traits.json HTTP/1.1
 GET {{baseurl}}/{{translate}}/player_avatars.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 
 ###
@@ -152,11 +172,13 @@ GET {{baseurl}}/{{translate}}/player_avatars.json HTTP/1.1
 GET {{baseurl}}/research/summary.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 ### Get Research Detail information
 GET {{baseurl}}/{{translate}}/research.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 
 ###
@@ -164,6 +186,7 @@ GET {{baseurl}}/{{translate}}/research.json HTTP/1.1
 GET {{baseurl}}/resource/summary.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 
 ###
@@ -171,21 +194,25 @@ GET {{baseurl}}/resource/summary.json HTTP/1.1
 GET {{baseurl}}/ship/summary.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 ### Get Ship Name
 GET {{baseurl}}/{{translate}}/ships.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 ### Get Ship Buffs
 GET {{baseurl}}/{{translate}}/ship_buffs.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 ### Get Ship Components
 GET {{baseurl}}/{{translate}}/ship_components.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 
 ###
@@ -193,6 +220,7 @@ GET {{baseurl}}/{{translate}}/ship_components.json HTTP/1.1
 GET {{baseurl}}/skins/summary.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 
 ###
@@ -200,6 +228,7 @@ GET {{baseurl}}/skins/summary.json HTTP/1.1
 GET {{baseurl}}/{{translate}}/starbase_modules.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 
 ###
@@ -207,11 +236,13 @@ GET {{baseurl}}/{{translate}}/starbase_modules.json HTTP/1.1
 GET {{baseurl}}/syndicate/summary.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 ### Get Syndicate Loyalty information
 GET {{baseurl}}/{{translate}}/loyalty.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 
 ###
@@ -219,8 +250,10 @@ GET {{baseurl}}/{{translate}}/loyalty.json HTTP/1.1
 GET {{baseurl}}/system/summary.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
 
 ### Get System Detail information
 GET {{baseurl}}/{{translate}}/systems.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
