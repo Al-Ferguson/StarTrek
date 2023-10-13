@@ -1,253 +1,258 @@
-### https://assets.stfc.space/data/latest Reset API examples
+/*
+# REST API examples for assets.stfc.space
 
-
-### Variables for API Tests
+## Global Variables
+*/
 @host = assets.stfc.space
 @apiPath = data/latest
 @translate = translations/en
 @jsonType = application/json
 @jsonEncoding = gzip, deflate
 @jsonLanguage = en-US, en;q=0.9
-@baseurl = https://{{host}}/{{apiPath}}
-
-
+@baseurl {{host}}/{{apiPath}}
+/*
+## Current stfc.space Database Version
+*/
 ###
-### Get stfc.space Database Version
-GET {{baseurl}}/version.txt HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
- 
-
+GET https://{{baseurl}}/version.txt
+Accept: {{jsonType}}
+Accept-Encoding: {{jsonEncoding}}
+Accept-Language: {{jsonLanguage}}
+/*
+## Blueprint information
+*/
 ###
-### Get Blueprints information
-GET {{baseurl}}/{{translate}}/blueprints.json HTTP/1.1
+GET https://{{baseurl}}/{{translate}}/blueprints.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-
-
+/*
+## Building information
+*/
 ###
-### Get Building information
-GET {{baseurl}}/building/summary.json HTTP/1.1
+GET https://{{baseurl}}/building/summary.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
+/*
+## Consumable 
+- Summary Information
+- Consumable Title Information
 
-### Get Building Detail information
-
-### Get Building Buff information
-
-
+*/
 ###
-### Get Consumable information
-GET {{baseurl}}/consumable/summary.json HTTP/1.1
+GET https://{{baseurl}}/consumable/summary.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-
-### Get Consumable Detail information
-GET {{baseurl}}/{{translate}}/consumables.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-
-
 ###
-### Get Event Titles information
-GET {{baseurl}}/{{translate}}/event_titles.json HTTP/1.1
+GET https://{{baseurl}}/{{translate}}/consumables.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-
-
+/*
+## Event Titles
+*/
 ###
-### Get Faction Information
-GET {{baseurl}}/{{translate}}/factions.json HTTP/1.1
+GET https://{{baseurl}}/{{translate}}/event_titles.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-
-
+/*
+## Faction information
+*/
 ###
-### Get Forbidden Tech information
-GET {{baseurl}}/forbidden_tech/summary.json HTTP/1.1
+GET https://{{baseurl}}/{{translate}}/factions.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-
-
+/*
+## Forbidden Tech Information
+*/
 ###
-### Get Hostile information
-GET {{baseurl}}/hostile/summary.json HTTP/1.1
+GET https://{{baseurl}}/forbidden_tech/summary.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-
-
+/*
+## Hostile Information
+*/
 ###
-### Get Material Detail information
-GET {{baseurl}}/{{translate}}/materials.json HTTP/1.1
+GET https://{{baseurl}}/hostile/summary.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-
-
+/*
+## Miscellaneous Material Information
+- Assignment Speedups
+- Repair Speedups
+- ...
+*/
 ###
-### Get Mission information
-GET {{baseurl}}/mission/summary.json HTTP/1.1
+GET https://{{baseurl}}/{{translate}}/materials.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-
-### Get Mission Detail information
-GET {{baseurl}}/{{translate}}/mission_titles.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-
-
+/*
+## Mission Information
+- Mission Detail Data
+- Mission Tittles
+- Mission Navigation
+*/
 ###
-### Get Navigation information
-GET {{baseurl}}/{{translate}}/navigation.json HTTP/1.1
+GET https://{{baseurl}}/mission/summary.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-
-
 ###
-### Get Officer information
-GET {{baseurl}}/officer/summary.json HTTP/1.1
+GET https://{{baseurl}}/{{translate}}/mission_titles.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-
-### Get Officer Detail information
-GET {{baseurl}}/{{translate}}/officers.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-
-### Get Officer Buffs information
-GET {{baseurl}}/{{translate}}/officer_buffs.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-
-### Get Officer Flavor information
-GET {{baseurl}}/{{translate}}/officer_flavor_text.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-
-### Get Officer Names information
-GET {{baseurl}}/{{translate}}/officer_names.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-
-### Get Officer Trait Information
-GET {{baseurl}}/{{translate}}/traits.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-
-
 ###
-### Get Player Avatar information
-GET {{baseurl}}/{{translate}}/player_avatars.json HTTP/1.1
+GET https://{{baseurl}}/{{translate}}/navigation.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-
-
+/*
+## Officer Information
+- Officer Detail Information
+- Officer Additional Information
+_ Officer Buffs
+- Officer "flavor" Information
+- Officer Names
+- Officer Traits
+*/
 ###
-### Get Research information
-GET {{baseurl}}/research/summary.json HTTP/1.1
+GET https://{{baseurl}}/officer/summary.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-
-### Get Research Detail information
-GET {{baseurl}}/{{translate}}/research.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-
-
 ###
-### Get Resource information
-GET {{baseurl}}/resource/summary.json HTTP/1.1
+GET https://{{baseurl}}/{{translate}}/officers.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-
-
 ###
-### Get Ship Summary Information
-GET {{baseurl}}/ship/summary.json HTTP/1.1
+GET https://{{baseurl}}/{{translate}}/officer_buffs.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-
-### Get Ship Name
-GET {{baseurl}}/{{translate}}/ships.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-
-### Get Ship Buffs
-GET {{baseurl}}/{{translate}}/ship_buffs.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-
-### Get Ship Components
-GET {{baseurl}}/{{translate}}/ship_components.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-
-
 ###
-### Get Skins information
-GET {{baseurl}}/skins/summary.json HTTP/1.1
+GET https://{{baseurl}}/{{translate}}/officer_flavor_text.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-
-
 ###
-### Get Starbase Module information
-GET {{baseurl}}/{{translate}}/starbase_modules.json HTTP/1.1
+GET https://{{baseurl}}/{{translate}}/officer_names.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-
-
 ###
-### Get Syndicate information
-GET {{baseurl}}/syndicate/summary.json HTTP/1.1
+GET https://{{baseurl}}/{{translate}}/traits.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-
-### Get Syndicate Loyalty information
-GET {{baseurl}}/{{translate}}/loyalty.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-
-
+/*
+## Player Avatar Information
+*/
 ###
-### Get System information
-GET {{baseurl}}/system/summary.json HTTP/1.1
+GET https://{{baseurl}}/{{translate}}/player_avatars.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-
-### Get System Detail information
-GET {{baseurl}}/{{translate}}/systems.json HTTP/1.1
+/*
+## Research Information
+- Research Details
+- Research Titles and Descriptions
+*/
+###
+GET https://{{baseurl}}/research/summary.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+###
+GET https://{{baseurl}}/{{translate}}/research.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+/*
+## Resource Information
+*/
+###
+GET https://{{baseurl}}/resource/summary.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+/*
+## Ship Information
+- Ship Details
+- Ship Names, Flavors, and Descriptions
+- Ship Buffs
+- Ship Components
+- Ship Skins
+*/
+###
+GET https://{{baseurl}}/ship/summary.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+###
+GET https://{{baseurl}}/{{translate}}/ships.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+###
+GET https://{{baseurl}}/{{translate}}/ship_buffs.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+###
+GET https://{{baseurl}}/{{translate}}/ship_components.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+###
+GET https://{{baseurl}}/skins/summary.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+/*
+## Starbase Information
+*/
+###
+GET https://{{baseurl}}/{{translate}}/starbase_modules.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+/*
+## Syndicate Information
+*/
+###
+GET https://{{baseurl}}/syndicate/summary.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+/*
+## Faction Loyalty information
+*/
+###
+GET https://{{baseurl}}/{{translate}}/loyalty.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+/*
+## System Information
+- System Detail Information
+- System Names, Flavor, and Description Information
+*/
+###
+GET https://{{baseurl}}/system/summary.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+###
+GET https://{{baseurl}}/{{translate}}/systems.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
