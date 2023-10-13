@@ -18,6 +18,24 @@ GET https://{{baseurl}}/version.txt
 Accept: {{jsonType}}
 Accept-Encoding: {{jsonEncoding}}
 Accept-Language: {{jsonLanguage}}
+
+HTTP/1.1 200  - OK
+content-type: text/plain
+content-length: 36
+connection: close
+date: Fri, 13 Oct 2023 21:19:10 GMT
+last-modified: Fri, 13 Oct 2023 15:20:12 GMT
+etag: "2d19d092030273d3ed20ee4beacea509"
+x-amz-server-side-encryption: AES256
+x-amz-version-id: m9uhNtK.w_jhp38CTEaWvufLHXvivipz
+accept-ranges: bytes
+server: AmazonS3
+x-cache: Hit from cloudfront
+via: 1.1 343244031758b0b51a24ef2fac7819dc.cloudfront.net (CloudFront)
+x-amz-cf-pop: ORD58-P6
+x-amz-cf-id: jGfSvlhagYGXjh_D_4gtY00Fb2AqYD0hQhdH-FWfxBgJ-5WS1Tw_kQ==
+age: 3868
+vary: Origin
 /*
 ## Blueprint information
 */
@@ -26,6 +44,24 @@ GET https://{{baseurl}}/{{translate}}/blueprints.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
+
+HTTP/1.1 200  - OK
+content-type: application/json
+transfer-encoding: chunked
+connection: close
+date: Fri, 13 Oct 2023 21:31:52 GMT
+last-modified: Fri, 13 Oct 2023 15:11:34 GMT
+etag: W/"d9c51c510b0a08d66486df4ef7f43ef1"
+x-amz-server-side-encryption: AES256
+x-amz-version-id: mHkYJyCvONOPuaD4WZD9_HopGWd.SL.C
+server: AmazonS3
+content-encoding: gzip
+vary: Accept-Encoding, Origin
+x-cache: Hit from cloudfront
+via: 1.1 cda1913a649dc75ebe085933b079c996.cloudfront.net (CloudFront)
+x-amz-cf-pop: CMH68-P4
+x-amz-cf-id: AQsFV4LdoTrBAuQ4iDKHivPCQrx9y4yWe2D5iXmsBBP73JKA7xSlVg==
+age: 2985
 /*
 ## Building information
 */
@@ -34,6 +70,23 @@ GET https://{{baseurl}}/building/summary.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
+
+HTTP/1.1 200  - OK
+content-type: application/json
+transfer-encoding: chunked
+connection: close
+date: Fri, 13 Oct 2023 22:24:15 GMT
+last-modified: Fri, 13 Oct 2023 15:06:52 GMT
+etag: W/"4ee75cf484d686794fa9d036985d3938"
+x-amz-server-side-encryption: AES256
+x-amz-version-id: JKmgceVqZJVNAVpRL6tIREE9vKmLvvNK
+server: AmazonS3
+content-encoding: gzip
+vary: Accept-Encoding, Origin
+x-cache: Miss from cloudfront
+via: 1.1 70ac3f7279fe70ef5e2b27dc35af06b4.cloudfront.net (CloudFront)
+x-amz-cf-pop: ORD58-P6
+x-amz-cf-id: hrLd2mctdlQOCpxLIz-bti_EritR5b92xeHWqizPH_rAAQBykptBAg==
 /*
 ## Consumable 
 - Summary Information
@@ -251,8 +304,44 @@ GET https://{{baseurl}}/system/summary.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
+
+HTTP/1.1 200  - OK
+content-type: application/json
+transfer-encoding: chunked
+connection: close
+date: Fri, 13 Oct 2023 20:05:27 GMT
+last-modified: Fri, 13 Oct 2023 15:09:39 GMT
+etag: W/"763b0dde10cffde4f156a10fbb838fe6"
+x-amz-server-side-encryption: AES256
+x-amz-version-id: dtsRmnGbjdmoXFfCIMjJdj2nGVrPtqVx
+server: AmazonS3
+content-encoding: gzip
+vary: Accept-Encoding, Origin
+x-cache: Hit from cloudfront
+via: 1.1 3e15e20983f10122d7332649559a0f8c.cloudfront.net (CloudFront)
+x-amz-cf-pop: ORD58-P6
+x-amz-cf-id: H9eScIsN6iqFh0cXm-5-qqrBNEW7py4MtQ6fWUNjyOtVPpVRFFbTSA==
+age: 8340
 ###
 GET https://{{baseurl}}/{{translate}}/systems.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
+
+HTTP/1.1 200  - OK
+content-type: application/json
+transfer-encoding: chunked
+connection: close
+date: Fri, 13 Oct 2023 20:04:08 GMT
+last-modified: Fri, 13 Oct 2023 15:12:31 GMT
+etag: W/"af2c3a6762dec81231b4f8effef2ae25"
+x-amz-server-side-encryption: AES256
+x-amz-version-id: MVrWzj.93Yyqu64Mli09l5m8_QWtIHPb
+server: AmazonS3
+content-encoding: gzip
+vary: Accept-Encoding, Origin
+x-cache: Hit from cloudfront
+via: 1.1 e807928bf10df259d5d9aa45c69572c8.cloudfront.net (CloudFront)
+x-amz-cf-pop: ORD58-P6
+x-amz-cf-id: UeiabpZIO1ajdqe5hmMAZ7R86K28v_N052tVgC9tXTrFBSmWxZAY1g==
+age: 8416
