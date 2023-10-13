@@ -1,11 +1,5 @@
 {
     "DockerRun.DisableAutoGenerateConfig": true,
-    "markdownlint.config": {
-        "MD028": false,
-        "MD025": {
-            "front_matter_title": ""
-        }
-    },
     "cSpell.words": [
         "B'Etor",
         "Badgey",
@@ -46,11 +40,6 @@
         "Yuki",
         "Zhou"
     ],
-    "python.testing.pytestArgs": [
-        "."
-    ],
-    "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true,
     "sqltools.connections": [
         {
             "mysqlOptions": {
