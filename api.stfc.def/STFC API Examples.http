@@ -1,6 +1,7 @@
 /*
 # REST API examples for assets.stfc.space
-
+*/
+/*
 ## Global Variables
 */
 @host = assets.stfc.space
@@ -31,13 +32,13 @@ x-amz-version-id: m9uhNtK.w_jhp38CTEaWvufLHXvivipz
 accept-ranges: bytes
 server: AmazonS3
 x-cache: Hit from cloudfront
-via: 1.1 343244031758b0b51a24ef2fac7819dc.cloudfront.net (CloudFront)
-x-amz-cf-pop: ORD58-P6
-x-amz-cf-id: jGfSvlhagYGXjh_D_4gtY00Fb2AqYD0hQhdH-FWfxBgJ-5WS1Tw_kQ==
-age: 3868
+via: 1.1 cc47ec2760d38b865200c4e75e0eec54.cloudfront.net (CloudFront)
+x-amz-cf-pop: CMH68-P4
+x-amz-cf-id: eX6_DtZQMbMDzfOqITFv6096nyQPnwKm1yQ4UY2n57Oy3Q9rGiuSAA==
+age: 5815
 vary: Origin
 /*
-## Blueprint information
+## Blueprint Information
 */
 ###
 GET https://{{baseurl}}/{{translate}}/blueprints.json HTTP/1.1
@@ -58,12 +59,12 @@ server: AmazonS3
 content-encoding: gzip
 vary: Accept-Encoding, Origin
 x-cache: Hit from cloudfront
-via: 1.1 cda1913a649dc75ebe085933b079c996.cloudfront.net (CloudFront)
+via: 1.1 9bb4d05ab08e4eaa205fa572ca4c835c.cloudfront.net (CloudFront)
 x-amz-cf-pop: CMH68-P4
-x-amz-cf-id: AQsFV4LdoTrBAuQ4iDKHivPCQrx9y4yWe2D5iXmsBBP73JKA7xSlVg==
-age: 2985
+x-amz-cf-id: QUFTT_3bPvAGlMPuNJTc5YENNPDA17VWGKBxQKRWJbfu2gkW4NA7kg==
+age: 4234
 /*
-## Building information
+## Building Information
 */
 ###
 GET https://{{baseurl}}/building/summary.json HTTP/1.1
@@ -83,15 +84,15 @@ x-amz-version-id: JKmgceVqZJVNAVpRL6tIREE9vKmLvvNK
 server: AmazonS3
 content-encoding: gzip
 vary: Accept-Encoding, Origin
-x-cache: Miss from cloudfront
-via: 1.1 70ac3f7279fe70ef5e2b27dc35af06b4.cloudfront.net (CloudFront)
-x-amz-cf-pop: ORD58-P6
-x-amz-cf-id: hrLd2mctdlQOCpxLIz-bti_EritR5b92xeHWqizPH_rAAQBykptBAg==
+x-cache: Hit from cloudfront
+via: 1.1 02a2bd1a95c9e133cb6af71565738388.cloudfront.net (CloudFront)
+x-amz-cf-pop: CMH68-P4
+x-amz-cf-id: E8WX_qSvQJ_il3FxEWiTcgyyqgd1o0f4phhQhea7jOTrtu4Rg4m8DA==
+age: 1118
 /*
-## Consumable 
-- Summary Information
-- Consumable Title Information
-
+## Consumable Information
+- Consumable Details
+- Consumable Titles and Descriptions
 */
 ###
 GET https://{{baseurl}}/consumable/summary.json HTTP/1.1
@@ -103,6 +104,23 @@ GET https://{{baseurl}}/{{translate}}/consumables.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
+
+HTTP/1.1 200  - OK
+content-type: application/json
+transfer-encoding: chunked
+connection: close
+date: Fri, 13 Oct 2023 22:55:00 GMT
+last-modified: Fri, 13 Oct 2023 15:11:34 GMT
+etag: W/"38d4f54d84e908f6dd1ff083b5b9d07a"
+x-amz-server-side-encryption: AES256
+x-amz-version-id: YxQr.9bmXu1PIsykNaJkUfVvJAn6tsrS
+server: AmazonS3
+content-encoding: gzip
+vary: Accept-Encoding, Origin
+x-cache: Miss from cloudfront
+via: 1.1 141cc765667839ffa8c4ad646af354cc.cloudfront.net (CloudFront)
+x-amz-cf-pop: CMH68-P4
+x-amz-cf-id: RVUbl4a7_IXi3BRuU2WAFWZ-pBVZrGCYzORM-vxPTI5aTank8HCrlg==
 /*
 ## Event Titles
 */
@@ -139,19 +157,31 @@ GET https://{{baseurl}}/hostile/summary.json HTTP/1.1
 ## Miscellaneous Material Information
 - Assignment Speedups
 - Repair Speedups
-- ...
+
 */
 ###
 GET https://{{baseurl}}/{{translate}}/materials.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-/*
-## Mission Information
-- Mission Detail Data
-- Mission Tittles
-- Mission Navigation
-*/
+
+HTTP/1.1 200  - OK
+content-type: application/json
+transfer-encoding: chunked
+connection: close
+date: Fri, 13 Oct 2023 21:42:52 GMT
+last-modified: Fri, 13 Oct 2023 15:11:35 GMT
+etag: W/"c1bf2907bf4d6c892ede1c60a7f90abf"
+x-amz-server-side-encryption: AES256
+x-amz-version-id: c_1VA5Dego8ksQ7IalEUwkjuo04XAUz1
+server: AmazonS3
+content-encoding: gzip
+vary: Accept-Encoding, Origin
+x-cache: Hit from cloudfront
+via: 1.1 cc47ec2760d38b865200c4e75e0eec54.cloudfront.net (CloudFront)
+x-amz-cf-pop: CMH68-P4
+x-amz-cf-id: Xq5dc8rU8R1Q5M8iSnHYTBZH1pAGh2nwBhukf9yQ_AQw-aYAi3iH8Q==
+age: 4080
 ###
 GET https://{{baseurl}}/mission/summary.json HTTP/1.1
     Accept: {{jsonType}}
@@ -271,7 +301,7 @@ GET https://{{baseurl}}/skins/summary.json HTTP/1.1
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
 /*
-## Starbase Information
+## Star Base Information
 */
 ###
 GET https://{{baseurl}}/{{translate}}/starbase_modules.json HTTP/1.1
