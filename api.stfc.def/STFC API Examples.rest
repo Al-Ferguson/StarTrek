@@ -1,5 +1,4 @@
-### https://assets.stfc.space/data/latest Reset API examples
-
+### REST API for stfc.space
 
 ### Variables for API Tests
 @host = assets.stfc.space
