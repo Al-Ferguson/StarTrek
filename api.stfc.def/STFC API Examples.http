@@ -19,24 +19,6 @@ GET https://{{baseurl}}/version.txt
 Accept: {{jsonType}}
 Accept-Encoding: {{jsonEncoding}}
 Accept-Language: {{jsonLanguage}}
-
-HTTP/1.1 200  - OK
-content-type: text/plain
-content-length: 36
-connection: close
-date: Fri, 13 Oct 2023 21:19:10 GMT
-last-modified: Fri, 13 Oct 2023 15:20:12 GMT
-etag: "2d19d092030273d3ed20ee4beacea509"
-x-amz-server-side-encryption: AES256
-x-amz-version-id: m9uhNtK.w_jhp38CTEaWvufLHXvivipz
-accept-ranges: bytes
-server: AmazonS3
-x-cache: Hit from cloudfront
-via: 1.1 cc47ec2760d38b865200c4e75e0eec54.cloudfront.net (CloudFront)
-x-amz-cf-pop: CMH68-P4
-x-amz-cf-id: eX6_DtZQMbMDzfOqITFv6096nyQPnwKm1yQ4UY2n57Oy3Q9rGiuSAA==
-age: 5815
-vary: Origin
 /*
 ## Blueprint Information
 */
@@ -45,24 +27,6 @@ GET https://{{baseurl}}/{{translate}}/blueprints.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-
-HTTP/1.1 200  - OK
-content-type: application/json
-transfer-encoding: chunked
-connection: close
-date: Fri, 13 Oct 2023 21:31:52 GMT
-last-modified: Fri, 13 Oct 2023 15:11:34 GMT
-etag: W/"d9c51c510b0a08d66486df4ef7f43ef1"
-x-amz-server-side-encryption: AES256
-x-amz-version-id: mHkYJyCvONOPuaD4WZD9_HopGWd.SL.C
-server: AmazonS3
-content-encoding: gzip
-vary: Accept-Encoding, Origin
-x-cache: Hit from cloudfront
-via: 1.1 9bb4d05ab08e4eaa205fa572ca4c835c.cloudfront.net (CloudFront)
-x-amz-cf-pop: CMH68-P4
-x-amz-cf-id: QUFTT_3bPvAGlMPuNJTc5YENNPDA17VWGKBxQKRWJbfu2gkW4NA7kg==
-age: 4234
 /*
 ## Building Information
 */
@@ -71,24 +35,6 @@ GET https://{{baseurl}}/building/summary.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-
-HTTP/1.1 200  - OK
-content-type: application/json
-transfer-encoding: chunked
-connection: close
-date: Fri, 13 Oct 2023 22:24:15 GMT
-last-modified: Fri, 13 Oct 2023 15:06:52 GMT
-etag: W/"4ee75cf484d686794fa9d036985d3938"
-x-amz-server-side-encryption: AES256
-x-amz-version-id: JKmgceVqZJVNAVpRL6tIREE9vKmLvvNK
-server: AmazonS3
-content-encoding: gzip
-vary: Accept-Encoding, Origin
-x-cache: Hit from cloudfront
-via: 1.1 02a2bd1a95c9e133cb6af71565738388.cloudfront.net (CloudFront)
-x-amz-cf-pop: CMH68-P4
-x-amz-cf-id: E8WX_qSvQJ_il3FxEWiTcgyyqgd1o0f4phhQhea7jOTrtu4Rg4m8DA==
-age: 1118
 /*
 ## Consumable Information
 - Consumable Details
@@ -104,25 +50,8 @@ GET https://{{baseurl}}/{{translate}}/consumables.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-
-HTTP/1.1 200  - OK
-content-type: application/json
-transfer-encoding: chunked
-connection: close
-date: Fri, 13 Oct 2023 22:55:00 GMT
-last-modified: Fri, 13 Oct 2023 15:11:34 GMT
-etag: W/"38d4f54d84e908f6dd1ff083b5b9d07a"
-x-amz-server-side-encryption: AES256
-x-amz-version-id: YxQr.9bmXu1PIsykNaJkUfVvJAn6tsrS
-server: AmazonS3
-content-encoding: gzip
-vary: Accept-Encoding, Origin
-x-cache: Miss from cloudfront
-via: 1.1 141cc765667839ffa8c4ad646af354cc.cloudfront.net (CloudFront)
-x-amz-cf-pop: CMH68-P4
-x-amz-cf-id: RVUbl4a7_IXi3BRuU2WAFWZ-pBVZrGCYzORM-vxPTI5aTank8HCrlg==
 /*
-## Event Titles
+## Event Information
 */
 ###
 GET https://{{baseurl}}/{{translate}}/event_titles.json HTTP/1.1
@@ -164,24 +93,12 @@ GET https://{{baseurl}}/{{translate}}/materials.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-
-HTTP/1.1 200  - OK
-content-type: application/json
-transfer-encoding: chunked
-connection: close
-date: Fri, 13 Oct 2023 21:42:52 GMT
-last-modified: Fri, 13 Oct 2023 15:11:35 GMT
-etag: W/"c1bf2907bf4d6c892ede1c60a7f90abf"
-x-amz-server-side-encryption: AES256
-x-amz-version-id: c_1VA5Dego8ksQ7IalEUwkjuo04XAUz1
-server: AmazonS3
-content-encoding: gzip
-vary: Accept-Encoding, Origin
-x-cache: Hit from cloudfront
-via: 1.1 cc47ec2760d38b865200c4e75e0eec54.cloudfront.net (CloudFront)
-x-amz-cf-pop: CMH68-P4
-x-amz-cf-id: Xq5dc8rU8R1Q5M8iSnHYTBZH1pAGh2nwBhukf9yQ_AQw-aYAi3iH8Q==
-age: 4080
+/*
+## Mission Information
+- Mission Details
+- Mission Titles and Descriptions
+- Mission Navigation Information
+*/
 ###
 GET https://{{baseurl}}/mission/summary.json HTTP/1.1
     Accept: {{jsonType}}
@@ -334,44 +251,8 @@ GET https://{{baseurl}}/system/summary.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-
-HTTP/1.1 200  - OK
-content-type: application/json
-transfer-encoding: chunked
-connection: close
-date: Fri, 13 Oct 2023 20:05:27 GMT
-last-modified: Fri, 13 Oct 2023 15:09:39 GMT
-etag: W/"763b0dde10cffde4f156a10fbb838fe6"
-x-amz-server-side-encryption: AES256
-x-amz-version-id: dtsRmnGbjdmoXFfCIMjJdj2nGVrPtqVx
-server: AmazonS3
-content-encoding: gzip
-vary: Accept-Encoding, Origin
-x-cache: Hit from cloudfront
-via: 1.1 3e15e20983f10122d7332649559a0f8c.cloudfront.net (CloudFront)
-x-amz-cf-pop: ORD58-P6
-x-amz-cf-id: H9eScIsN6iqFh0cXm-5-qqrBNEW7py4MtQ6fWUNjyOtVPpVRFFbTSA==
-age: 8340
 ###
 GET https://{{baseurl}}/{{translate}}/systems.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-
-HTTP/1.1 200  - OK
-content-type: application/json
-transfer-encoding: chunked
-connection: close
-date: Fri, 13 Oct 2023 20:04:08 GMT
-last-modified: Fri, 13 Oct 2023 15:12:31 GMT
-etag: W/"af2c3a6762dec81231b4f8effef2ae25"
-x-amz-server-side-encryption: AES256
-x-amz-version-id: MVrWzj.93Yyqu64Mli09l5m8_QWtIHPb
-server: AmazonS3
-content-encoding: gzip
-vary: Accept-Encoding, Origin
-x-cache: Hit from cloudfront
-via: 1.1 e807928bf10df259d5d9aa45c69572c8.cloudfront.net (CloudFront)
-x-amz-cf-pop: ORD58-P6
-x-amz-cf-id: UeiabpZIO1ajdqe5hmMAZ7R86K28v_N052tVgC9tXTrFBSmWxZAY1g==
-age: 8416
