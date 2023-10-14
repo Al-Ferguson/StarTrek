@@ -16,12 +16,11 @@ NOTE: This has been tested with Python 3.9+ and Requests v2.30+
 #   - typing
 
 import requests as rq
-
 # endregion Imports
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2023-10-13 19:55:54"
+__updated__ = "2023-10-13 19:58:13"
 __version__: str = "0.1.2"
 # endregion Author & Version
 
@@ -60,7 +59,8 @@ def jsonvalue(name: list, key: int):
         str: Text value for passed key
     """
 
-    return [x["text"] for x in name if (int(x["id"]) == key and x["key"] == "name")][0]
+    return [x["text"] for x in name if (int(x["id"]) == key and
+                                        x["key"] == "name")][0]
 
 
 def generate_ship_import() -> str:

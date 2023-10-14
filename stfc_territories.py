@@ -16,22 +16,23 @@ NOTE: This has been tested with Python 3.11+ and Requests v2.30+
 #   - typing
 
 import requests as rq
-# from typing import Generic, TypeVar
+
 # endregion Imports
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = '2023-10-05 01:49:14'
-__version__: str = "0.0.1"
+__updated__ = "2023-10-13 20:08:50"
+__version__: str = "0.0.2"
 # endregion Author & Version
 
 # region Global Variables
-API_URL: str = 'https://assets.stfc.space/data/latest/'
+API_URL: str = "https://assets.stfc.space/data/latest/"
 TRANSLATE_LANGUAGE = "en"
-DETAIL_URL: str = f'{API_URL}/translations/{TRANSLATE_LANGUAGE}'
+DETAIL_URL: str = f"{API_URL}/translations/{TRANSLATE_LANGUAGE}"
 
-SYSTEM: list = rq.get(f'{API_URL}system/summary.json', timeout=5).json()
-SYSTEMS: list = rq.get(f'{DETAIL_URL}/systems.json', timeout=5).json()
+SYSTEM: list = rq.get(f"{API_URL}system/summary.json", timeout=5).json()
+SYSTEMS: list = rq.get(f"{DETAIL_URL}/systems.json", timeout=5).json()
+FACTIONS = rq.get(f"{DETAIL_URL}/factions.json", timeout=5).json()
 # endregion Global Variables
 
 # region Functions
@@ -46,22 +47,47 @@ def jsonvalue(name: list, key: int):
         str: Text value for passed key
     """
 
-    return [x['text'] for x in name if (int(x['id']) == key
-                                        and x['key'] == 'name')][0]
+    return [x["text"] for x in name if (int(x["id"]) == key
+                                        and x["key"] == "name")][0]
 
 
-def construct_systemtitles(system: dict) -> str:
+def construct_faction(dictionary: dict) -> str:
+    """Construct faction from a dictionary"""
+    return f'"{jsonvalue(FACTIONS, dictionary["faction"])}"'
+
+
+def generate_system() -> str:
+    """systemimport Builds the SQL for the STFC Systems Import File
+    Args:
+        None
+    Returns:
+        str: IMPORT SQL for STFC Systems
+    """
+    result = [construct_system_row(system) for system in SYSTEM]
+
+    return ",\n".join(result)
+
+
+def construct_system_row(system: dict) -> str:
+    """data builds IMPORT Data Line"""
+    return f'({system["id"]}, {construct_systemnames(system)},\
+ {system["level"]}, {system["est_warp"]}, {construct_faction(system)},\
+ {system["is_deep_space"]})'
+
+
+def construct_systemnames(system: dict) -> str:
     """Construct system Name from system dictionary"""
     return f'"{jsonvalue(SYSTEMS, system["id"])}"'
 
 
 # endregion Functions
 
+
 def main() -> None:
     """https://stfc.space Information retrieval & CSV build."""
 
-    print('Writing System CSV:')
-    with open("STFC Territories.csv", "w") as file:
+    print("Writing System CSV:")
+    with open("STFC Territories.csv", "w", encoding="utf-8") as file:
         file.write(generate_system())
 
 
