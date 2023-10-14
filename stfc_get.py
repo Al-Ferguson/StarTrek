@@ -9,32 +9,43 @@ NOTE: This has been tested with Python 3.9+ and Requests v2.30+
 
 
 # region Imports
+# Script Dependencies:
+#   - requests
+#   - csv
+#   - json
+#   - typing
+
 import requests as rq
+
 # endregion Imports
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = '2023-10-04 23:47:00'
+__updated__ = "2023-10-13 19:55:54"
 __version__: str = "0.1.2"
 # endregion Author & Version
 
 # region Global Variables
-API_URL: str = 'https://assets.stfc.space/data/latest'
+API_URL: str = "https://assets.stfc.space/data/latest"
 TRANSLATE_LANGUAGE = "en"
-DETAIL_URL: str = f'{API_URL}/translations/{TRANSLATE_LANGUAGE}'
+DETAIL_URL: str = f"{API_URL}/translations/{TRANSLATE_LANGUAGE}"
 
-SHIP_INSERT: str = 'INSERT INTO `StfcShips` (`ShipID`, `ShipName`,' \
-    '`ShipLevel`, `ShipType`,`ShipFaction`) VALUES\n'
-SYSTEM_INSERT: str = 'INSERT INTO `StfcSystems` (`SystemID`, `SystemName`,' \
-    '`SystemLevel`, `SystemWarpDist`, `SystemType`, `DarkSpace`) VALUES\n'
+SHIP_INSERT: str = (
+    "INSERT INTO `StfcShips` (`ShipID`, `ShipName`,"
+    "`ShipLevel`, `ShipType`,`ShipFaction`) VALUES\n"
+)
+SYSTEM_INSERT: str = (
+    "INSERT INTO `StfcSystems` (`SystemID`, `SystemName`,"
+    "`SystemLevel`, `SystemWarpDist`, `SystemType`, `DarkSpace`) VALUES\n"
+)
 SQL_END = ";\n\nCOMMIT;\n\n"
 
-SHIP: list = rq.get(f'{API_URL}/ship/summary.json', timeout=5).json()
-SHIPS: list = rq.get(f'{DETAIL_URL}/ships.json', timeout=5).json()
-SHIPTYPES: list = rq.get(f'{DETAIL_URL}/ship_type.json', timeout=5).json()
-SYSTEM: list = rq.get(f'{API_URL}/system/summary.json', timeout=5).json()
-SYSTEMS: list = rq.get(f'{DETAIL_URL}/systems.json', timeout=5).json()
-FACTIONS = rq.get(f'{DETAIL_URL}/factions.json', timeout=5).json()
+SHIP: list = rq.get(f"{API_URL}/ship/summary.json", timeout=5).json()
+SHIPS: list = rq.get(f"{DETAIL_URL}/ships.json", timeout=5).json()
+SHIPTYPES: list = rq.get(f"{DETAIL_URL}/ship_type.json", timeout=5).json()
+SYSTEM: list = rq.get(f"{API_URL}/system/summary.json", timeout=5).json()
+SYSTEMS: list = rq.get(f"{DETAIL_URL}/systems.json", timeout=5).json()
+FACTIONS = rq.get(f"{DETAIL_URL}/factions.json", timeout=5).json()
 # endregion Global Variables
 
 # region Functions
@@ -49,8 +60,7 @@ def jsonvalue(name: list, key: int):
         str: Text value for passed key
     """
 
-    return [x['text'] for x in name if (int(x['id']) == key
-                                        and x['key'] == 'name')][0]
+    return [x["text"] for x in name if (int(x["id"]) == key and x["key"] == "name")][0]
 
 
 def generate_ship_import() -> str:
@@ -117,11 +127,11 @@ def construct_systemnames(system: dict) -> str:
 def main() -> None:
     """https://stfc.space Information retrieval & Import SQL build."""
 
-    print('Writing Ships IMPORT SQL:')
+    print("Writing Ships IMPORT SQL:")
     with open("STFC Pirate 2 Ships.sql", "w", encoding="utf-8") as file:
         file.write(generate_ship_import() + SQL_END)
 
-    print('Writing Systems IMPORT SQL:')
+    print("Writing Systems IMPORT SQL:")
     with open("STFC Pirate 3 Systems.sql", "w", encoding="utf-8") as file:
         file.write(generate_system_import() + SQL_END)
 
