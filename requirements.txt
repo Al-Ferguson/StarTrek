@@ -8,7 +8,6 @@ CacheControl
 certifi
 cffi
 charset-normalizer
-cleo
 click
 click-option-group
 colorama
