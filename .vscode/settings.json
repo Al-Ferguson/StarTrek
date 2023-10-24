@@ -54,5 +54,11 @@
             "database": "stfcpirate"
         }
     ],
-    "python.analysis.autoImportCompletions": true
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.extraPaths": [
+        "/Users/aferguson/.vscode/extensions/continue.continue-0.0.412-darwin-arm64"
+    ],
+    "python.autoComplete.extraPaths": [
+        "/Users/aferguson/.vscode/extensions/continue.continue-0.0.412-darwin-arm64"
+    ]
 }
