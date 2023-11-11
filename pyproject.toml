@@ -1,3 +1,7 @@
+[project]
+requires-python = ">=3.11"
+name = "StarTrek"
+
 [tool.poetry]
 name = "startrek"
 version = "0.1.4"
@@ -13,5 +17,5 @@ requests = "^2.31"
 mypy = "^1.51"
 
 [build-system]
-requires = ["poetry-core>=1.7.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
