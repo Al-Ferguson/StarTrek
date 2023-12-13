@@ -19,9 +19,6 @@ GET https://{{baseurl}}/version.txt
 Accept: {{jsonType}}
 Accept-Encoding: {{jsonEncoding}}
 Accept-Language: {{jsonLanguage}}
-/*
-## Blueprint Information
-*/
 ###
 GET https://{{baseurl}}/{{translate}}/blueprints.json HTTP/1.1
     Accept: {{jsonType}}
