@@ -126,6 +126,11 @@ GET https://{{baseurl}}/officer/summary.json HTTP/1.1
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
 ###
+GET https://{{baseurl}}/officer/4151676212.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+###
 GET https://{{baseurl}}/{{translate}}/officers.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
@@ -161,10 +166,16 @@ GET https://{{baseurl}}/{{translate}}/player_avatars.json HTTP/1.1
 /*
 ## Research Information
 - Research Details
+- Research Detail for ID=4255996393
 - Research Titles and Descriptions
 */
 ###
 GET https://{{baseurl}}/research/summary.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+###
+GET https://{{baseurl}}/research/4255996393.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
@@ -184,6 +195,7 @@ GET https://{{baseurl}}/resource/summary.json HTTP/1.1
 /*
 ## Ship Information
 - Ship Details
+- Ship Details for ID=3682502332
 - Ship Names, Flavors, and Descriptions
 - Ship Buffs
 - Ship Components
@@ -191,6 +203,11 @@ GET https://{{baseurl}}/resource/summary.json HTTP/1.1
 */
 ###
 GET https://{{baseurl}}/ship/summary.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+###
+GET https://{{baseurl}}/ship/3682502332.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
@@ -224,9 +241,16 @@ GET https://{{baseurl}}/{{translate}}/starbase_modules.json HTTP/1.1
     Accept-Language: {{jsonLanguage}}
 /*
 ## Syndicate Information
+- Syndicate Summary
+- Syndicate Detail for ID=4162111876
 */
 ###
 GET https://{{baseurl}}/syndicate/summary.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+###
+GET https://{{baseurl}}/syndicate/4162111876.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
