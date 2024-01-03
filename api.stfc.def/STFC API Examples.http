@@ -240,7 +240,8 @@ GET https://{{baseurl}}/{{translate}}/loyalty.json HTTP/1.1
     Accept-Language: {{jsonLanguage}}
 /*
 ## System Information
-- System Detail Information
+- System Detail Summary
+- System Detail for ID=2105774194
 - System Names, Flavor, and Description Information
 */
 ###
@@ -249,7 +250,34 @@ GET https://{{baseurl}}/system/summary.json HTTP/1.1
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
 ###
+GET https://{{baseurl}}/system/2105774194.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+###
 GET https://{{baseurl}}/{{translate}}/systems.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+/*
+## Forbidden Tech
+- Forbidden Tech Summary
+- Forbidden Tech Detail for ID=1206498925
+- Forbidden Tech Names, Flavors, & Descriptions
+
+*/
+###
+GET https://{{baseurl}}/forbidden_tech/summary.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+###
+GET https://{{baseurl}}/forbidden_tech/1206498925.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+###
+GET https://{{baseurl}}/{{translate}}/forbidden_tech.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
