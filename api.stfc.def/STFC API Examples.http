@@ -19,24 +19,6 @@ GET https://{{baseurl}}/version.txt
 Accept: {{jsonType}}
 Accept-Encoding: {{jsonEncoding}}
 Accept-Language: {{jsonLanguage}}
-
-HTTP/1.1 200  - OK
-content-type: text/plain
-content-length: 36
-connection: close
-date: Wed, 03 Jan 2024 12:43:04 GMT
-last-modified: Tue, 05 Dec 2023 14:01:29 GMT
-etag: "9b4a27b85b41865b291d8b68c2cc08d0"
-x-amz-server-side-encryption: AES256
-x-amz-version-id: Tk8L5YPYdONN6Gy4krUiih6zIrSGDozk
-accept-ranges: bytes
-server: AmazonS3
-x-cache: Hit from cloudfront
-via: 1.1 90d8b1c5139ab84fb9d212df3fc8ceaa.cloudfront.net (CloudFront)
-x-amz-cf-pop: ORD58-P6
-x-amz-cf-id: H9JmdOdzb-NIWrnTZbZzJYq-fhj-DyoeSgxdhWNawTwwq1nskLc1ZA==
-age: 48
-vary: Origin
 ###
 GET https://{{baseurl}}/{{translate}}/blueprints.json HTTP/1.1
     Accept: {{jsonType}}
@@ -44,9 +26,16 @@ GET https://{{baseurl}}/{{translate}}/blueprints.json HTTP/1.1
     Accept-Language: {{jsonLanguage}}
 /*
 ## Building Information
+- Building Summary
+- Building Information for ID=1007
 */
 ###
 GET https://{{baseurl}}/building/summary.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+###
+GET https://{{baseurl}}/building/1007.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
