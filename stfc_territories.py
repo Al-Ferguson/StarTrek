@@ -21,7 +21,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2023-11-11 16:28:25"
+__updated__ = "2024-02-18 05:34:19"
 __version__: str = "0.0.2"
 # endregion Author & Version
 
@@ -31,7 +31,7 @@ TRANSLATE_LANGUAGE = "en"
 DETAIL_URL: str = f"{API_URL}/translations/{TRANSLATE_LANGUAGE}"
 
 SYSTEM: list = rq.get(f"{API_URL}system/summary.json", timeout=5).json()
-SYSTEMS: list = rq.get(f"{DETAIL_URL}/systems.json", timeout=5).json()
+SYSTEM_DETAILS: list = rq.get(f"{DETAIL_URL}/systems.json", timeout=5).json()
 FACTIONS = rq.get(f"{DETAIL_URL}/factions.json", timeout=5).json()
 # endregion Global Variables
 
@@ -47,8 +47,8 @@ def jsonvalue(name: list, key: int):
         str: Text value for passed key
     """
 
-    return [x["text"] for x in name if (int(x["id"]) == key
-                                        and x["key"] == "name")][0]
+    lookup = {int(item["id"]): item["text"] for item in name if item["key"] == "name"}
+    return lookup.get(key, "")
 
 
 def construct_faction(dictionary: dict) -> str:
@@ -63,13 +63,14 @@ def generate_system() -> str:
     Returns:
         str: IMPORT SQL for STFC Systems
     """
+ 
     result = [construct_system_row(system) for system in SYSTEM]
-
     return ",\n".join(result)
 
 
 def construct_system_row(system: dict) -> str:
     """data builds IMPORT Data Line"""
+ 
     return f'({system["id"]}, {construct_systemnames(system)},\
  {system["level"]}, {system["est_warp"]}, {construct_faction(system)},\
  {system["is_deep_space"]})'
@@ -77,7 +78,8 @@ def construct_system_row(system: dict) -> str:
 
 def construct_systemnames(system: dict) -> str:
     """Construct system Name from system dictionary"""
-    return f'"{jsonvalue(SYSTEMS, system["id"])}"'
+
+    return f'"{jsonvalue(SYSTEM_DETAILS, system["id"])}"'
 
 
 # endregion Functions
