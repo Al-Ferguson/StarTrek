@@ -21,7 +21,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2024-02-18 05:34:19"
+__updated__ = "2024-02-18 05:35:15"
 __version__: str = "0.0.2"
 # endregion Author & Version
 
@@ -53,6 +53,7 @@ def jsonvalue(name: list, key: int):
 
 def construct_faction(dictionary: dict) -> str:
     """Construct faction from a dictionary"""
+
     return f'"{jsonvalue(FACTIONS, dictionary["faction"])}"'
 
 
@@ -63,14 +64,14 @@ def generate_system() -> str:
     Returns:
         str: IMPORT SQL for STFC Systems
     """
- 
+
     result = [construct_system_row(system) for system in SYSTEM]
     return ",\n".join(result)
 
 
 def construct_system_row(system: dict) -> str:
     """data builds IMPORT Data Line"""
- 
+
     return f'({system["id"]}, {construct_systemnames(system)},\
  {system["level"]}, {system["est_warp"]}, {construct_faction(system)},\
  {system["is_deep_space"]})'
