@@ -15,12 +15,13 @@ NOTE: This has been tested with Python 3.9+ and Requests v2.30+
 #   - json
 #   - typing
 
+from typing import Any, Text
 import requests as rq
 # endregion Imports
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2023-11-11 16:39:37"
+__updated__ = "2024-06-08 17:23:20"
 __version__: str = "0.1.2"
 # endregion Author & Version
 
@@ -50,7 +51,7 @@ FACTIONS = rq.get(f"{DETAIL_URL}/factions.json", timeout=5).json()
 # region Functions
 
 
-def jsonvalue(name: list, key: int):
+def jsonvalue(name: list, key: int) -> Any:
     """jsonvalue returns Text versions of Int Key values from a JSON
     Args:
         name (json): JSON to search for Text value
