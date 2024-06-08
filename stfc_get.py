@@ -15,13 +15,13 @@ NOTE: This has been tested with Python 3.9+ and Requests v2.30+
 #   - json
 #   - typing
 
-from typing import Any, Text
+from typing import Any
 import requests as rq
 # endregion Imports
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2024-06-08 17:23:20"
+__updated__ = "2024-06-08 17:24:25"
 __version__: str = "0.1.2"
 # endregion Author & Version
 
