@@ -21,7 +21,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2024-06-08 17:24:25"
+__updated__ = "2024-06-13 03:38:59"
 __version__: str = "0.1.2"
 # endregion Author & Version
 
@@ -51,17 +51,19 @@ FACTIONS = rq.get(f"{DETAIL_URL}/factions.json", timeout=5).json()
 # region Functions
 
 
-def jsonvalue(name: list, key: int) -> Any:
-    """jsonvalue returns Text versions of Int Key values from a JSON
+def get_json_value(name: list, key: int) -> Any:
+    """get_json_value returns Text of Int Key values from a JSON
     Args:
         name (json): JSON to search for Text value
         key (int): Key to convert
     Returns:
         str: Text value for passed key
     """
-
-    return [x["text"] for x in name if (int(x["id"]) == key and
-                                        x["key"] == "name")][0]
+    try:
+        return next(x["text"] for x in name if
+                    int(x["id"]) == key and x["key"] == "name")
+    except StopIteration:
+        return ""
 
 
 def generate_ship_import() -> str:
@@ -85,17 +87,17 @@ def construct_ship_row(ship: dict) -> str:
 
 def construct_shipnames(ship: dict) -> str:
     """Construct ship Name from ship dictionary"""
-    return f'"{jsonvalue(SHIPS, ship["id"])}"'
+    return f'"{get_json_value(SHIPS, ship["id"])}"'
 
 
 def construct_hull_type(ship: dict) -> str:
     """Construct hull from ship dictionary"""
-    return f'"{jsonvalue(SHIPTYPES, ship["hull_type"]).capitalize()}"'
+    return f'"{get_json_value(SHIPTYPES, ship["hull_type"]).capitalize()}"'
 
 
 def construct_faction(dictionary: dict) -> str:
     """Construct faction from a dictionary"""
-    return f'"{jsonvalue(FACTIONS, dictionary["faction"])}"'
+    return f'"{get_json_value(FACTIONS, dictionary["faction"])}"'
 
 
 def generate_system_import() -> str:
@@ -119,7 +121,7 @@ def construct_system_row(system: dict) -> str:
 
 def construct_systemnames(system: dict) -> str:
     """Construct system Name from system dictionary"""
-    return f'"{jsonvalue(SYSTEMS, system["id"])}"'
+    return f'"{get_json_value(SYSTEMS, system["id"])}"'
 
 
 # endregion Functions
