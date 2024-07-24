@@ -57,3 +57,4 @@ dmypy.json
 logs
 .dockerrc
 .trunk
+.trunk/
