@@ -26,4 +26,5 @@ charset-normalizer>=3.3.2
 idna>=3.6
     # via requestsmypy --install-types
 requests>=2.31.0
+types-requests>=2.32.0
     # via startrek (pyproject.toml)
