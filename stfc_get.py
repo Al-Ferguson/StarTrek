@@ -21,7 +21,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2024-10-24 15:13:27"
+__updated__ = "2024-10-24 15:17:33"
 __version__: str = "0.1.4"
 # endregion Author & Version
 
@@ -51,17 +51,10 @@ FACTIONS = rq.get(f"{DETAIL_URL}/factions.json", timeout=5).json()
 # region Functions
 
 
-def get_json_value(name: list, key: int) -> Any:
-    """get_json_value returns Text of Int Key values from a JSON
-    Args:
-        name (json): JSON to search for Text value
-        key (int): Key to convert
-    Returns:
-        str: Text value for passed key
-    """
+def get_json_value(data: list, key: int) -> str:
+    """Returns Text value for passed key"""
     try:
-        return next(x["text"] for x in name if
-                    int(x["id"]) == key and x["key"] == "name")
+        return next((x["text"] for x in data if int(x["id"]) == key), "")
     except StopIteration:
         return ""
 
@@ -125,7 +118,7 @@ def construct_system_row(system: dict) -> str:
     Returns:
         str: Import data line as string.
     """
-    
+
     return f'({system["id"]}, {construct_systemnames(system)}, \
              {system["level"]}, {system["est_warp"]}, {construct_faction(system)}, \
              {system["is_deep_space"]})'
