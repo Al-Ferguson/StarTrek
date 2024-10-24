@@ -21,8 +21,8 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2024-06-13 03:40:44"
-__version__: str = "0.1.3"
+__updated__ = "2024-10-24 15:13:27"
+__version__: str = "0.1.4"
 # endregion Author & Version
 
 # region Global Variables
@@ -79,10 +79,13 @@ def generate_ship_import() -> str:
 
 
 def construct_ship_row(ship: dict) -> str:
-    """data builds IMPORT Data Line"""
-    return f'({ship["id"]}, {construct_shipnames(ship)},\
- {ship["grade"]}, {construct_hull_type(ship)},\
- {construct_faction(ship)})'
+    """Constructs a ship row string from the given dictionary."""
+    return (
+        f'({ship["id"]}, '
+        f'{construct_shipnames(ship)}, '
+        f'{construct_hull_type(ship)}, '
+        f'{construct_faction(ship)})'
+    )
 
 
 def construct_shipnames(ship: dict) -> str:
@@ -113,10 +116,19 @@ def generate_system_import() -> str:
 
 
 def construct_system_row(system: dict) -> str:
-    """data builds IMPORT Data Line"""
-    return f'({system["id"]}, {construct_systemnames(system)},\
- {system["level"]}, {system["est_warp"]}, {construct_faction(system)},\
- {system["is_deep_space"]})'
+    """
+    Builds import data line from system dictionary.
+    
+    Args:
+        system (dict): System dictionary.
+        
+    Returns:
+        str: Import data line as string.
+    """
+    
+    return f'({system["id"]}, {construct_systemnames(system)}, \
+             {system["level"]}, {system["est_warp"]}, {construct_faction(system)}, \
+             {system["is_deep_space"]})'
 
 
 def construct_systemnames(system: dict) -> str:
@@ -131,13 +143,14 @@ def main() -> None:
     """https://stfc.space Information retrieval & Import SQL build."""
 
     print("Writing Ships IMPORT SQL:")
+    ships_sql = generate_ship_import() + SQL_END
     with open("STFC Pirate 2 Ships.sql", "w", encoding="utf-8") as file:
-        file.write(generate_ship_import() + SQL_END)
+        file.write(ships_sql)
 
     print("Writing Systems IMPORT SQL:")
+    systems_sql = generate_system_import() + SQL_END
     with open("STFC Pirate 3 Systems.sql", "w", encoding="utf-8") as file:
-        file.write(generate_system_import() + SQL_END)
-
+        file.write(systems_sql)
 
 if __name__ == "__main__":
     print(f"\n{__doc__}\n")
