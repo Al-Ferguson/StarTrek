@@ -15,13 +15,12 @@ NOTE: This has been tested with Python 3.9+ and Requests v2.30+
 #   - json
 #   - typing
 
-from typing import Any
 import requests as rq
 # endregion Imports
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2024-10-24 15:17:33"
+__updated__ = "2024-10-24 15:21:19"
 __version__: str = "0.1.4"
 # endregion Author & Version
 
@@ -111,17 +110,17 @@ def generate_system_import() -> str:
 def construct_system_row(system: dict) -> str:
     """
     Builds import data line from system dictionary.
-    
+
     Args:
         system (dict): System dictionary.
-        
+
     Returns:
         str: Import data line as string.
     """
 
     return f'({system["id"]}, {construct_systemnames(system)}, \
-             {system["level"]}, {system["est_warp"]}, {construct_faction(system)}, \
-             {system["is_deep_space"]})'
+             {system["level"]}, {system["est_warp"]}, \
+             {construct_faction(system)} {system["is_deep_space"]})'
 
 
 def construct_systemnames(system: dict) -> str:
@@ -144,6 +143,7 @@ def main() -> None:
     systems_sql = generate_system_import() + SQL_END
     with open("STFC Pirate 3 Systems.sql", "w", encoding="utf-8") as file:
         file.write(systems_sql)
+
 
 if __name__ == "__main__":
     print(f"\n{__doc__}\n")
