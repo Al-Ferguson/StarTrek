@@ -20,7 +20,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2024-10-25 16:51:27"
+__updated__ = "2024-10-25 18:18:30"
 __version__: str = "0.1.4"
 # endregion Author & Version
 
@@ -55,6 +55,8 @@ SYSTEMS: list = rq.get(
 FACTIONS = rq.get(
     f"{DETAIL_URL}/factions.json?version={VERSION}", timeout=5
 ).json()
+
+SHIPTYPES: list = ["Interceptor", "Survey", "Explorer", "Battleship"]
 # endregion Global Variables
 
 # region Functions
@@ -63,7 +65,7 @@ FACTIONS = rq.get(
 def get_json_value(data: list, key: int) -> str:
     """Returns Text value for passed key"""
     try:
-        return next((x["text"] for x in data if int(x["id"]) == key), "")
+        return next((x["text"] for x in data if x["id"] == key), "")
     except StopIteration:
         return ""
 
@@ -85,7 +87,8 @@ def construct_ship_row(ship: dict) -> str:
     return (
         f'({ship["id"]}, '
         f'{construct_shipnames(ship)}, '
-        f'{construct_hull_type(ship)}, '
+        f'"{SHIPTYPES[ship["hull_type"]]}", '
+        f'{ship["grade"]}, '
         f'{construct_faction(ship)})'
     )
 
@@ -93,11 +96,6 @@ def construct_ship_row(ship: dict) -> str:
 def construct_shipnames(ship: dict) -> str:
     """Construct ship Name from ship dictionary"""
     return f'"{get_json_value(SHIPS, ship["id"])}"'
-
-
-def construct_hull_type(ship: dict) -> str:
-    """Construct hull from ship dictionary"""
-    return f'"{get_json_value(SHIPTYPES, ship["hull_type"]).capitalize()}"'
 
 
 def construct_faction(dictionary: dict) -> str:
@@ -128,9 +126,10 @@ def construct_system_row(system: dict) -> str:
         str: Import data line as string.
     """
 
-    return f'({system["id"]}, {construct_systemnames(system)}, \
-             {system["level"]}, {system["est_warp"]}, \
-             {construct_faction(system)} {system["is_deep_space"]})'
+    return (f'({system["id"]}, {construct_systemnames(system)}, '
+            f'{system["level"]}, {system["est_warp"]}, '
+            f'{construct_faction(system)}, {system["is_deep_space"]})'
+            )
 
 
 def construct_systemnames(system: dict) -> str:
