@@ -4,7 +4,7 @@ NOTE: This application requires the Requests Module from PyPi. This can
       be installed by running `pip install -U requests`.
 NOTE: To access a REST API via https, the Python implementation must be
       compiled with SSL support (accessed via `import ssl` statement).
-NOTE: This has been tested with Python 3.9+ and Requests v2.30+
+NOTE: This has been tested with Python 3.9+ and Requests v2.32+
 """
 
 
@@ -20,12 +20,13 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2024-10-24 15:21:19"
+__updated__ = "2024-10-25 16:51:27"
 __version__: str = "0.1.4"
 # endregion Author & Version
 
 # region Global Variables
 API_URL: str = "https://assets.stfc.space/data/latest"
+VERSION: str = rq.get(f"{API_URL}/version.txt", timeout=5).text
 TRANSLATE_LANGUAGE = "en"
 DETAIL_URL: str = f"{API_URL}/translations/{TRANSLATE_LANGUAGE}"
 
@@ -39,12 +40,21 @@ SYSTEM_INSERT: str = (
 )
 SQL_END = ";\n\nCOMMIT;\n\n"
 
-SHIP: list = rq.get(f"{API_URL}/ship/summary.json", timeout=5).json()
-SHIPS: list = rq.get(f"{DETAIL_URL}/ships.json", timeout=5).json()
-SHIPTYPES: list = rq.get(f"{DETAIL_URL}/ship_type.json", timeout=5).json()
-SYSTEM: list = rq.get(f"{API_URL}/system/summary.json", timeout=5).json()
-SYSTEMS: list = rq.get(f"{DETAIL_URL}/systems.json", timeout=5).json()
-FACTIONS = rq.get(f"{DETAIL_URL}/factions.json", timeout=5).json()
+SHIP: list = rq.get(
+    f"{API_URL}/ship/summary.json?version={VERSION}", timeout=5
+).json()
+SHIPS: list = rq.get(
+    f"{DETAIL_URL}/ships.json?version={VERSION}", timeout=5
+).json()
+SYSTEM: list = rq.get(
+    f"{API_URL}/system/summary.json?version={VERSION}", timeout=5
+).json()
+SYSTEMS: list = rq.get(
+    f"{DETAIL_URL}/systems.json?version={VERSION}", timeout=5
+).json()
+FACTIONS = rq.get(
+    f"{DETAIL_URL}/factions.json?version={VERSION}", timeout=5
+).json()
 # endregion Global Variables
 
 # region Functions
