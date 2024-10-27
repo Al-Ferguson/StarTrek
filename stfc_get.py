@@ -20,14 +20,11 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2024-10-27 13:34:12"
-__version__: str = "0.2.3"
+__updated__ = "2024-10-27 13:41:06"
+__version__: str = "0.2.4"
 # endregion Author & Version
 
 # region Global Variables
-API_URL: str = "https://assets.stfc.space/data/latest"
-VERSION: str = rq.get(f"{API_URL}/version.txt", timeout=5).text
-TRANSLATE_LANGUAGE = "en"
 
 
 def fetch_json(url: str, tout: int = 5) -> list:
@@ -35,6 +32,10 @@ def fetch_json(url: str, tout: int = 5) -> list:
     result: list = rq.get(url, timeout=tout).json()
     return result
 
+
+API_URL: str = "https://assets.stfc.space/data/latest"
+VERSION: str = rq.get(f"{API_URL}/version.txt", timeout=5).text
+TRANSLATE_LANGUAGE = "en"
 
 DETAIL_URL: str = f"{API_URL}/translations/{TRANSLATE_LANGUAGE}"
 
@@ -62,12 +63,7 @@ SHIPTYPES: list = ["Interceptor", "Survey", "Explorer", "Battleship"]
 
 
 def generate_ship_import() -> str:
-    """shipimport Builds the SQL for the STFC Ships Import File
-    Args:
-        None
-    Returns:
-        str: IMPORT SQL for STFC Ships
-    """
+    """shipimport Builds the SQL for the STFC Ships Import File"""
     result = [construct_ship_row(ship) for ship in SHIP]
     return SHIP_INSERT + ",\n".join(result)
 
@@ -104,12 +100,7 @@ def construct_faction(factid: str) -> str:
 
 
 def generate_system_import() -> str:
-    """systemimport Builds the SQL for the STFC Systems Import File
-    Args:
-        None
-    Returns:
-        str: IMPORT SQL for STFC Systems
-    """
+    """systemimport Builds the SQL for the STFC Systems Import File"""
     result: list[str] = [construct_system_row(system) for system in SYSTEM]
     return SYSTEM_INSERT + ",\n".join(result)
 
