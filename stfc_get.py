@@ -20,7 +20,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2024-10-27 02:38:01"
+__updated__ = "2024-10-27 02:45:10"
 __version__: str = "0.2.0"
 # endregion Author & Version
 
@@ -115,7 +115,7 @@ def generate_system_import() -> str:
     Returns:
         str: IMPORT SQL for STFC Systems
     """
-    result = [construct_system_row(system) for system in SYSTEM]
+    result: list[str] = [construct_system_row(system) for system in SYSTEM]
 
     return SYSTEM_INSERT + ",\n".join(result)
 
