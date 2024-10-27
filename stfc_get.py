@@ -20,7 +20,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2024-10-27 13:59:03"
+__updated__ = "2024-10-27 16:09:13"
 __version__: str = "0.2.5"
 # endregion Author & Version
 
@@ -98,8 +98,8 @@ def construct_systemnames(systid: str) -> str:
 
 # region Global Variables
 API_URL: str = "https://assets.stfc.space/data/latest"
-VERSION: str = rq.get(f"{API_URL}/version.txt", timeout=5).text
 TRANSLATE_LANGUAGE = "en"
+VERSION: str = rq.get(f"{API_URL}/version.txt", timeout=5).text
 
 DETAIL_URL: str = f"{API_URL}/translations/{TRANSLATE_LANGUAGE}"
 
