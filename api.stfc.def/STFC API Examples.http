@@ -1,5 +1,5 @@
 /*
-# REST API examples for assets.stfc.space
+# REST API examples for https://stfc.space
 */
 /*
 ## Global Variables
@@ -16,105 +16,42 @@ Accept: {{jsonType}}
 Accept-Encoding: {{jsonEncoding}}
 Accept-Language: {{jsonLanguage}}
 /*
-## Ship Blueprint Information
+## Ship Information
+- Ship Details
+- Ship Details for ID=3682502332
+- Ship Names, Flavors, and Descriptions
+- Ship Components
+- Ship Buffs
 */
 ###
-GET https://{{baseurl}}/{{translate}}/blueprints.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-/*
-## Building Information
-- Building Summary
-- Building Information for ID=1007
-*/
-###
-GET https://{{baseurl}}/building/summary.json?version={{version}} HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-/*
-## Sample Building information
-*/
-###
-GET https://{{baseurl}}/building/1007.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-/*
-## Consumable Information
-- Consumable Details
-- Consumable Titles and Descriptions
-*/
-###
-GET https://{{baseurl}}/consumable/summary.json?version={{version}} HTTP/1.1
+GET https://{{baseurl}}/ship/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
 ###
-GET https://{{baseurl}}/{{translate}}/consumables.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-/*
-## Event Information
-*/
-###
-GET https://{{baseurl}}/{{translate}}/event_titles.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-/*
-## Faction information
-*/
-###
-GET https://{{baseurl}}/{{translate}}/factions.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-/*
-## Hostile Information
-*/
-###
-GET https://{{baseurl}}/hostile/summary.json?version={{version}} HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-/*
-## Miscellaneous Material Information
-- Assignment Speedups
-- Repair Speedups
-
-*/
-###
-GET https://{{baseurl}}/{{translate}}/materials.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-/*
-## Mission Information
-- Mission Details
-- Mission Titles and Descriptions
-- Mission Navigation Information
-*/
-###
-GET https://{{baseurl}}/mission/summary.json?version={{version}} HTTP/1.1
+GET https://{{baseurl}}/ship/3682502332.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
 ###
-GET https://{{baseurl}}/{{translate}}/mission_titles.json HTTP/1.1
+GET https://{{baseurl}}/{{translate}}/ships.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
 ###
-GET https://{{baseurl}}/{{translate}}/navigation.json HTTP/1.1
+GET https://{{baseurl}}/{{translate}}/ship_components.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+###
+GET https://{{baseurl}}/{{translate}}/ship_buffs.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
 /*
 ## Officer Information
 - Officer Detail Information
+- Officer Detail for Officer 4151676212
 - Officer Additional Information
 _ Officer Buffs
 - Officer "flavor" Information
@@ -137,6 +74,11 @@ GET https://{{baseurl}}/{{translate}}/officers.json HTTP/1.1
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
 ###
+GET https://{{baseurl}}/{{translate}}/officer_names.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+###
 GET https://{{baseurl}}/{{translate}}/officer_buffs.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
@@ -147,20 +89,22 @@ GET https://{{baseurl}}/{{translate}}/officer_flavor_text.json HTTP/1.1
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
 ###
-GET https://{{baseurl}}/{{translate}}/officer_names.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-###
 GET https://{{baseurl}}/{{translate}}/traits.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
 /*
-## Player Avatar Information
+## Building Information
+- Building Summary
+- Building Information for ID=1007
 */
 ###
-GET https://{{baseurl}}/{{translate}}/player_avatars.json HTTP/1.1
+GET https://{{baseurl}}/building/summary.json?version={{version}} HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+###
+GET https://{{baseurl}}/building/1007.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
@@ -186,88 +130,10 @@ GET https://{{baseurl}}/{{translate}}/research.json HTTP/1.1
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
 /*
-## Resource Information
-*/
-###
-GET https://{{baseurl}}/resource/summary.json?version={{version}} HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-/*
-## Ship Information
-- Ship Details
-- Ship Details for ID=3682502332
-- Ship Names, Flavors, and Descriptions
-- Ship Buffs
-- Ship Components
-- Ship Skins
-*/
-###
-GET https://{{baseurl}}/ship/summary.json?version={{version}} HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-###
-GET https://{{baseurl}}/ship/3682502332.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-###
-GET https://{{baseurl}}/{{translate}}/ships.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-###
-GET https://{{baseurl}}/{{translate}}/ship_buffs.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-###
-GET https://{{baseurl}}/{{translate}}/ship_components.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-###
-GET https://{{baseurl}}/skins/summary.json?version={{version}} HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-/*
-## Star Base Information
-*/
-###
-GET https://{{baseurl}}/{{translate}}/starbase_modules.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-/*
-## Syndicate Information
-- Syndicate Summary
-- Syndicate Detail for ID=4162111876
-*/
-###
-GET https://{{baseurl}}/syndicate/summary.json?version={{version}} HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-###
-GET https://{{baseurl}}/syndicate/4162111876.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-/*
-## Faction Loyalty information
-*/
-###
-GET https://{{baseurl}}/{{translate}}/loyalty.json HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-/*
 ## System Information
-- System Detail Summary
-- System Detail for ID=2105774194
-- System Names, Flavor, and Description Information
+- System Details 
+- System Detail for ID=1234567890 
+- System Titles and Descriptions 
 */
 ###
 GET https://{{baseurl}}/system/summary.json?version={{version}} HTTP/1.1
@@ -275,12 +141,35 @@ GET https://{{baseurl}}/system/summary.json?version={{version}} HTTP/1.1
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
 ###
-GET https://{{baseurl}}/system/2105774194.json HTTP/1.1
+GET https://{{baseurl}}/system/1234567890.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
 ###
 GET https://{{baseurl}}/{{translate}}/systems.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+/*
+## Hostile Information
+*/
+###
+GET https://{{baseurl}}/hostile/summary.json?version={{version}} HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+/*
+## Consumable Information
+- Consumable Details
+- Consumable Titles and Descriptions
+*/
+###
+GET https://{{baseurl}}/consumable/summary.json?version={{version}} HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+###
+GET https://{{baseurl}}/{{translate}}/consumables.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
@@ -303,6 +192,126 @@ GET https://{{baseurl}}/forbidden_tech/1206498925.json HTTP/1.1
     Accept-Language: {{jsonLanguage}}
 ###
 GET https://{{baseurl}}/{{translate}}/forbidden_tech.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+/*
+## Hazards Information
+*/
+###
+GET https://{{baseurl}}/hazards/summary.json?version={{version}} HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+/*
+## Wave Defense Information
+*/
+###
+GET https://{{baseurl}}/wave_defense/summary.json?version={{version}} HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+/*
+## Mission Information
+- Mission Details
+- Mission Titles and Descriptions
+- Mission Navigation Information
+*/
+###
+GET https://{{baseurl}}/mission/summary.json?version={{version}} HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+###
+GET https://{{baseurl}}/{{translate}}/mission_titles.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+###
+GET https://{{baseurl}}/{{translate}}/navigation.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+/*
+## Resource Information
+*/
+###
+GET https://{{baseurl}}/resource/summary.json?version={{version}} HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+/*
+## Forbidden Tech Information
+*/
+###
+GET https://{{baseurl}}/forbidden_tech/summary.json?version={{version}} HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+/*
+## Event Titles and Descriptions
+*/
+###
+GET https://{{baseurl}}/{{translate}}/event_titles.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+/*
+## Faction Titles and Descriptions
+*/
+###
+GET https://{{baseurl}}/{{translate}}/factions.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+/*
+## Miscellaneous Material Information
+
+*/
+###
+GET https://{{baseurl}}/{{translate}}/materials.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+/*
+## Player Avatar Information
+*/
+###
+GET https://{{baseurl}}/{{translate}}/player_avatars.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+/*
+## Star Base Module Names, ...
+*/
+###
+GET https://{{baseurl}}/{{translate}}/starbase_modules.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+/*
+## Might not be any good anymore
+*/
+/*
+### Syndicate Information ????????
+- Syndicate Summary
+- Syndicate Detail for ID=4162111876
+*/
+###
+GET https://{{baseurl}}/syndicate/summary.json?version={{version}} HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+###
+GET https://{{baseurl}}/syndicate/4162111876.json HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+/*
+### Faction Loyalty information ????????
+*/
+###
+GET https://{{baseurl}}/{{translate}}/loyalty.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
