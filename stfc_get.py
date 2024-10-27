@@ -20,11 +20,11 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2024-10-27 13:41:06"
+__updated__ = "2024-10-27 13:56:11"
 __version__: str = "0.2.4"
 # endregion Author & Version
 
-# region Global Variables
+# region Functions
 
 
 def fetch_json(url: str, tout: int = 5) -> list:
@@ -33,6 +33,70 @@ def fetch_json(url: str, tout: int = 5) -> list:
     return result
 
 
+def generate_ship_import() -> str:
+    """shipimport Builds the SQL for the STFC Ships Import File"""
+    return SHIP_INSERT + ",\n".join(construct_ship_row(ship) for ship in SHIP)
+
+
+def construct_ship_row(ship: dict) -> str:
+    """Constructs a ship row string from the given dictionary."""
+    factid: str = ship.get("faction", {}).get("loca_id", "0")
+    return (
+        f'({ship["id"]}, '
+        f'{construct_shipnames(ship["loca_id"])}, '
+        f'{ship["grade"]}, '
+        f'"{SHIPTYPES[ship["hull_type"]]}", '
+        f'{construct_faction(factid)})'
+    )
+
+
+def construct_shipnames(shipid: str) -> str:
+    """Construct Ship Name from ships dictionary"""
+    return f'"{get_json_value(SHIPS, shipid, "ship_name", "")}"'
+
+
+def get_json_value(sdb: list, srchid: str, skey: str, dflt: str) -> str:
+    """Get a value from a JSON Dictionary"""
+    return next((x["text"] for x in sdb
+                 if (x["id"] == srchid and x["key"] == skey)), dflt)
+
+
+def construct_faction(factid: str) -> str:
+    """Construct Faction Name from factions dictionary"""
+    return f'"{get_json_value(FACTIONS, factid, "faction_name", "Neutral")}"'
+
+
+def generate_system_import() -> str:
+    """systemimport Builds the SQL for the STFC Systems Import File"""
+    return SYSTEM_INSERT + ",\n".join(construct_system_row(system)
+                                      for system in SYSTEM)
+
+
+def construct_system_row(system: dict) -> str:
+    """Builds SQL import data line from system dictionary."""
+    try:
+        factid: str = system["hostiles"][0]["faction"]["loca_id"]
+    except IndexError:
+        factid = "0"
+    return (
+        f'({system["id"]}, '
+        f'{construct_systemnames(system["id"])}, '
+        f'{system["level"]}, '
+        f'{system["est_warp"]}, '
+        f"{construct_faction(factid)}, "
+        f'{system["is_deep_space"]}, '
+        f'{system["is_mirror_universe"]})'
+    )
+
+
+def construct_systemnames(systid: str) -> str:
+    """Construct System Name from systems dictionary"""
+    return f'"{get_json_value(SYSTEMS, f"{systid}", "title", "")}"'
+
+
+# endregion Functions
+
+# region Global Variables
 API_URL: str = "https://assets.stfc.space/data/latest"
 VERSION: str = rq.get(f"{API_URL}/version.txt", timeout=5).text
 TRANSLATE_LANGUAGE = "en"
@@ -58,77 +122,6 @@ FACTIONS: list = fetch_json(f"{DETAIL_URL}/factions.json?version={VERSION}")
 
 SHIPTYPES: list = ["Interceptor", "Survey", "Explorer", "Battleship"]
 # endregion Global Variables
-
-# region Functions
-
-
-def generate_ship_import() -> str:
-    """shipimport Builds the SQL for the STFC Ships Import File"""
-    result = [construct_ship_row(ship) for ship in SHIP]
-    return SHIP_INSERT + ",\n".join(result)
-
-
-def construct_ship_row(ship: dict) -> str:
-    """Constructs a ship row string from the given dictionary."""
-    factid: str = ship.get("faction", {}).get("loca_id", "0")
-    return (
-        f'({ship["id"]}, '
-        f'{construct_shipnames(ship["loca_id"])}, '
-        f'{ship["grade"]}, '
-        f'"{SHIPTYPES[ship["hull_type"]]}", '
-        f'{construct_faction(factid)})'
-    )
-
-
-def construct_shipnames(shipid: str) -> str:
-    """Construct Ship Name from ships dictionary"""
-    result = get_json_value(SHIPS, shipid, "ship_name", "")
-    return f'"{result}"'
-
-
-def get_json_value(sdb: list, srchid: str, skey: str, dflt: str) -> str:
-    """Get a value from a JSON Dictionary"""
-    return next((x["text"] for x in sdb
-                 if (x["id"] == srchid and x["key"] == skey)), dflt)
-
-
-def construct_faction(factid: str) -> str:
-    """Construct Faction Name from factions dictionary"""
-    result: str = get_json_value(FACTIONS, factid,
-                                 "faction_name", "Neutral")
-    return f'"{result}"'
-
-
-def generate_system_import() -> str:
-    """systemimport Builds the SQL for the STFC Systems Import File"""
-    result: list[str] = [construct_system_row(system) for system in SYSTEM]
-    return SYSTEM_INSERT + ",\n".join(result)
-
-
-def construct_system_row(system: dict) -> str:
-    """Builds SQL import data line from system dictionary."""
-    try:
-        factid: str = system["hostiles"][0]["faction"]["loca_id"]
-    except IndexError:
-        factid = "0"
-    return (
-        f'({system["id"]}, '
-        f'{construct_systemnames(system["id"])}, '
-        f'{system["level"]}, '
-        f'{system["est_warp"]}, '
-        f"{construct_faction(factid)}, "
-        f'{system["is_deep_space"]}, '
-        f'{system["is_mirror_universe"]})'
-    )
-
-
-def construct_systemnames(systid: str) -> str:
-    """Construct System Name from systems dictionary"""
-    result: str = get_json_value(SYSTEMS, f"{systid}", "title", "")
-    return f'"{result}"'
-
-
-# endregion Functions
 
 
 def main() -> None:
