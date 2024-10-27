@@ -11,14 +11,13 @@
 @jsonEncoding = gzip, deflate
 @jsonLanguage = en-US, en;q=0.9
 @baseurl = {{host}}/{{apiPath}}
-/*
-## Current stfc.space Database Version
-*/
-###
 @version = GET https://{{baseurl}}/version.txt
 Accept: {{jsonType}}
 Accept-Encoding: {{jsonEncoding}}
 Accept-Language: {{jsonLanguage}}
+/*
+## Ship Blueprint Information
+*/
 ###
 GET https://{{baseurl}}/{{translate}}/blueprints.json HTTP/1.1
     Accept: {{jsonType}}
@@ -34,8 +33,9 @@ GET https://{{baseurl}}/building/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-###
-
+/*
+## Sample Building information
+*/
 ###
 GET https://{{baseurl}}/building/1007.json HTTP/1.1
     Accept: {{jsonType}}
