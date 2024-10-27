@@ -20,8 +20,8 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2024-10-27 02:45:10"
-__version__: str = "0.2.0"
+__updated__ = "2024-10-27 02:59:00"
+__version__: str = "0.2.1"
 # endregion Author & Version
 
 # region Global Variables
@@ -71,7 +71,6 @@ def generate_ship_import() -> str:
         str: IMPORT SQL for STFC Ships
     """
     result = [construct_ship_row(ship) for ship in SHIP]
-
     return SHIP_INSERT + ",\n".join(result)
 
 
@@ -81,7 +80,6 @@ def construct_ship_row(ship: dict) -> str:
         factid: str = ship["faction"]["loca_id"]
     except IndexError:
         factid = "0"
-
     return (
         f'({ship["id"]}, '
         f'{construct_shipnames(ship["loca_id"])}, '
@@ -96,7 +94,6 @@ def construct_shipnames(shipid: str) -> str:
     result: str = next((x["text"] for x in SHIPS
                         if (x["id"] == shipid and x["key"] == "ship_name")),
                        "")
-
     return f'"{result}"'
 
 
@@ -116,7 +113,6 @@ def generate_system_import() -> str:
         str: IMPORT SQL for STFC Systems
     """
     result: list[str] = [construct_system_row(system) for system in SYSTEM]
-
     return SYSTEM_INSERT + ",\n".join(result)
 
 
@@ -126,7 +122,6 @@ def construct_system_row(system: dict) -> str:
         factid: str = system["hostiles"][0]["faction"]["loca_id"]
     except IndexError:
         factid = "0"
-
     return (
         f'({system["id"]}, '
         f'{construct_systemnames(system["id"])}, '
@@ -141,10 +136,9 @@ def construct_system_row(system: dict) -> str:
 def construct_systemnames(systid: str) -> str:
     """Construct System Name from systems dictionary"""
     result: str = next((x["text"] for x in SYSTEMS
-                        if x["id"] == f"{systid}" 
+                        if x["id"] == f"{systid}"
                         and x["key"] == "title"),
                        "")
-
     return f'"{result}"'
 
 
