@@ -20,7 +20,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2024-10-25 18:18:30"
+__updated__ = "2024-10-26 20:02:33"
 __version__: str = "0.1.4"
 # endregion Author & Version
 
@@ -62,10 +62,11 @@ SHIPTYPES: list = ["Interceptor", "Survey", "Explorer", "Battleship"]
 # region Functions
 
 
-def get_json_value(data: list, key: int) -> str:
+def get_json_value(data: list, row: int, keyval: str) -> str:
     """Returns Text value for passed key"""
     try:
-        return next((x["text"] for x in data if x["id"] == key), "")
+        return next((x['text'] for x in data if
+                     x['id'] == row and x['key'] == keyval), "")
     except StopIteration:
         return ""
 
@@ -86,21 +87,24 @@ def construct_ship_row(ship: dict) -> str:
     """Constructs a ship row string from the given dictionary."""
     return (
         f'({ship["id"]}, '
-        f'{construct_shipnames(ship)}, '
-        f'"{SHIPTYPES[ship["hull_type"]]}", '
+        f'{construct_shipnames(ship["loca_id"])}, '
         f'{ship["grade"]}, '
-        f'{construct_faction(ship)})'
+        f'"{SHIPTYPES[ship["hull_type"]]}", '
+        f'{construct_faction(ship["faction"]["loca_id"])})'
     )
 
 
-def construct_shipnames(ship: dict) -> str:
+def construct_shipnames(shipid: int) -> str:
     """Construct ship Name from ship dictionary"""
-    return f'"{get_json_value(SHIPS, ship["id"])}"'
+    return f'"{get_json_value(SHIPS, shipid, 'ship_name')}"'
 
 
-def construct_faction(dictionary: dict) -> str:
+def construct_faction(factid: int) -> str:
     """Construct faction from a dictionary"""
-    return f'"{get_json_value(FACTIONS, dictionary["faction"])}"'
+    faction: str = f'{get_json_value(FACTIONS, factid, "faction_name")}'
+    if not faction:
+        faction = 'Neutral'
+    return f'"{faction}"'
 
 
 def generate_system_import() -> str:
@@ -126,15 +130,19 @@ def construct_system_row(system: dict) -> str:
         str: Import data line as string.
     """
 
-    return (f'({system["id"]}, {construct_systemnames(system)}, '
-            f'{system["level"]}, {system["est_warp"]}, '
-            f'{construct_faction(system)}, {system["is_deep_space"]})'
-            )
+    return (
+        f'({system["id"]}, '
+        f'{construct_systemnames(system["id"])}, '
+        f'{system["level"]}, '
+        f'{system["est_warp"]}, '
+        f'{construct_faction(system["id"])}, '
+        f'{system["is_deep_space"]})'
+    )
 
 
-def construct_systemnames(system: dict) -> str:
+def construct_systemnames(systemid: int) -> str:
     """Construct system Name from system dictionary"""
-    return f'"{get_json_value(SYSTEMS, system["id"])}"'
+    return f'"{get_json_value(SYSTEMS, systemid, 'system_name')}"'
 
 
 # endregion Functions
