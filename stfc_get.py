@@ -20,7 +20,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2024-10-27 16:09:13"
+__updated__ = "2024-10-27 16:21:20"
 __version__: str = "0.2.5"
 # endregion Author & Version
 
@@ -99,8 +99,6 @@ def construct_systemnames(systid: str) -> str:
 # region Global Variables
 API_URL: str = "https://assets.stfc.space/data/latest"
 TRANSLATE_LANGUAGE = "en"
-VERSION: str = rq.get(f"{API_URL}/version.txt", timeout=5).text
-
 DETAIL_URL: str = f"{API_URL}/translations/{TRANSLATE_LANGUAGE}"
 
 SHIP_INSERT: str = (
@@ -113,6 +111,8 @@ SYSTEM_INSERT: str = (
     "`MirrorSpace`) VALUES\n"
 )
 SQL_END = ";\n\nCOMMIT;\n\n"
+
+VERSION: str = rq.get(f"{API_URL}/version.txt", timeout=5).text
 
 SHIP: list = fetch_json(f"{API_URL}/ship/summary.json?version={VERSION}")
 SHIPS: list = fetch_json(f"{DETAIL_URL}/ships.json?version={VERSION}")
