@@ -20,7 +20,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2024-10-27 13:20:15"
+__updated__ = "2024-10-27 13:34:12"
 __version__: str = "0.2.3"
 # endregion Author & Version
 
@@ -28,6 +28,14 @@ __version__: str = "0.2.3"
 API_URL: str = "https://assets.stfc.space/data/latest"
 VERSION: str = rq.get(f"{API_URL}/version.txt", timeout=5).text
 TRANSLATE_LANGUAGE = "en"
+
+
+def fetch_json(url: str, tout: int = 5) -> list:
+    """Fetch JSON data from a given URL."""
+    result: list = rq.get(url, timeout=tout).json()
+    return result
+
+
 DETAIL_URL: str = f"{API_URL}/translations/{TRANSLATE_LANGUAGE}"
 
 SHIP_INSERT: str = (
@@ -41,21 +49,11 @@ SYSTEM_INSERT: str = (
 )
 SQL_END = ";\n\nCOMMIT;\n\n"
 
-SHIP: list = rq.get(
-    f"{API_URL}/ship/summary.json?version={VERSION}", timeout=5
-).json()
-SHIPS: list = rq.get(
-    f"{DETAIL_URL}/ships.json?version={VERSION}", timeout=5
-).json()
-SYSTEM: list = rq.get(
-    f"{API_URL}/system/summary.json?version={VERSION}", timeout=5
-).json()
-SYSTEMS: list = rq.get(
-    f"{DETAIL_URL}/systems.json?version={VERSION}", timeout=5
-).json()
-FACTIONS = rq.get(
-    f"{DETAIL_URL}/factions.json?version={VERSION}", timeout=5
-).json()
+SHIP: list = fetch_json(f"{API_URL}/ship/summary.json?version={VERSION}")
+SHIPS: list = fetch_json(f"{DETAIL_URL}/ships.json?version={VERSION}")
+SYSTEM: list = fetch_json(f"{API_URL}/system/summary.json?version={VERSION}")
+SYSTEMS: list = fetch_json(f"{DETAIL_URL}/systems.json?version={VERSION}")
+FACTIONS: list = fetch_json(f"{DETAIL_URL}/factions.json?version={VERSION}")
 
 SHIPTYPES: list = ["Interceptor", "Survey", "Explorer", "Battleship"]
 # endregion Global Variables

@@ -36,6 +36,7 @@
         "shipid",
         "shipname",
         "skey",
+        "sqlrow",
         "srchdb",
         "srchid",
         "srchkey",
