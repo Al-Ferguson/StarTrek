@@ -8,7 +8,7 @@
 @jsonEncoding = gzip, deflate
 @jsonLanguage = en-US, en;q=0.9
 @baseurl = https://{{host}}/{{apiPath}}
-
+@version = b8523a2b-334d-4b5a-98bc-e614a44cbee5
 
 ###
 ### Get stfc.space Database Version
@@ -28,7 +28,7 @@ GET {{baseurl}}/{{translate}}/blueprints.json HTTP/1.1
 
 ###
 ### Get Building information
-GET {{baseurl}}/building/summary.json HTTP/1.1
+GET {{baseurl}}/building/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
@@ -40,7 +40,7 @@ GET {{baseurl}}/building/summary.json HTTP/1.1
 
 ###
 ### Get Consumable information
-GET {{baseurl}}/consumable/summary.json HTTP/1.1
+GET {{baseurl}}/consumable/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
@@ -70,7 +70,7 @@ GET {{baseurl}}/{{translate}}/factions.json HTTP/1.1
 
 ###
 ### Get Forbidden Tech information
-GET {{baseurl}}/forbidden_tech/summary.json HTTP/1.1
+GET {{baseurl}}/forbidden_tech/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
@@ -78,7 +78,7 @@ GET {{baseurl}}/forbidden_tech/summary.json HTTP/1.1
 
 ###
 ### Get Hostile information
-GET {{baseurl}}/hostile/summary.json HTTP/1.1
+GET {{baseurl}}/hostile/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
@@ -94,7 +94,7 @@ GET {{baseurl}}/{{translate}}/materials.json HTTP/1.1
 
 ###
 ### Get Mission information
-GET {{baseurl}}/mission/summary.json HTTP/1.1
+GET {{baseurl}}/mission/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
@@ -116,7 +116,7 @@ GET {{baseurl}}/{{translate}}/navigation.json HTTP/1.1
 
 ###
 ### Get Officer information
-GET {{baseurl}}/officer/summary.json HTTP/1.1
+GET {{baseurl}}/officer/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
@@ -162,7 +162,7 @@ GET {{baseurl}}/{{translate}}/player_avatars.json HTTP/1.1
 
 ###
 ### Get Research information
-GET {{baseurl}}/research/summary.json HTTP/1.1
+GET {{baseurl}}/research/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
@@ -176,7 +176,7 @@ GET {{baseurl}}/{{translate}}/research.json HTTP/1.1
 
 ###
 ### Get Resource information
-GET {{baseurl}}/resource/summary.json HTTP/1.1
+GET {{baseurl}}/resource/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
@@ -184,7 +184,7 @@ GET {{baseurl}}/resource/summary.json HTTP/1.1
 
 ###
 ### Get Ship Summary Information
-GET {{baseurl}}/ship/summary.json HTTP/1.1
+GET {{baseurl}}/ship/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
@@ -210,7 +210,7 @@ GET {{baseurl}}/{{translate}}/ship_components.json HTTP/1.1
 
 ###
 ### Get Skins information
-GET {{baseurl}}/skins/summary.json HTTP/1.1
+GET {{baseurl}}/skins/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
@@ -226,7 +226,7 @@ GET {{baseurl}}/{{translate}}/starbase_modules.json HTTP/1.1
 
 ###
 ### Get Syndicate information
-GET {{baseurl}}/syndicate/summary.json HTTP/1.1
+GET {{baseurl}}/syndicate/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
@@ -240,7 +240,7 @@ GET {{baseurl}}/{{translate}}/loyalty.json HTTP/1.1
 
 ###
 ### Get System information
-GET {{baseurl}}/system/summary.json HTTP/1.1
+GET {{baseurl}}/system/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
