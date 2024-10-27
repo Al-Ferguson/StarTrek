@@ -20,8 +20,8 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2024-10-27 02:59:49"
-__version__: str = "0.2.1"
+__updated__ = "2024-10-27 12:20:35"
+__version__: str = "0.2.3"
 # endregion Author & Version
 
 # region Global Variables
@@ -91,17 +91,20 @@ def construct_ship_row(ship: dict) -> str:
 
 def construct_shipnames(shipid: str) -> str:
     """Construct Ship Name from ships dictionary"""
-    result: str = next((x["text"] for x in SHIPS
-                        if (x["id"] == shipid and x["key"] == "ship_name")),
-                       "")
+    result = get_json_value(SHIPS, shipid, "ship_name", "")
     return f'"{result}"'
+
+
+def get_json_value(sdb: list, srchid: str, skey: str, dflt: str) -> str:
+    """Get a value from a JSON Dictionary"""
+    return next((x["text"] for x in sdb
+                 if (x["id"] == srchid and x["key"] == skey)), dflt)
 
 
 def construct_faction(factid: str) -> str:
     """Construct Faction Name from factions dictionary"""
-    result: str = next((x["text"] for x in FACTIONS
-                        if x["id"] == factid and x["key"] == "faction_name"),
-                       "Neutral")
+    result: str = get_json_value(FACTIONS, factid,
+                                 "faction_name", "Neutral")
     return f'"{result}"'
 
 
@@ -135,10 +138,7 @@ def construct_system_row(system: dict) -> str:
 
 def construct_systemnames(systid: str) -> str:
     """Construct System Name from systems dictionary"""
-    result: str = next((x["text"] for x in SYSTEMS
-                        if x["id"] == f"{systid}"
-                        and x["key"] == "title"),
-                       "")
+    result: str = get_json_value(SYSTEMS, f"{systid}", "title", "")
     return f'"{result}"'
 
 
