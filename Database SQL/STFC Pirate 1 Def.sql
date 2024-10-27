@@ -176,6 +176,7 @@ CREATE TABLE `StfcSystems` (
   `SystemWarpDist` int(11) NOT NULL,
   `SystemType` set('Federation','Neutral','Klingon','Romulan','Territory') NOT NULL,
   `DarkSpace` tinyint(1) NOT NULL DEFAULT 0,
+  `MirrorSpace` tinyint(1) NOT NULL DEFAULT 0,
   `LastUpdatedBy` varchar(20) NOT NULL DEFAULT current_user(),
   `LastUpdated` timestamp(6) NOT NULL DEFAULT current_timestamp(6) ON UPDATE current_timestamp(6)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

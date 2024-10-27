@@ -20,7 +20,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2024-10-26 20:02:33"
+__updated__ = "2024-10-27 02:34:43"
 __version__: str = "0.1.4"
 # endregion Author & Version
 
@@ -35,8 +35,9 @@ SHIP_INSERT: str = (
     "`ShipLevel`, `ShipType`,`ShipFaction`) VALUES\n"
 )
 SYSTEM_INSERT: str = (
-    "INSERT INTO `StfcSystems` (`SystemID`, `SystemName`,"
-    "`SystemLevel`, `SystemWarpDist`, `SystemType`, `DarkSpace`) VALUES\n"
+    "INSERT INTO `StfcSystems` (`SystemID`, `SystemName`, "
+    "`SystemLevel`, `SystemWarpDist`, `SystemType`, `DarkSpace`, "
+    "`MirrorSpace`) VALUES\n"
 )
 SQL_END = ";\n\nCOMMIT;\n\n"
 
@@ -62,15 +63,6 @@ SHIPTYPES: list = ["Interceptor", "Survey", "Explorer", "Battleship"]
 # region Functions
 
 
-def get_json_value(data: list, row: int, keyval: str) -> str:
-    """Returns Text value for passed key"""
-    try:
-        return next((x['text'] for x in data if
-                     x['id'] == row and x['key'] == keyval), "")
-    except StopIteration:
-        return ""
-
-
 def generate_ship_import() -> str:
     """shipimport Builds the SQL for the STFC Ships Import File
     Args:
@@ -85,26 +77,35 @@ def generate_ship_import() -> str:
 
 def construct_ship_row(ship: dict) -> str:
     """Constructs a ship row string from the given dictionary."""
+    try:
+        factid: str = ship["faction"]["loca_id"]
+    except IndexError:
+        factid = "0"
+
     return (
         f'({ship["id"]}, '
         f'{construct_shipnames(ship["loca_id"])}, '
         f'{ship["grade"]}, '
         f'"{SHIPTYPES[ship["hull_type"]]}", '
-        f'{construct_faction(ship["faction"]["loca_id"])})'
+        f'{construct_faction(factid)})'
     )
 
 
-def construct_shipnames(shipid: int) -> str:
-    """Construct ship Name from ship dictionary"""
-    return f'"{get_json_value(SHIPS, shipid, 'ship_name')}"'
+def construct_shipnames(shipid: str) -> str:
+    """Construct Ship Name from ships dictionary"""
+    result: str = next((x["text"] for x in SHIPS
+                        if (x["id"] == shipid and x["key"] == "ship_name")),
+                       "")
+
+    return f'"{result}"'
 
 
-def construct_faction(factid: int) -> str:
-    """Construct faction from a dictionary"""
-    faction: str = f'{get_json_value(FACTIONS, factid, "faction_name")}'
-    if not faction:
-        faction = 'Neutral'
-    return f'"{faction}"'
+def construct_faction(factid: str) -> str:
+    """Construct Faction Name from factions dictionary"""
+    result: str = next((x["text"] for x in FACTIONS
+                        if x["id"] == factid and x["key"] == "faction_name"),
+                       "Neutral")
+    return f'"{result}"'
 
 
 def generate_system_import() -> str:
@@ -120,29 +121,31 @@ def generate_system_import() -> str:
 
 
 def construct_system_row(system: dict) -> str:
-    """
-    Builds import data line from system dictionary.
-
-    Args:
-        system (dict): System dictionary.
-
-    Returns:
-        str: Import data line as string.
-    """
+    """Builds SQL import data line from system dictionary."""
+    try:
+        factid: str = system["hostiles"][0]["faction"]["loca_id"]
+    except IndexError:
+        factid = "0"
 
     return (
         f'({system["id"]}, '
         f'{construct_systemnames(system["id"])}, '
         f'{system["level"]}, '
         f'{system["est_warp"]}, '
-        f'{construct_faction(system["id"])}, '
-        f'{system["is_deep_space"]})'
+        f"{construct_faction(factid)}, "
+        f'{system["is_deep_space"]}, '
+        f'{system["is_mirror_universe"]})'
     )
 
 
-def construct_systemnames(systemid: int) -> str:
-    """Construct system Name from system dictionary"""
-    return f'"{get_json_value(SYSTEMS, systemid, 'system_name')}"'
+def construct_systemnames(systid: str) -> str:
+    """Construct System Name from systems dictionary"""
+    result: str = next((x["text"] for x in SYSTEMS
+                        if x["id"] == f"{systid}" 
+                        and x["key"] == "title"),
+                       "")
+
+    return f'"{result}"'
 
 
 # endregion Functions
