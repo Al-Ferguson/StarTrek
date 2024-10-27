@@ -20,7 +20,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2024-10-27 12:20:35"
+__updated__ = "2024-10-27 13:20:15"
 __version__: str = "0.2.3"
 # endregion Author & Version
 
@@ -76,10 +76,7 @@ def generate_ship_import() -> str:
 
 def construct_ship_row(ship: dict) -> str:
     """Constructs a ship row string from the given dictionary."""
-    try:
-        factid: str = ship["faction"]["loca_id"]
-    except IndexError:
-        factid = "0"
+    factid: str = ship.get("faction", {}).get("loca_id", "0")
     return (
         f'({ship["id"]}, '
         f'{construct_shipnames(ship["loca_id"])}, '
