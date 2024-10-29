@@ -54,7 +54,10 @@ dmypy.json
 
 # Mac directory file
 .DS_Store
-logs
 .dockerrc
 .trunk
 .trunk/
+.logs
+.vscode
+.vscode/
+logs
