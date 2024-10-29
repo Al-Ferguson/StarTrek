@@ -20,17 +20,16 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2024-10-27 16:21:20"
-__version__: str = "0.2.5"
+__updated__ = "2024-10-28 23:03:48"
+__version__: str = "0.2.6"
 # endregion Author & Version
 
 # region Functions
 
 
-def fetch_json(url: str, tout: int = 5) -> list:
+def fetch_json(url: str, tout: int = 5) -> tuple:
     """Fetch JSON data from a given URL."""
-    result: list = rq.get(url, timeout=tout).json()
-    return result
+    return tuple(rq.get(url, timeout=tout).json())
 
 
 def generate_ship_import() -> str:
@@ -114,13 +113,13 @@ SQL_END = ";\n\nCOMMIT;\n\n"
 
 VERSION: str = rq.get(f"{API_URL}/version.txt", timeout=5).text
 
-SHIP: list = fetch_json(f"{API_URL}/ship/summary.json?version={VERSION}")
-SHIPS: list = fetch_json(f"{DETAIL_URL}/ships.json?version={VERSION}")
-SYSTEM: list = fetch_json(f"{API_URL}/system/summary.json?version={VERSION}")
-SYSTEMS: list = fetch_json(f"{DETAIL_URL}/systems.json?version={VERSION}")
-FACTIONS: list = fetch_json(f"{DETAIL_URL}/factions.json?version={VERSION}")
+SHIP: tuple = fetch_json(f"{API_URL}/ship/summary.json?version={VERSION}")
+SHIPS: tuple = fetch_json(f"{DETAIL_URL}/ships.json?version={VERSION}")
+SYSTEM: tuple = fetch_json(f"{API_URL}/system/summary.json?version={VERSION}")
+SYSTEMS: tuple = fetch_json(f"{DETAIL_URL}/systems.json?version={VERSION}")
+FACTIONS: tuple = fetch_json(f"{DETAIL_URL}/factions.json?version={VERSION}")
 
-SHIPTYPES: list = ["Interceptor", "Survey", "Explorer", "Battleship"]
+SHIPTYPES: tuple = ("Interceptor", "Survey", "Explorer", "Battleship")
 # endregion Global Variables
 
 
