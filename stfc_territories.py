@@ -20,7 +20,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2024-10-28 23:07:08"
+__updated__ = "2024-10-28 23:42:12"
 __version__: str = "0.0.5"
 # endregion Author & Version
 
@@ -32,7 +32,7 @@ def fetch_json(url: str, tout: int = 5) -> tuple:
     return tuple(rq.get(url, timeout=tout).json())
 
 
-def get_json_value(sdb: list, srchid: str, skey: str, dflt: str) -> str:
+def get_json_value(sdb: tuple, srchid: str, skey: str, dflt: str) -> str:
     """Get a value from a JSON Dictionary"""
     return next((x["text"] for x in sdb if
                  (x["id"] == srchid and x["key"] == skey)), dflt)
