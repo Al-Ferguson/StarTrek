@@ -20,17 +20,16 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2024-10-27 16:24:15"
+__updated__ = "2024-10-28 23:05:43"
 __version__: str = "0.0.4"
 # endregion Author & Version
 
 # region Functions
 
 
-def fetch_json(url: str, tout: int = 5) -> list:
+def fetch_json(url: str, tout: int = 5) -> tuple:
     """Fetch JSON data from a given URL."""
-    result: list = rq.get(url, timeout=tout).json()
-    return result
+    return tuple(rq.get(url, timeout=tout).json())
 
 
 def get_json_value(sdb: list, srchid: str, skey: str, dflt: str) -> str:
@@ -86,9 +85,9 @@ DETAIL_URL: str = f"{API_URL}/translations/{TRANSLATE_LANGUAGE}"
 
 VERSION: str = rq.get(f"{API_URL}/version.txt", timeout=5).text
 
-SYSTEM: list = fetch_json(f"{API_URL}/system/summary.json?version={VERSION}")
-SYSTEMS: list = fetch_json(f"{DETAIL_URL}/systems.json?version={VERSION}")
-FACTIONS: list = fetch_json(f"{DETAIL_URL}/factions.json?version={VERSION}")
+SYSTEM: tuple = fetch_json(f"{API_URL}/system/summary.json?version={VERSION}")
+SYSTEMS: tuple = fetch_json(f"{DETAIL_URL}/systems.json?version={VERSION}")
+FACTIONS: tuple = fetch_json(f"{DETAIL_URL}/factions.json?version={VERSION}")
 # endregion Global Variables
 
 
