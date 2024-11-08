@@ -20,7 +20,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2024-10-29 09:35:51"
+__updated__ = "2024-11-08 08:36:54"
 __version__: str = "0.2.6"
 # endregion Author & Version
 
@@ -54,10 +54,10 @@ def construct_shipnames(shipid: str) -> str:
     return f'"{get_json_value(SHIPS, shipid, "ship_name", "")}"'
 
 
-def get_json_value(sdb: tuple, srchid: str, skey: str, dflt: str = "") -> str:
+def get_json_value(sdb: tuple, srchid: str, srchkey: str, dflt: str = "") -> str:
     """Get a value from a JSON Dictionary"""
     return next((x["text"] for x in sdb
-                 if (x["id"] == srchid and x["key"] == skey)), dflt)
+                 if (x["id"] == srchid and x["key"] == srchkey)), dflt)
 
 
 def construct_faction(factid: str) -> str:
