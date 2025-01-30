@@ -20,7 +20,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2024-11-13 12:45:30"
+__updated__ = "2025-01-29 17:15:31"
 __version__: str = "0.2.6"
 # endregion Author & Version
 
@@ -139,5 +139,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     print(f"\n{__doc__}\n")
-
     main()
