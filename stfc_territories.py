@@ -20,7 +20,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2024-10-28 23:42:12"
+__updated__ = "2025-02-06 12:17:05"
 __version__: str = "0.0.5"
 # endregion Author & Version
 
@@ -38,8 +38,8 @@ def get_json_value(sdb: tuple, srchid: str, skey: str, dflt: str) -> str:
                  (x["id"] == srchid and x["key"] == skey)), dflt)
 
 
-def jsonvalue(name: list, key: int):
-    """jsonvalue returns Text versions of Int Key values from a JSON"""
+def get_json_text_value(name: list, key: int):
+    """get_json_text_value returns Text version of Int Key value from JSON"""
     lookup = {int(item["id"]): item["text"] for
               item in name if item["key"] == "name"}
     return lookup.get(key, "")
