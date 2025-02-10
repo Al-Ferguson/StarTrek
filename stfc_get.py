@@ -20,7 +20,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2025-02-09 01:33:40"
+__updated__ = "2025-02-09 17:03:57"
 __version__: str = "0.2.6"
 # endregion Author & Version
 
@@ -33,7 +33,7 @@ def fetch_json(url: str, tout: int = 5) -> tuple:
 
 
 def generate_ship_import() -> str:
-    """shipimport Builds the SQL for the STFC Ships Import File"""
+    """generate_ship_import Builds the SQL for the STFC Ships Import File"""
     return SHIP_INSERT + ",\n".join(construct_ship_row(ship) for ship in SHIP)
 
 
@@ -50,7 +50,7 @@ def construct_ship_row(ship: dict) -> str:
 
 
 def construct_shipnames(shipid: str) -> str:
-    """Construct Ship Name from ships dictionary"""
+    """Construct Ship Names from ships dictionary"""
     return f'"{get_json_value(SHIPS, shipid, "ship_name", "")}"'
 
 
@@ -61,12 +61,12 @@ def get_json_value(sdb: tuple, srchid: str, srkey: str, dflt: str = "") -> str:
 
 
 def construct_faction(factid: str) -> str:
-    """Construct Faction Name from factions dictionary"""
+    """construct_faction builds Faction Name from factions dictionary"""
     return f'"{get_json_value(FACTIONS, factid, "faction_name", "Neutral")}"'
 
 
 def generate_system_import() -> str:
-    """systemimport Builds the SQL for the STFC Systems Import File"""
+    """generate_system_import builds the SQL for the STFC Systems Import File"""
     return SYSTEM_INSERT + ",\n".join(construct_system_row(system)
                                       for system in SYSTEM)
 
@@ -79,7 +79,7 @@ def construct_system_row(system: dict) -> str:
         factid = "0"
     return (
         f'({system["id"]}, '
-        f'{construct_systemnames(system["id"])}, '
+        f'{construct_system_names(system["id"])}, '
         f'{system["level"]}, '
         f'{system["est_warp"]}, '
         f"{construct_faction(factid)}, "
@@ -88,7 +88,7 @@ def construct_system_row(system: dict) -> str:
     )
 
 
-def construct_systemnames(systid: str) -> str:
+def construct_system_names(systid: str) -> str:
     """Construct System Name from systems dictionary"""
     return f'"{get_json_value(SYSTEMS, f"{systid}", "title")}"'
 
