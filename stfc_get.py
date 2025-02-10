@@ -20,7 +20,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2025-02-09 17:03:57"
+__updated__ = "2025-02-09 17:26:21"
 __version__: str = "0.2.6"
 # endregion Author & Version
 
@@ -66,7 +66,7 @@ def construct_faction(factid: str) -> str:
 
 
 def generate_system_import() -> str:
-    """generate_system_import builds the SQL for the STFC Systems Import File"""
+    """generate_system_import builds SQL for the STFC Systems Import File"""
     return SYSTEM_INSERT + ",\n".join(construct_system_row(system)
                                       for system in SYSTEM)
 
