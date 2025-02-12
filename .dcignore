@@ -1553,4 +1553,5 @@ build/
 */test_invalid.*
 
 # Trunk
-/.trunk/*
+*/.trunk/**/*
+*/.trunk/
