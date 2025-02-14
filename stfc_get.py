@@ -20,16 +20,16 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2025-02-09 17:26:21"
+__updated__ = "2025-02-13 23:22:10"
 __version__: str = "0.2.6"
 # endregion Author & Version
 
 # region Functions
 
 
-def fetch_json(url: str, tout: int = 5) -> tuple:
+def fetch_json(url: str, tout: int = 5) -> dict:
     """Fetch JSON data from a given URL."""
-    return tuple(rq.get(url, timeout=tout).json())
+    return rq.get(url, timeout=tout).json()
 
 
 def generate_ship_import() -> str:
