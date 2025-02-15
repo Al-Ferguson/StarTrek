@@ -20,7 +20,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2025-02-15 13:23:27"
+__updated__ = "2025-02-15 14:12:30"
 __version__: str = "0.2.6"
 # endregion Author & Version
 
@@ -49,10 +49,19 @@ def construct_shipnames(shipid: str) -> str:
     return f'"{get_json_value(SHIPS, shipid, "ship_name", "")}"'
 
 
-def get_json_value(sdb: tuple, srchid: str, srkey: str, dflt: str = "") -> str:
-    """Get a value from a JSON Dictionary"""
-    return next((x["text"] for x in sdb
-                 if (x["id"] == srchid and x["key"] == srkey)), dflt)
+def get_json_value(
+    json_data: tuple[dict], srchid: str, srchkey: str, dflt: str = ""
+) -> str:
+    """Get a value from a JSON Dictionary for the given key"""
+    return next(
+        (item["text"]
+         for item in json_data
+         if (
+             item["id"] == srchid and
+             item["key"] == srchkey
+             )),
+        dflt
+        )
 
 
 def construct_faction(factid: str) -> str:
@@ -108,16 +117,18 @@ SQL_END = ";\n\nCOMMIT;\n\n"
 
 VERSION: str = rq.get(f"{API_URL}/version.txt", timeout=5).text
 
-SHIP: tuple = rq.get(f"{API_URL}/ship/summary.json?version={VERSION}",
-                     timeout=5).json()
-SHIPS: tuple = rq.get(f"{DETAIL_URL}/ships.json?version={VERSION}",
-                      timeout=5).json()
-SYSTEM: tuple = rq.get(f"{API_URL}/system/summary.json?version={VERSION}",
-                       timeout=5).json()
-SYSTEMS: tuple = rq.get(f"{DETAIL_URL}/systems.json?version={VERSION}",
-                        timeout=5).json()
-FACTIONS: tuple = rq.get(f"{DETAIL_URL}/factions.json?version={VERSION}",
-                         timeout=5).json()
+SHIP: tuple[dict] = rq.get(f"{API_URL}/ship/summary.json?version={VERSION}",
+                           timeout=5).json()
+SHIPS: tuple[dict] = rq.get(f"{DETAIL_URL}/ships.json?version={VERSION}",
+                            timeout=5).json()
+SYSTEM: tuple[dict] = rq.get(
+    f"{API_URL}/system/summary.json?version={VERSION}",
+    timeout=5
+).json()
+SYSTEMS: tuple[dict] = rq.get(f"{DETAIL_URL}/systems.json?version={VERSION}",
+                              timeout=5).json()
+FACTIONS: tuple[dict] = rq.get(f"{DETAIL_URL}/factions.json?version={VERSION}",
+                               timeout=5).json()
 
 SHIPTYPES: tuple = ("Interceptor", "Survey", "Explorer", "Battleship")
 # endregion Global Variables
