@@ -20,7 +20,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2025-02-15 13:22:06"
+__updated__ = "2025-02-15 13:23:27"
 __version__: str = "0.2.6"
 # endregion Author & Version
 
