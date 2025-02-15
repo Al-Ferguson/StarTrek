@@ -20,14 +20,14 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2025-02-13 23:22:10"
+__updated__ = "2025-02-15 13:05:17"
 __version__: str = "0.2.6"
 # endregion Author & Version
 
 # region Functions
 
 
-def fetch_json(url: str, tout: int = 5) -> dict:
+def fetch_json(url: str, tout: int = 5) -> tuple:
     """Fetch JSON data from a given URL."""
     return rq.get(url, timeout=tout).json()
 
