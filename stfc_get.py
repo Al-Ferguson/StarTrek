@@ -20,16 +20,11 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2025-02-15 13:05:17"
+__updated__ = "2025-02-15 13:22:06"
 __version__: str = "0.2.6"
 # endregion Author & Version
 
 # region Functions
-
-
-def fetch_json(url: str, tout: int = 5) -> tuple:
-    """Fetch JSON data from a given URL."""
-    return rq.get(url, timeout=tout).json()
 
 
 def generate_ship_import() -> str:
@@ -113,11 +108,16 @@ SQL_END = ";\n\nCOMMIT;\n\n"
 
 VERSION: str = rq.get(f"{API_URL}/version.txt", timeout=5).text
 
-SHIP: tuple = fetch_json(f"{API_URL}/ship/summary.json?version={VERSION}")
-SHIPS: tuple = fetch_json(f"{DETAIL_URL}/ships.json?version={VERSION}")
-SYSTEM: tuple = fetch_json(f"{API_URL}/system/summary.json?version={VERSION}")
-SYSTEMS: tuple = fetch_json(f"{DETAIL_URL}/systems.json?version={VERSION}")
-FACTIONS: tuple = fetch_json(f"{DETAIL_URL}/factions.json?version={VERSION}")
+SHIP: tuple = rq.get(f"{API_URL}/ship/summary.json?version={VERSION}",
+                     timeout=5).json()
+SHIPS: tuple = rq.get(f"{DETAIL_URL}/ships.json?version={VERSION}",
+                      timeout=5).json()
+SYSTEM: tuple = rq.get(f"{API_URL}/system/summary.json?version={VERSION}",
+                       timeout=5).json()
+SYSTEMS: tuple = rq.get(f"{DETAIL_URL}/systems.json?version={VERSION}",
+                        timeout=5).json()
+FACTIONS: tuple = rq.get(f"{DETAIL_URL}/factions.json?version={VERSION}",
+                         timeout=5).json()
 
 SHIPTYPES: tuple = ("Interceptor", "Survey", "Explorer", "Battleship")
 # endregion Global Variables
