@@ -20,11 +20,26 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2025-02-15 14:12:30"
+__updated__ = "2025-02-15 19:41:43"
 __version__: str = "0.2.6"
 # endregion Author & Version
 
 # region Functions
+
+
+def get_json_value(
+    json_data: tuple[dict], srchid: str, srchkey: str, dflt: str = ""
+) -> str:
+    """Get a value from a JSON Dictionary for the given key"""
+    return next(
+        (item["text"]
+         for item in json_data
+         if (
+             item["id"] == srchid and
+             item["key"] == srchkey
+             )),
+        dflt
+        )
 
 
 def generate_ship_import() -> str:
@@ -47,21 +62,6 @@ def construct_ship_row(ship: dict) -> str:
 def construct_shipnames(shipid: str) -> str:
     """Construct Ship Names from ships dictionary"""
     return f'"{get_json_value(SHIPS, shipid, "ship_name", "")}"'
-
-
-def get_json_value(
-    json_data: tuple[dict], srchid: str, srchkey: str, dflt: str = ""
-) -> str:
-    """Get a value from a JSON Dictionary for the given key"""
-    return next(
-        (item["text"]
-         for item in json_data
-         if (
-             item["id"] == srchid and
-             item["key"] == srchkey
-             )),
-        dflt
-        )
 
 
 def construct_faction(factid: str) -> str:

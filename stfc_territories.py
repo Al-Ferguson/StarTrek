@@ -15,34 +15,30 @@ NOTE: This has been tested with Python 3.9+ and Requests v2.32+
 #   - typing
 
 import requests as rq
-
 # endregion Imports
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2025-02-06 12:17:05"
+__updated__ = "2025-02-15 19:41:31"
 __version__: str = "0.0.5"
 # endregion Author & Version
 
 # region Functions
 
 
-def fetch_json(url: str, tout: int = 5) -> tuple:
-    """Fetch JSON data from a given URL."""
-    return tuple(rq.get(url, timeout=tout).json())
-
-
-def get_json_value(sdb: tuple, srchid: str, skey: str, dflt: str) -> str:
-    """Get a value from a JSON Dictionary"""
-    return next((x["text"] for x in sdb if
-                 (x["id"] == srchid and x["key"] == skey)), dflt)
-
-
-def get_json_text_value(name: list, key: int):
-    """get_json_text_value returns Text version of Int Key value from JSON"""
-    lookup = {int(item["id"]): item["text"] for
-              item in name if item["key"] == "name"}
-    return lookup.get(key, "")
+def get_json_value(
+    json_data: tuple[dict], srchid: str, srchkey: str, dflt: str = ""
+) -> str:
+    """Get a value from a JSON Dictionary for the given key"""
+    return next(
+        (item["text"]
+         for item in json_data
+         if (
+             item["id"] == srchid and
+             item["key"] == srchkey
+             )),
+        dflt
+        )
 
 
 def construct_faction(factid: str) -> str:
@@ -51,7 +47,7 @@ def construct_faction(factid: str) -> str:
 
 
 def generate_system() -> str:
-    """systemimport Builds the SQL for the STFC Systems Import File"""
+    """generate_system Builds the SQL for the STFC Systems Import File"""
     return ",\n".join([construct_system_row(system) for system in SYSTEM])
 
 
@@ -85,9 +81,15 @@ DETAIL_URL: str = f"{API_URL}/translations/{TRANSLATE_LANGUAGE}"
 
 VERSION: str = rq.get(f"{API_URL}/version.txt", timeout=5).text
 
-SYSTEM: tuple = fetch_json(f"{API_URL}/system/summary.json?version={VERSION}")
-SYSTEMS: tuple = fetch_json(f"{DETAIL_URL}/systems.json?version={VERSION}")
-FACTIONS: tuple = fetch_json(f"{DETAIL_URL}/factions.json?version={VERSION}")
+SYSTEM: tuple[dict] = rq.get(
+    f"{API_URL}/system/summary.json?version={VERSION}",
+    timeout=5
+).json()
+SYSTEMS: tuple[dict] = rq.get(f"{DETAIL_URL}/systems.json?version={VERSION}",
+                              timeout=5).json()
+FACTIONS: tuple[dict] = rq.get(f"{DETAIL_URL}/factions.json?version={VERSION}",
+                               timeout=5).json()
+
 # endregion Global Variables
 
 
