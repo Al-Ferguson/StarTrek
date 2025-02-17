@@ -102,6 +102,7 @@ lib64/
 parts/
 sdist/
 tests/test_coverage/*
+test/data/*
 var/
 wheels/
 share/python-wheels/
@@ -115,9 +116,9 @@ target/
 profile_default/
 __pypackages__/
 celerybeat-schedule
-env/
-venv/
-ENV/
+/env/*
+/venv/*
+/ENV/*
 env.bak/
 venv.bak/
 activate/
