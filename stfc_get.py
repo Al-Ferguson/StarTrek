@@ -20,7 +20,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2025-02-15 19:41:43"
+__updated__ = "2025-03-06 09:25:02"
 __version__: str = "0.2.6"
 # endregion Author & Version
 
@@ -34,10 +34,8 @@ def get_json_value(
     return next(
         (item["text"]
          for item in json_data
-         if (
-             item["id"] == srchid and
-             item["key"] == srchkey
-             )),
+         if (item["id"] == srchid and item["key"] == srchkey)
+         ),
         dflt
         )
 
