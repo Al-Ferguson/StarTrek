@@ -1,21 +1,51 @@
 [project]
-requires-python = ">=3.12"
 name = "StarTrek"
-
-[tool.poetry]
-name = "startrek"
-version = "0.1.4"
+keywords = ["Star Trek", "Fleet Command", "Python"]
+version = "0.2.6"
+requires-python = ">=3.12"
 description = "Star Trek Fleet Command Projects"
-authors = ["Al Ferguson <aferguson@neptunescove.org>"]
-license = "GNU3"
+authors = [
+    {name = "Al Ferguson", email = "aferguson@neptunescove.org>"},
+]
+maintainers = [
+    {name = "Al Ferguson", email = "aferguson@neptunescove.org>"},
+]
+license = "GPLv3+"
+readme = "README.md"
+readme-type = "markdown"
+Changelog = "CHANGELOG.md"
+dependencies = [
+    "requests",
+]
+tools = [
+    "bandit",
+    "black",
+    "flake8",
+    "isort",
+    "mypy",
+    "pyflakes",
+    "pylama",
+    "pylint",
+    "ruff",
+    "semgrep",
+ ]
+classifiers  = [
+    # How mature is this project? Common values are
+    #   3 - Alpha
+    #   4 - Beta
+    #   5 - Production/Stable    
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: >=3.12",
+]
 
-[tool.poetry.dependencies]
-python = "^3.12"
-requests = "^2.31"
+[project.urls]
+url = "https://github.com/AlFerguson/StarTrek_Projects"
+url_type = "github"
 
-[tool.poetry.dev-dependencies]
-mypy = "^1.51"
+[tool.black]
+line-length = 88
+target-version = ['py312', 'py313']
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["pip-tools","setuptools>=42", "wheel"]
