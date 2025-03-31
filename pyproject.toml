@@ -48,3 +48,23 @@ dev-dependencies= [
     "types-requests>=2.32.0",
     "typing_extensions>=4.7.1",
 ]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.mypy]
+allow_redefinition = false
+check_untyped_defs = true
+ignore_errors = false
+ignore_missing_imports = true
+local_partial_types = true
+no_implicit_optional = true
+python_version = 3.12
+strict_equality = true
+strict_optional = true
+warn_no_return = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unused_configs = true
+warn_unused_ignores = true
