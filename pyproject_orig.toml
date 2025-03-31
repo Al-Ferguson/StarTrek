@@ -14,6 +14,21 @@ license = "GPLv3+"
 readme = "README.md"
 readme-type = "markdown"
 Changelog = "CHANGELOG.md"
+dependencies = [
+    "requests",
+]
+tools = [
+    "bandit",
+    "black",
+    "flake8",
+    "isort",
+    "mypy",
+    "pyflakes",
+    "pylama",
+    "pylint",
+    "ruff",
+    "semgrep",
+ ]
 classifiers  = [
     # How mature is this project? Common values are
     #   3 - Alpha
@@ -27,31 +42,26 @@ classifiers  = [
 [project.urls]
 url = "https://github.com/AlFerguson/StarTrek_Projects"
 url_type = "github"
-documentation = "https://docs.github.com/AlFerguson/StarTrek_Projects"
 
-[tool.pyflow]
-name = "StarTrek"
-py_version = "3.12"
-version = "0.1.0"
+[tool.black]
+line-length = 88
+target-version = ['py312', 'py313']
 
-[tool.pyflow.scripts]
+[tool.mypy]
+allow_redefinition = false
+check_untyped_defs = true
+ignore_errors = false
+ignore_missing_imports = true
+local_partial_types = true
+no_implicit_optional = true
+python_version = 3.12
+strict_equality = true
+strict_optional = true
+warn_no_return = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unused_configs = true
+warn_unused_ignores = true
 
-[tool.pyflow.dependencies]
-bandit = ">=1.7.5"
-black = ">=23.11.0"
-flake8 = ">=6.1.0"
-isort = ">=5.12.0"
-mypy = ">=1.7.1"
-pyflakes = ">=3.1.0"
-pylama = ">=8.4.1"
-pylint = ">=3.0.2"
-ruff = ">=3.0.0"
-semgrep = ">=1.95.0"
-requests = ">=2.31.0"
-annotated-types = ">=0.6.0"
-mypy-extensions = ">=1.0.0"
-types-requests = ">=2.32.0"
-typing_extensions = ">=4.7.1"
-
-[tool.pyflow.dev-dependencies]
-
+[build-system]
+requires = ["pip-tools","setuptools>=42", "wheel"]
