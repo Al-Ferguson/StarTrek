@@ -23,37 +23,28 @@ classifiers  = [
     "Intended Audience :: STFC Commodores",
     "Programming Language :: Python :: >=3.12",
 ]
+dependencies = [
+    "requests >=2.31.0",
+]
 
 [project.urls]
 url = "https://github.com/AlFerguson/StarTrek_Projects"
 url_type = "github"
 documentation = "https://docs.github.com/AlFerguson/StarTrek_Projects"
 
-[tool.pyflow]
-name = "StarTrek"
-py_version = "3.12"
-version = "0.2.6"
-
-[tool.pyflow.scripts]
-
-[tool.pyflow.dependencies]
-requests = ">=2.31.0"
-
-[tool.pyflow.dev-dependencies]
-annotated-types = ">=0.6.0"
-bandit = ">=1.7.5"
-black = ">=23.11.0"
-flake8 = ">=6.1.0"
-isort = ">=5.12.0"
-mypy = ">=1.7.1"
-mypy-extensions = ">=1.0.0"
-pyflakes = ">=3.1.0"
-pylama = ">=8.4.1"
-pylint = ">=3.0.2"
-ruff = ">=3.0.0"
-semgrep = ">=1.95.0"
-types-requests = ">=2.32.0"
-typing_extensions = ">=4.7.1"
-
-[tool.pyflow.extras]
-test = ["pytest"]
+[tool.uv]
+dev-dependencies= [
+    "annotated-types>=0.6.0",
+    "bandit>=1.7.5",
+    "black>=23.11.0",
+    "flake8>=6.1.0",
+    "isort>=5.12.0",
+    "mypy>=1.7.1",
+    "mypy-extensions>=1.0.0",
+    "pyflakes>=3.1.0",
+    "pylama>=8.4.1",
+    "pylint>=3.0.2",
+    "semgrep>=1.95.0",
+    "types-requests>=2.32.0",
+    "typing_extensions>=4.7.1",
+]
