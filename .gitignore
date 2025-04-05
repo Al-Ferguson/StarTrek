@@ -1,51 +1,47 @@
 # Byte-compiled / optimized / DLL files
+*$py.class
+*.py[cod]
 __pycache__
 __pycache__/
-*.py[cod]
-*$py.class
 
 # Unit test / coverage reports
-htmlcov/
-.alpackages/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-.dccache
-.pytest_cache
-nosetests.xml
-coverage.xml
-test_coverage
 *.cover
 *.py,cover
+.alpackages/
+.cache
+.coverage
+.coverage.*
+.dccache
 .hypothesis/
+.nox/
+.pytest_cache
 .pytest_cache/
+.tox/
 cover/
-
-# Temp fields
-*.*~
-~*.*
+coverage.xml
+htmlcov/
+nosetests.xml
+test_coverage
 
 # Scanner Works 
 .scannerwork
 
 # Environments
 .env
-activate
-deactivate
 .venv
-env/
-activate/
-deactivate/
-venv/
 ENV/
+activate
+activate/
+deactivate
+deactivate/
 env.bak/
+env/
 venv.bak/
+venv/
 
 # mypy
-.mypy_cache/
 .dmypy.json
+.mypy_cache/
 dmypy.json
 
 # PyCharm
@@ -55,11 +51,15 @@ dmypy.json
 # Mac directory file
 .DS_Store
 .dockerrc
+.logs
+.snyk
 .trunk
 .trunk/
-.logs
 .vscode
 .vscode/
 logs
-.snyk
 pyflow.lock
+
+# Temp fields
+*.*~
+~*.*
