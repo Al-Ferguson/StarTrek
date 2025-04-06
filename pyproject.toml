@@ -33,6 +33,7 @@ url_type = "github"
 documentation = "https://docs.github.com/AlFerguson/StarTrek_Projects"
 
 [tool.uv]
+upgrade = true
 dev-dependencies= [
     "annotated-types>=0.6.0",
     "bandit>=1.7.5",
@@ -50,10 +51,6 @@ dev-dependencies= [
     "typing_extensions>=4.7.1",
 ]
 
-[tool.ruff]
-line-length = 100
-target-version = "py312"
-
 [tool.mypy]
 allow_redefinition = false
 check_untyped_defs = true
@@ -69,6 +66,10 @@ warn_redundant_casts = true
 warn_return_any = true
 warn_unused_configs = true
 warn_unused_ignores = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
 
 [build-system]
 requires = ["setuptools >= 61.0", "wheel"]
