@@ -2,7 +2,7 @@
 name = "StarTrek"
 keywords = ["Star Trek", "Fleet Command", "Python"]
 version = "0.2.6"
-requires-python = ">=3.12"
+requires-python = ">=3.13"
 description = "Star Trek Fleet Command Projects"
 authors = [
     {name = "Al Ferguson", email = "aferguson@neptunescove.org>"},
@@ -69,7 +69,7 @@ warn_unused_ignores = true
 
 [tool.ruff]
 line-length = 100
-target-version = "py312"
+target-version = "py313"
 
 [build-system]
 requires = ["setuptools >= 61.0", "wheel"]
