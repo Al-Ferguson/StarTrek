@@ -13,6 +13,7 @@ pylama>=8.4.1
 pylint>=3.0.2
 ruff>=0.11.0
 semgrep>=1.95.0
+zstandard>=0.23.0
 #
 # Added for type checking
 annotated-types>=0.6.0
