@@ -22,6 +22,7 @@ coverage.xml
 htmlcov/
 nosetests.xml
 test_coverage
+uv.lock
 
 # Scanner Works 
 .scannerwork
