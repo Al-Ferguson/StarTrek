@@ -28,6 +28,7 @@ uv.lock
 .scannerwork
 
 # Environments
+.cursor/
 .env
 .venv
 ENV/
