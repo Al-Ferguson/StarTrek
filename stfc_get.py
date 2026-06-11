@@ -21,7 +21,7 @@ import requests as rq
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2025-12-16 22:14:26"
+__updated__ = "2026-06-10 19:38:22"
 __version__: str = "0.2.6"
 # endregion Author & Version
 
@@ -77,7 +77,7 @@ def construct_system_row(system: dict) -> str:
     """Build SQL import data line from system dictionary."""
     try:
         factid: str = system["hostiles"][0]["faction"]["loca_id"]
-    except IndexError:
+    except (KeyError, IndexError, TypeError):
         factid = "0"
     return (
         f"({system['id']}, "
