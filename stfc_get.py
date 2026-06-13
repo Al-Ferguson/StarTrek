@@ -79,16 +79,18 @@ def construct_system_row(system: dict) -> str:
         factid: str = system["hostiles"][0]["faction"]["loca_id"]
     except (KeyError, IndexError, TypeError):
         factid = "0"
-    return (
-        f"({system['id']}, "
-        f"{construct_system_names(system['id'])}, "
-        f"{system['level']}, "
-        f"{system['est_warp']}, "
-        f"{construct_faction(factid)}, "
-        f"{system['is_deep_space']}, "
-        f"{system['is_mirror_universe']})"
-    )
 
+    row_data = [
+        str(system["id"]),
+        construct_system_names(system["id"]),
+        str(system["level"]),
+        str(system["est_warp"]),
+        construct_faction(factid),
+        str(system["is_deep_space"]),
+        str(system["is_mirror_universe"])
+    ]
+
+    return f"({', '.join(row_data)})"
 
 def construct_system_names(systid: str) -> str:
     """Construct System Name from systems dictionary"""
