@@ -2,7 +2,7 @@
 name = "StarTrek"
 keywords = ["Star Trek", "Fleet Command", "Python"]
 version = "0.2.6"
-requires-python = ">=3.13"
+requires-python = ">=3.14"
 description = "Star Trek Fleet Command Projects"
 authors = [
     {name = "Al Ferguson", email = "aferguson@neptunescove.org>"},
