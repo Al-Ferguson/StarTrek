@@ -1,3 +1,4 @@
+# Copyright (c) 2026 Al Ferguson
 """stfc_territories.py - Pull https://stfc.space data and write CSV file.
 
 NOTE: This application requires the Requests Module from PyPi. This can

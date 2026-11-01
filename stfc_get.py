@@ -1,3 +1,4 @@
+# Copyright (c) 2026 Al Ferguson
 """stfc_get.py - Pull data from https://stfc.space and write to CSV file.
 
 NOTE: This application requires the Requests Module from PyPi. This can
@@ -28,8 +29,9 @@ __version__: str = "0.2.6"
 # region Functions
 
 
-def get_json_value(json_data: tuple[dict], srchid: str, srchkey: str, dflt: str = "") -> str:
-    """Get a value from a JSON Dictionary for the given key"""
+def get_json_value(json_data: tuple[dict], srchid: str,
+                   srchkey: str, dflt: str = "") -> str:
+    """Get a value from a JSON Dictionary for the given key."""
     return next(
         (
             item["text"]
@@ -41,7 +43,7 @@ def get_json_value(json_data: tuple[dict], srchid: str, srchkey: str, dflt: str 
 
 
 def generate_ship_import() -> str:
-    """Build the SQL for the STFC Ships Import File"""
+    """Build the SQL for the STFC Ships Import File."""
     ship_rows = [construct_ship_row(ship) for ship in SHIP]
     return SHIP_INSERT + ",\n".join(ship_rows)
 
@@ -116,11 +118,16 @@ SQL_END = ";\n\nCOMMIT;\n\n"
 
 VERSION: str = rq.get(f"{API_URL}/version.txt", timeout=5).text
 
-SHIP: tuple[dict] = rq.get(f"{API_URL}/ship/summary.json?version={VERSION}", timeout=5).json()
-SHIPS: tuple[dict] = rq.get(f"{DETAIL_URL}/ships.json?version={VERSION}", timeout=5).json()
-SYSTEM: tuple[dict] = rq.get(f"{API_URL}/system/summary.json?version={VERSION}", timeout=5).json()
-SYSTEMS: tuple[dict] = rq.get(f"{DETAIL_URL}/systems.json?version={VERSION}", timeout=5).json()
-FACTIONS: tuple[dict] = rq.get(f"{DETAIL_URL}/factions.json?version={VERSION}", timeout=5).json()
+SHIP: tuple[dict] = rq.get(f"{API_URL}/ship/summary.json?version={VERSION}",
+                           timeout=5).json()
+SHIPS: tuple[dict] = rq.get(f"{DETAIL_URL}/ships.json?version={VERSION}",
+                            timeout=5).json()
+SYSTEM: tuple[dict] = rq.get(f"{API_URL}/system/summary.json?version={VERSION}",
+                             timeout=5).json()
+SYSTEMS: tuple[dict] = rq.get(f"{DETAIL_URL}/systems.json?version={VERSION}",
+                              timeout=5).json()
+FACTIONS: tuple[dict] = rq.get(f"{DETAIL_URL}/factions.json?version={VERSION}",
+                               timeout=5).json()
 
 SHIPTYPES: tuple = ("Interceptor", "Survey", "Explorer", "Battleship")
 # endregion Global Variables
@@ -128,7 +135,6 @@ SHIPTYPES: tuple = ("Interceptor", "Survey", "Explorer", "Battleship")
 
 def main() -> None:
     """https://stfc.space Information retrieval & Import SQL build."""
-
     print("Writing Ships IMPORT SQL:")
     ships_sql = generate_ship_import() + SQL_END
     with open("STFC Pirate 2 Ships.sql", "w", encoding="utf-8") as file:
