@@ -3,22 +3,13 @@
 # by the following command:
 #
 # Added for syntax checking
-bandit>=1.7.5
-black>=23.11.0
-flake8>=6.1.0
-isort>=5.12.0
-mypy>=1.7.1
-pyflakes>=3.1.0
-pylama>=8.4.1
-pylint>=3.0.2
-pytest>=9.0.0
-pyzstd>=0.16.2
-ruff>=0.11.0
-semgrep>=1.95.0
-zstandard>=0.23.0
+mypy>=2.4.0
+pyrefly>=1.4.0
+ruff>=0.17.0
+semgrep>=1.182.0
 #
 # Added for type checking
-annotated-types>=0.6.0
-mypy-extensions>=1.0.0
-typing_extensions>=4.7.1
+annotated-types>=0.8.0
+mypy-extensions>=1.1.0
+typing_extensions>=4.16.0
 #

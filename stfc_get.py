@@ -16,7 +16,7 @@ NOTE: This has been tested with Python 3.9+ and Requests v2.32+
 #   - json
 #   - typing
 
-import requests as rq
+import httpx2 as rq
 
 # endregion Imports
 
@@ -118,16 +118,11 @@ SQL_END = ";\n\nCOMMIT;\n\n"
 
 VERSION: str = rq.get(f"{API_URL}/version.txt", timeout=5).text
 
-SHIP: tuple[dict] = rq.get(f"{API_URL}/ship/summary.json?version={VERSION}",
-                           timeout=5).json()
-SHIPS: tuple[dict] = rq.get(f"{DETAIL_URL}/ships.json?version={VERSION}",
-                            timeout=5).json()
-SYSTEM: tuple[dict] = rq.get(f"{API_URL}/system/summary.json?version={VERSION}",
-                             timeout=5).json()
-SYSTEMS: tuple[dict] = rq.get(f"{DETAIL_URL}/systems.json?version={VERSION}",
-                              timeout=5).json()
-FACTIONS: tuple[dict] = rq.get(f"{DETAIL_URL}/factions.json?version={VERSION}",
-                               timeout=5).json()
+SHIP: tuple[dict] = rq.get(f"{API_URL}/ship/summary.json?version={VERSION}").json()
+SHIPS: tuple[dict] = rq.get(f"{DETAIL_URL}/ships.json?version={VERSION}").json()
+SYSTEM: tuple[dict] = rq.get(f"{API_URL}/system/summary.json?version={VERSION}").json()
+SYSTEMS: tuple[dict] = rq.get(f"{DETAIL_URL}/systems.json?version={VERSION}").json()
+FACTIONS: tuple[dict] = rq.get(f"{DETAIL_URL}/factions.json?version={VERSION}").json()
 
 SHIPTYPES: tuple = ("Interceptor", "Survey", "Explorer", "Battleship")
 # endregion Global Variables

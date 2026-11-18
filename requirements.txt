@@ -3,11 +3,11 @@
 # by the following command:
 #
 # Required by Python scripts
-requests>=2.31.0
+httpx2>=2.16.0
+
 #
 # Added for type checking
 annotated-types>=0.6.0
 mypy-extensions>=1.0.0
-types-requests>=2.32.0
 typing_extensions>=4.7.1
 #
