@@ -61,17 +61,17 @@ def construct_ship_row(ship: dict) -> str:
 
 
 def construct_shipnames(shipid: str) -> str:
-    """Construct Ship Names from ships dictionary"""
+    """Construct Ship Names from ships dictionary."""
     return f'"{get_json_value(SHIPS, shipid, "ship_name", "")}"'
 
 
 def construct_faction(factid: str) -> str:
-    """Build Faction Name from factions dictionary"""
+    """Build Faction Name from factions dictionary."""
     return f'"{get_json_value(FACTIONS, factid, "faction_name", "Neutral")}"'
 
 
 def generate_system_import() -> str:
-    """Build SQL for the STFC Systems Import File"""
+    """Build SQL for the STFC Systems Import File."""
     return SYSTEM_INSERT + ",\n".join(construct_system_row(system) for system in SYSTEM)
 
 
@@ -89,13 +89,13 @@ def construct_system_row(system: dict) -> str:
         str(system["est_warp"]),
         construct_faction(factid),
         str(system["is_deep_space"]),
-        str(system["is_mirror_universe"])
+        str(system["is_mirror_universe"]),
     ]
 
     return f"({', '.join(row_data)})"
 
 def construct_system_names(systid: str) -> str:
-    """Construct System Name from systems dictionary"""
+    """Construct System Name from systems dictionary."""
     return f'"{get_json_value(SYSTEMS, f"{systid}", "title")}"'
 
 
