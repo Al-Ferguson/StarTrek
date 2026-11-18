@@ -17,13 +17,14 @@ NOTE: This has been tested with Python 3.9+ and Requests v2.32+
 #   - typing
 
 import httpx2 as rq
+import Path
 
 # endregion Imports
 
 # region Author & Version
 __author__: str = "Al Ferguson"
-__updated__ = "2026-06-10 19:38:22"
-__version__: str = "0.2.6"
+__updated__ = "2026-11-18 14:17:22"
+__version__: str = "0.3.0"
 # endregion Author & Version
 
 # region Functions
@@ -72,7 +73,9 @@ def construct_faction(factid: str) -> str:
 
 def generate_system_import() -> str:
     """Build SQL for the STFC Systems Import File."""
-    return SYSTEM_INSERT + ",\n".join(construct_system_row(system) for system in SYSTEM)
+    return SYSTEM_INSERT + ",\n".join(
+        construct_system_row(system) for system in SYSTEM
+    )
 
 
 def construct_system_row(system: dict) -> str:
@@ -102,12 +105,13 @@ def construct_system_names(systid: str) -> str:
 # endregion Functions
 
 # region Global Variables
-API_URL: str = "https://assets.stfc.space/data/latest"
+API_URL: str = "https://data.stfc.space"
 TRANSLATE_LANGUAGE = "en"
 DETAIL_URL: str = f"{API_URL}/translations/{TRANSLATE_LANGUAGE}"
 
 SHIP_INSERT: str = (
-    "INSERT INTO `StfcShips` (`ShipID`, `ShipName`,`ShipLevel`, `ShipType`,`ShipFaction`) VALUES\n"
+    "INSERT INTO `StfcShips` (`ShipID`, `ShipName`,`ShipLevel`, "
+    "`ShipType`,`ShipFaction`) VALUES\n"
 )
 SYSTEM_INSERT: str = (
     "INSERT INTO `StfcSystems` (`SystemID`, `SystemName`, "
@@ -116,31 +120,38 @@ SYSTEM_INSERT: str = (
 )
 SQL_END = ";\n\nCOMMIT;\n\n"
 
-VERSION: str = rq.get(f"{API_URL}/version.txt", timeout=5).text
-
-SHIP: tuple[dict] = rq.get(f"{API_URL}/ship/summary.json?version={VERSION}").json()
-SHIPS: tuple[dict] = rq.get(f"{DETAIL_URL}/ships.json?version={VERSION}").json()
-SYSTEM: tuple[dict] = rq.get(f"{API_URL}/system/summary.json?version={VERSION}").json()
-SYSTEMS: tuple[dict] = rq.get(f"{DETAIL_URL}/systems.json?version={VERSION}").json()
-FACTIONS: tuple[dict] = rq.get(f"{DETAIL_URL}/factions.json?version={VERSION}").json()
+with rq.Client(base_url="{API_URL}", http2=True) as client:
+    VERSION: str = client.get("version.txt").text
+    SHIP: tuple[dict] = client.get(
+        f"ship/summary.json?version={VERSION}",
+    ).json()
+    SHIPS: tuple[dict] = client.get(f"ships.json?version={VERSION}").json()
+    SYSTEM: tuple[dict] = client.get(
+        f"planetary_base/summary.json?version={VERSION}",
+    ).json()
+    SYSTEMS: tuple[dict] = client.get(f"systems.json?version={VERSION}").json()
+    FACTIONS: tuple[dict] = client.get(
+        f"factions.json?version={VERSION}",
+    ).json()
 
 SHIPTYPES: tuple = ("Interceptor", "Survey", "Explorer", "Battleship")
+
 # endregion Global Variables
 
 
 def main() -> None:
     """https://stfc.space Information retrieval & Import SQL build."""
-    print("Writing Ships IMPORT SQL:")
+    print("Writing Ships IMPORT SQL:")  # noqa: T201
     ships_sql = generate_ship_import() + SQL_END
-    with open("STFC Pirate 2 Ships.sql", "w", encoding="utf-8") as file:
+    with Path.open("STFC Pirate 2 Ships.sql", "w", encoding="utf-8") as file:
         file.write(ships_sql)
 
-    print("Writing Systems IMPORT SQL:")
+    print("Writing Systems IMPORT SQL:")  # noqa: T201
     systems_sql = generate_system_import() + SQL_END
-    with open("STFC Pirate 3 Systems.sql", "w", encoding="utf-8") as file:
+    with Path.open("STFC Pirate 3 Systems.sql", "w", encoding="utf-8") as file:
         file.write(systems_sql)
 
 
 if __name__ == "__main__":
-    print(f"\n{__doc__}\n")
+    print(f"\n{__doc__}\n")  # noqa: T201
     main()

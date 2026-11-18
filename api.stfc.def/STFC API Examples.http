@@ -1,40 +1,50 @@
-/*
-# REST API examples for https://stfc.space
-*/
-/*
-## Global Variables
-*/
-@host = assets.stfc.space
-@apiPath = data/latest
+##
+##  REST API examples for https://data.stfc.space
+##      Global Variables
+##
+@host = data.stfc.space
 @translate = translations/en
 @jsonType = application/json
 @jsonEncoding = gzip, deflate
 @jsonLanguage = en-US, en;q=0.9
-@baseurl = {{host}}/{{apiPath}}
+@baseurl = {{host}}
 @version = GET https://{{baseurl}}/version.txt
-Accept: {{jsonType}}
-Accept-Encoding: {{jsonEncoding}}
-Accept-Language: {{jsonLanguage}}
-/*
-## Ship Information
-- Ship Details
-- Ship Details for ID=3682502332
-- Ship Names, Flavors, and Descriptions
-- Ship Components
-- Ship Buffs
-*/
+@eversion = GET https://{{baseurl}}/events/version.txt
+
+###
+### Get data.stfc.space Database Version
+GET {{baseurl}}/version.txt HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+ 
+###
+### Get data.stfc.space/events Database Version
+GET {{baseurl}}/events/version.txt HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+ 
+
+##  Ship Information
+##      - Ship Details
+##      - Ship Details for ID=3682502332
+##      - Ship Names, Flavors, and Descriptions
+##      - Ship Components
+##      - Ship Buffs
+
+
 ###
 GET https://{{baseurl}}/ship/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
 ###
-GET https://{{baseurl}}/ship/3682502332.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
 ###
-GET https://{{baseurl}}/{{translate}}/ships.json HTTP/1.1
+GET https://{{baseurl}}/{{translate}}/ships.json?{{version}} HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
@@ -48,23 +58,22 @@ GET https://{{baseurl}}/{{translate}}/ship_buffs.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-/*
 ## Officer Information
-- Officer Detail Information
-- Officer Detail for Officer 4151676212
-- Officer Additional Information
-_ Officer Buffs
-- Officer "flavor" Information
-- Officer Names
-- Officer Traits
-*/
+##      - Officer Detail Information
+##      - Officer Detail for Officer 4151676212
+##      - Officer Additional Information
+##      - Officer Buffs
+##      - Officer "flavor" Information
+##      - Officer Names
+##      - Officer Traits
+
 ###
 GET https://{{baseurl}}/officer/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
 ###
-GET https://{{baseurl}}/officer/4151676212.json HTTP/1.1
+GET https://{{baseurl}}/officer/988947581 HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
@@ -93,34 +102,34 @@ GET https://{{baseurl}}/{{translate}}/traits.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-/*
+
 ## Building Information
-- Building Summary
-- Building Information for ID=1007
-*/
+##      - Building Summary
+##      - Building Information for ID=1007
+
 ###
 GET https://{{baseurl}}/building/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
 ###
-GET https://{{baseurl}}/building/1007.json HTTP/1.1
+GET https://{{baseurl}}/building/1007 HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-/*
+
 ## Research Information
-- Research Details
-- Research Detail for ID=4255996393
-- Research Titles and Descriptions
-*/
+##      - Research Details
+##      - Research Detail for ID=4255996393
+##      - Research Titles and Descriptions
+
 ###
 GET https://{{baseurl}}/research/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
 ###
-GET https://{{baseurl}}/research/4255996393.json HTTP/1.1
+GET https://{{baseurl}}/research/4255996393 HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
@@ -129,19 +138,14 @@ GET https://{{baseurl}}/{{translate}}/research.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-/*
+
 ## System Information
-- System Details 
-- System Detail for ID=1234567890 
-- System Titles and Descriptions 
-*/
+##      - System Details 
+##      - System Detail for ID=1234567890 
+##      - System Titles and Descriptions 
+
 ###
-GET https://{{baseurl}}/system/summary.json?version={{version}} HTTP/1.1
-    Accept: {{jsonType}}
-    Accept-Encoding: {{jsonEncoding}}
-    Accept-Language: {{jsonLanguage}}
-###
-GET https://{{baseurl}}/system/1234567890.json HTTP/1.1
+GET https://{{baseurl}}/planetary_base/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
@@ -150,19 +154,19 @@ GET https://{{baseurl}}/{{translate}}/systems.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-/*
+
 ## Hostile Information
-*/
+
 ###
 GET https://{{baseurl}}/hostile/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-/*
+
 ## Consumable Information
-- Consumable Details
-- Consumable Titles and Descriptions
-*/
+##      - Consumable Details
+##      - Consumable Titles and Descriptions
+
 ###
 GET https://{{baseurl}}/consumable/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
@@ -173,20 +177,19 @@ GET https://{{baseurl}}/{{translate}}/consumables.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-/*
-## Forbidden Tech Information
-- Forbidden Tech Summary
-- Forbidden Tech Detail for ID=1206498925
-- Forbidden Tech Names, Flavors, & Descriptions
 
-*/
+## Forbidden Tech Information
+##      - Forbidden Tech Summary
+##      - Forbidden Tech Detail for ID=1206498925
+##      - Forbidden Tech Names, Flavors, & Descriptions
+
 ###
 GET https://{{baseurl}}/forbidden_tech/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
 ###
-GET https://{{baseurl}}/forbidden_tech/1206498925.json HTTP/1.1
+GET https://{{baseurl}}/forbidden_tech/1206498925 HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
@@ -195,28 +198,28 @@ GET https://{{baseurl}}/{{translate}}/forbidden_tech.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-/*
+
 ## Hazards Information
-*/
+
 ###
 GET https://{{baseurl}}/hazards/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-/*
+
 ## Wave Defense Information
-*/
+
 ###
 GET https://{{baseurl}}/wave_defense/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-/*
+
 ## Mission Information
-- Mission Details
-- Mission Titles and Descriptions
-- Mission Navigation Information
-*/
+##      - Mission Details
+##      - Mission Titles and Descriptions
+##      - Mission Navigation Information
+
 ###
 GET https://{{baseurl}}/mission/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
@@ -228,88 +231,89 @@ GET https://{{baseurl}}/{{translate}}/mission_titles.json HTTP/1.1
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
 ###
+GET https://{{baseurl}}/galaxy/mission_unlocks HTTP/1.1
+    Accept: {{jsonType}}
+    Accept-Encoding: {{jsonEncoding}}
+    Accept-Language: {{jsonLanguage}}
+###
 GET https://{{baseurl}}/{{translate}}/navigation.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-/*
+
 ## Resource Information
-*/
+
 ###
 GET https://{{baseurl}}/resource/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-/*
+
 ## Forbidden Tech Information
-*/
+
 ###
 GET https://{{baseurl}}/forbidden_tech/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-/*
+
 ## Event Titles and Descriptions
-*/
+
 ###
 GET https://{{baseurl}}/{{translate}}/event_titles.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-/*
+
 ## Faction Titles and Descriptions
-*/
+
 ###
 GET https://{{baseurl}}/{{translate}}/factions.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-/*
+
 ## Miscellaneous Material Information
 
-*/
 ###
 GET https://{{baseurl}}/{{translate}}/materials.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-/*
+
 ## Player Avatar Information
-*/
+
 ###
 GET https://{{baseurl}}/{{translate}}/player_avatars.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-/*
+
 ## Star Base Module Names, ...
-*/
+
 ###
 GET https://{{baseurl}}/{{translate}}/starbase_modules.json HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-/*
-## Might not be any good anymore
-*/
-/*
-### Syndicate Information ????????
-- Syndicate Summary
-- Syndicate Detail for ID=4162111876
-*/
+
+## Syndicate Information .json?.json?.json?.json?.json?.json?.json?.json?
+##      - Syndicate Summary
+##      - Syndicate Detail for ID=4162111876
+
 ###
 GET https://{{baseurl}}/syndicate/summary.json?version={{version}} HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
 ###
-GET https://{{baseurl}}/syndicate/4162111876.json HTTP/1.1
+GET https://{{baseurl}}/syndicate/4162111876 HTTP/1.1
     Accept: {{jsonType}}
     Accept-Encoding: {{jsonEncoding}}
     Accept-Language: {{jsonLanguage}}
-/*
-### Faction Loyalty information ????????
-*/
+
+### Faction Loyalty information .json?.json?.json?.json?.json?.json?.json?.json?
+
 ###
 GET https://{{baseurl}}/{{translate}}/loyalty.json HTTP/1.1
     Accept: {{jsonType}}
