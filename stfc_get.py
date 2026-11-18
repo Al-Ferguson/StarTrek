@@ -16,8 +16,10 @@ NOTE: This has been tested with Python 3.9+ and Requests v2.32+
 #   - json
 #   - typing
 
-import httpx2 as rq
-import Path
+import json
+from pathlib import Path
+
+import httpx2
 
 # endregion Imports
 
@@ -30,19 +32,6 @@ __version__: str = "0.3.0"
 # region Functions
 
 
-def get_json_value(json_data: tuple[dict], srchid: str,
-                   srchkey: str, dflt: str = "") -> str:
-    """Get a value from a JSON Dictionary for the given key."""
-    return next(
-        (
-            item["text"]
-            for item in json_data
-            if item.get("id") == srchid and item.get("key") == srchkey
-        ),
-        dflt,
-    )
-
-
 def generate_ship_import() -> str:
     """Build the SQL for the STFC Ships Import File."""
     ship_rows = [construct_ship_row(ship) for ship in SHIP]
@@ -51,24 +40,16 @@ def generate_ship_import() -> str:
 
 def construct_ship_row(ship: dict) -> str:
     """Construct a ship row string from the given dictionary."""
-    factid = ship.get("faction", {}).get("loca_id", "0")
     ship_id = str(ship["id"])
-    ship_name = construct_shipnames(ship["loca_id"])
+    ship_name = str(SHIPS[ship["loca_id"]].get("ship_name", ""),
+)
     grade = str(ship["grade"])
     ship_type = SHIPTYPES[ship["hull_type"]]
-    faction = construct_faction(factid)
+    faction = str(
+        FACTIONS.get(ship["faction"].get("loca_id")).get("faction_name", "Neutral"),
+    )
 
     return f'({ship_id}, {ship_name}, {grade}, "{ship_type}", {faction})'
-
-
-def construct_shipnames(shipid: str) -> str:
-    """Construct Ship Names from ships dictionary."""
-    return f'"{get_json_value(SHIPS, shipid, "ship_name", "")}"'
-
-
-def construct_faction(factid: str) -> str:
-    """Build Faction Name from factions dictionary."""
-    return f'"{get_json_value(FACTIONS, factid, "faction_name", "Neutral")}"'
 
 
 def generate_system_import() -> str:
@@ -87,28 +68,20 @@ def construct_system_row(system: dict) -> str:
 
     row_data = [
         str(system["id"]),
-        construct_system_names(system["id"]),
+        str(SYSTEMS[system["loca_id"]]["title"]),
         str(system["level"]),
         str(system["est_warp"]),
-        construct_faction(factid),
+        str(FACTIONS[factid]["faction_name"]),
         str(system["is_deep_space"]),
         str(system["is_mirror_universe"]),
     ]
 
     return f"({', '.join(row_data)})"
 
-def construct_system_names(systid: str) -> str:
-    """Construct System Name from systems dictionary."""
-    return f'"{get_json_value(SYSTEMS, f"{systid}", "title")}"'
-
 
 # endregion Functions
 
 # region Global Variables
-API_URL: str = "https://data.stfc.space"
-TRANSLATE_LANGUAGE = "en"
-DETAIL_URL: str = f"{API_URL}/translations/{TRANSLATE_LANGUAGE}"
-
 SHIP_INSERT: str = (
     "INSERT INTO `StfcShips` (`ShipID`, `ShipName`,`ShipLevel`, "
     "`ShipType`,`ShipFaction`) VALUES\n"
@@ -120,19 +93,33 @@ SYSTEM_INSERT: str = (
 )
 SQL_END = ";\n\nCOMMIT;\n\n"
 
-with rq.Client(base_url="{API_URL}", http2=True) as client:
-    VERSION: str = client.get("version.txt").text
-    SHIP: tuple[dict] = client.get(
-        f"ship/summary.json?version={VERSION}",
-    ).json()
-    SHIPS: tuple[dict] = client.get(f"ships.json?version={VERSION}").json()
-    SYSTEM: tuple[dict] = client.get(
-        f"planetary_base/summary.json?version={VERSION}",
-    ).json()
-    SYSTEMS: tuple[dict] = client.get(f"systems.json?version={VERSION}").json()
-    FACTIONS: tuple[dict] = client.get(
-        f"factions.json?version={VERSION}",
-    ).json()
+API_URL: str = "https://data.stfc.space"
+TRANSLATE_LANGUAGE = "en"
+DETAIL: str = f"translations/{TRANSLATE_LANGUAGE}"
+
+with httpx2.Client(
+    base_url="https://data.stfc.space",
+    headers={
+        "Accept": "application/json",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "en-US, en;q=0.9",
+    },
+    http2=True,
+) as client:
+    VERSION: str = client.get("/version.txt").text
+    SHIP = json.loads(client.get(f"ship/summary.json?version={VERSION}").text)
+    SHIPS = json.loads(
+        client.get(f"/{DETAIL}/ships.json?version={VERSION}").text,
+    )
+    SYSTEM = json.loads(
+        client.get(f"/planetary_base/summary.json?version={VERSION}").text,
+    )
+    SYSTEMS = json.loads(
+        client.get(f"/{DETAIL}/systems.json?version={VERSION}").text,
+    )
+    FACTIONS = json.loads(
+        client.get(f"/{DETAIL}/factions.json?version={VERSION}").text,
+    )
 
 SHIPTYPES: tuple = ("Interceptor", "Survey", "Explorer", "Battleship")
 
@@ -140,15 +127,15 @@ SHIPTYPES: tuple = ("Interceptor", "Survey", "Explorer", "Battleship")
 
 
 def main() -> None:
-    """https://stfc.space Information retrieval & Import SQL build."""
+    """https://data.stfc.space Information retrieval & Import SQL build."""
     print("Writing Ships IMPORT SQL:")  # noqa: T201
     ships_sql = generate_ship_import() + SQL_END
-    with Path.open("STFC Pirate 2 Ships.sql", "w", encoding="utf-8") as file:
+    with Path("STFC Pirate 2 Ships.sql").open("w", encoding="utf-8") as file:
         file.write(ships_sql)
 
     print("Writing Systems IMPORT SQL:")  # noqa: T201
     systems_sql = generate_system_import() + SQL_END
-    with Path.open("STFC Pirate 3 Systems.sql", "w", encoding="utf-8") as file:
+    with Path("STFC Pirate 3 Systems.sql").open("w", encoding="utf-8") as file:
         file.write(systems_sql)
 
 
