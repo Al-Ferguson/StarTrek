@@ -3,7 +3,7 @@
 # by the following command:
 #
 # Required by Python scripts
-httpx2>=2.16.0
+httpx2[http2]>=2.16.0
 
 #
 # Added for type checking
